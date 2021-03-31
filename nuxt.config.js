@@ -9,7 +9,7 @@ const configSanity = {
   useCdn: false,
   minimal: true,
   dataset: 'production',
-  token: process.env.NODE_ENV == "development" ? process.env.SANITY_READ_TOKEN : ''
+  // token: process.env.NODE_ENV == "development" ? process.env.SANITY_READ_TOKEN : ''
 }
 const client = createClient(configSanity)
 
