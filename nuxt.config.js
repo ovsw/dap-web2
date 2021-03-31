@@ -6,14 +6,22 @@ if (!globalThis.fetch) {
 
 const configSanity = {
   projectId: '0un18sqx',
-  useCdn: true,
+  useCdn: false,
   minimal: true,
   dataset: 'production',
+  token: process.env.SANITY_READ_TOKEN
 }
+
+console.log('token:', process.env.SANITY_READ_TOKEN)
 
 const client = createClient(configSanity)
 
 export default {
+  privateRuntimeConfig: {
+    sanity: {
+      token: process.env.SANITY_READ_TOKEN,
+    },
+  },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -35,11 +43,12 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/scss/main.scss'
+    '@/assets/scss/critical.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~plugins/sanity.js',
     '~plugins/preview.client.js',
     '~plugins/image-builder.js',
     '~/plugins/to-link.js',
@@ -57,7 +66,7 @@ export default {
   styleResources: {
     // your settings here
     scss: [
-      'assets/scss/_variables.scss'
+      'assets/scss/_gorko.scss'
     ],
    },
 

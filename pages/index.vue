@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Home</h1>
+    <h1>{{siteHome.content.hero.title}}</h1>
       <div v-for="section in siteHome.content.sections" :key="section._key">
 
           <!-- {{section.title}}
@@ -23,7 +23,9 @@ const query = /* groq */ `{
 export default {
   name: 'siteHome',
   asyncData({ $sanity }) {
-    return $sanity.fetch(query)
+    const sanityCall = $sanity.fetch(query)
+    console.log('🎈 asyncData: called', sanityCall )
+    return sanityCall
   },
 }
 </script>

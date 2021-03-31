@@ -12,6 +12,7 @@
     "@nuxtjs/sanity": "^0.7.1",
     "@sanity/image-url": "^0.140.22",
     "core-js": "^3.9.1",
+    "gorko": "^0.3.0",
     "nuxt": "^2.15.3"
   },
   "devDependencies": {
