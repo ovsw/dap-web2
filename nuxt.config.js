@@ -77,16 +77,29 @@ export default {
 
   // GENERATE DYNAMIC PAGES FROM SANITY
   generate: {
+    //subFolders: false,
     fallback: true,
     crawler: false,
     async routes() {
-      const movies = await client.fetch(`*[_type == "movie"]`)
-      return movies.map((movie) => {
-        return {
-          route: `/movies/${movie.slug.current}/`,
-          payload: movie,
-        }
-      })
+      const pages = await client.fetch(`*[_type == "page"]`)
+      const newsItems = await client.fetch(`*[_type == "newsItem"]`)
+
+      return [
+        ...pages.map((page) => {
+          // console.log('creting route for: ', `/${page.content.slug.current}/`)
+          return {
+            route: `/${page.content.slug.current}/`,
+            payload: page,
+          }
+        }), 
+        ...newsItems.map((page) => {
+          // console.log('creting route for: ', `/news/${page.content.slug.current}/`)
+          return {
+            route: `/news/${page.content.slug.current}/`,
+            payload: page,
+          }
+        })
+      ]
     },
   },
 
