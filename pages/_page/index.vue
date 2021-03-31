@@ -1,8 +1,14 @@
 <template>
   <article>
     <h1>{{ page.content.title }}</h1>
-    <!-- <img :src="$urlFor(page.poster)" :alt="page.title + ' poster'" />
-    <SanityContent :blocks="page.overview" :serializers="serializers" /> -->
+    <div v-for="section in page.content.sections" :key="section._key">
+
+          <!-- {{section.title}}
+         {{section._type}} -->
+            
+        <SectionsMagSection v-if="section._type == 'magSection'" v-bind:section="section"/>
+           
+      </div>
   </article>
 </template>
 
