@@ -9,19 +9,16 @@ const configSanity = {
   useCdn: false,
   minimal: true,
   dataset: 'production',
-  token: process.env.SANITY_READ_TOKEN
+  token: process.env.NODE_ENV == "development" ? process.env.SANITY_READ_TOKEN : ''
 }
-
-console.log('token:', process.env.SANITY_READ_TOKEN)
-
 const client = createClient(configSanity)
 
 export default {
-  privateRuntimeConfig: {
-    sanity: {
-      token: process.env.SANITY_READ_TOKEN,
-    },
-  },
+  // privateRuntimeConfig: {
+  //   sanity: {
+  //     token: process.env.SANITY_READ_TOKEN,
+  //   },
+  // },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
