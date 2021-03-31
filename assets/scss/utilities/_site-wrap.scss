@@ -2,4 +2,12 @@
   // overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+
+  @include apply-utility('font', 'base');
+  padding-top: 85px;
+  
+  @include media-query('lg') {
+    padding-top: 137px;
+  }
+  
 }

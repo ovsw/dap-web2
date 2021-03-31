@@ -15,12 +15,34 @@ body {
   @include media-query('md') {
     font-size: get-size('500');
   }
+}
+
+.site-wrap {
+  // overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
 
   @include apply-utility('font', 'base');
   padding-top: 85px;
   
   @include media-query('lg') {
     padding-top: 137px;
+  }
+  
+}
+
+.refreshPreview {
+  position:sticky; 
+  top:0; width: 100%; 
+  text-align: center; 
+  background-color: black; 
+  color: white; 
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(49, 49, 49);
+    font-weight: bold;
   }
 }
 

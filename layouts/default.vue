@@ -1,6 +1,13 @@
 <template>
   <div>
-    <Nuxt />
+    <client-only>
+      <button class="refreshPreview" v-if="$store.state.showDrafPreviewBanner" @click="$nuxt.refresh()">
+        Draft Preview. Click here to refresh
+      </button>
+    </client-only>
+    <div class="site-wrap">
+      <Nuxt />
+    </div>
   </div>
 </template>
 
