@@ -38,10 +38,30 @@ export default {
     ]
   },
 
+  googleFonts: {
+    subsets: 'latin',
+    display: 'swap',
+    // download: true,
+    // overwriting: true,
+    // fontsDir: 'fonts',
+    // fontsPath: '~assets/fonts',
+    families: {
+      'Overpass': true,
+      'Open+Sans': {
+        wght: [400, 600, 700],
+        ital: [400, 600]
+      },
+      'Raleway': {
+        wght: [400, 800, 900]
+      },
+    }
+  },
+
+  tailwindcss: {
+    jit: false
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/scss/critical.scss'
-  ],
+  css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -56,16 +76,10 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/style-resources',
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/tailwindcss',
     '@nuxtjs/sanity'
   ],
-
-  styleResources: {
-    // your settings here
-    scss: [
-      'assets/scss/_gorko.scss'
-    ],
-   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
