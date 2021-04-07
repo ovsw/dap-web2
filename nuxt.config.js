@@ -56,9 +56,25 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/google-fonts',
     '@nuxtjs/style-resources',
     '@nuxtjs/sanity'
   ],
+
+  googleFonts: {
+    display: 'swap',
+    download: true,
+    overwriting: false,
+    families: {
+      'Overpass': {
+        wght: [400, 600, 700],
+        ital: [400]
+      },
+      Raleway: {
+        wght: [800, 900]
+      },
+    }
+  },
 
   styleResources: {
     // your settings here
