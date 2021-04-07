@@ -61,7 +61,9 @@ export default {
     jit: true
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    // 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -69,6 +71,7 @@ export default {
     '~plugins/preview.client.js',
     '~plugins/image-builder.js',
     '~/plugins/to-link.js',
+    '~/plugins/lightbox.client.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

@@ -2,11 +2,11 @@
     <div>
       <h1>{{siteHome.content.hero.title}}</h1>
         <div>
-        <template v-for="section in siteHome.content.sections" >
+        <div v-for="section in siteHome.content.sections" :key="section._key" >
+          
+          <SectionsMagSection v-if="section._type == 'magSection'" v-bind:section="section" />
       
-          <SectionsMagSection v-if="section._type == 'magSection'" v-bind:section="section" :key="section._key"/>
-      
-        </template>
+        </div>
         </div>
     </div>
 </template>

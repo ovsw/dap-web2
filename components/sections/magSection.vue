@@ -19,7 +19,7 @@
         class="[ magSection__image ] md:mr-grd"
       >
       
-      <img
+      <img v-if="!section.video"
         class="object-cover w-full h-full"
         :src="
           $urlFor(section.image)
@@ -46,6 +46,38 @@
             ' 1200w, '
         "
         />
+        
+        <client-only>
+          <video-light-box v-if="section.video" :videoUrl="section.video">
+            <img
+              class="object-cover w-full h-full"
+              :src="
+                $urlFor(section.image)
+                  .width(700)
+                  .height(300)
+              "
+              :alt="section.image.alt"
+              :srcset="
+                $urlFor(section.image)
+                  .width(400)
+                  .height(300) +
+                  ' 400w, ' +
+                  $urlFor(section.image)
+                    .width(928)
+                    .height(300) +
+                  ' 928w, ' +
+                  $urlFor(section.image)
+                    .width(200)
+                    .height(500) +
+                  ' 1000w, ' +
+                  $urlFor(section.image)
+                    .width(928)
+                    .height(500) +
+                  ' 1200w, '
+              "
+              />
+          </video-light-box>
+        </client-only>
       </div>
       <div
         class="
