@@ -8,7 +8,12 @@
         @click="toggleSubMenu"
       >
         {{ mainNavItem.name }}
-        <!-- {%- include "partials/svg/icon-caret-down.svg" -%} -->
+        <svg-icon
+            name="icon-caret-down"
+            title="caret down icon"
+            height="1em"
+            width="1em"
+          />
       </button>
 
       <!-- {# submenu (columns wrapper) #} -->
