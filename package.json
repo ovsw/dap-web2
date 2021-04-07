@@ -14,6 +14,7 @@
     "core-js": "^3.9.1",
     "gorko": "^0.3.0",
     "nuxt": "^2.15.3",
+    "vue-on-click-outside": "^1.0.3",
     "vue-silentbox": "^2.4.4"
   },
   "devDependencies": {
