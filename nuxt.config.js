@@ -58,7 +58,7 @@ export default {
   },
 
   tailwindcss: {
-    jit: false
+    jit: true
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],

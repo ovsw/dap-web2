@@ -4,6 +4,7 @@ module.exports = {
   purge: {
     // layers: ['components', 'utilities'],
     content: [
+      'tw-jit-classes.txt',
       'components/**/*.vue',
       'layouts/**/*.vue',
       'pages/**/*.vue',
