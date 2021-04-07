@@ -16,7 +16,7 @@
     :data-theme-color="sectionThemeOptions.color"
   >
       <div
-        class="[ magSection__image ]"
+        class="[ magSection__image ] md:mr-grd"
       >
       
       <img
@@ -55,14 +55,13 @@
           p-10 md:p-20
           space-y-6
 
-          md:max-w-prose
+          md:max-w-2xl
           m-grd
-          md:my-0
-          md:mx-grd
+          md:m-0
 
          flex-auto
          
-          border-5 
+          border-5
         "
         :class="`border-${sectionThemeOptions.color}`"
       >
@@ -78,6 +77,7 @@
       
         <div class="magSection__rteWrapper [ flow ] ">
           <SanityContent :blocks="section.text" :serializers="serializers" class="prose"/>
+          <p>Hot Ride, Cool Slides, and America's Best Amusement Park Food! Hot Ride, Cool Slides, and America's Best Amusement Park Food! Hot Ride, Cool Slides, and America's Best Amusement Park Food!</p>
         </div>
         <!-- <div class="magSection__buttonWrapper">
             <a href="https://dap-web.netlify.app/laguna-splash-water-park-attractions/" class="[ button ] [ button--colored-bg button--color-green ]">View Our Attractions!</a>
@@ -92,6 +92,7 @@
 import externalLink from '@/components/serializers/externalLink'
 
 export default {
+  name: 'magSection',
   props: ['section'],
   data() {
     return {
@@ -142,6 +143,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
- 
+<style lang="css">
+
 </style>

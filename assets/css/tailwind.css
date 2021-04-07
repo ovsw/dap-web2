@@ -11,4 +11,14 @@
   h1, h2 {
     @apply text-4xl font-extrabold uppercase font-display;
   }
+
+  /* .magSection + .magSection {
+    flex-direction: row-reverse!important;
+  } */
+  .magSection:nth-child(even) {
+    flex-direction: row-reverse!important;
+  }
+  .magSection:nth-child(even) .magSection__image {
+    @apply md:mr-0 md:ml-grd;
+  }
 }
