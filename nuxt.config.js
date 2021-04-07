@@ -49,6 +49,7 @@ export default {
     '~plugins/preview.client.js',
     '~plugins/image-builder.js',
     '~/plugins/to-link.js',
+    '~/plugins/lightbox.client.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
