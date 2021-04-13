@@ -4,69 +4,75 @@ module.exports = {
   purge: {
     // layers: ['components', 'utilities'],
     content: [
-      'tw-jit-classes.txt',
-      'components/**/*.vue',
-      'layouts/**/*.vue',
-      'pages/**/*.vue',
-      'plugins/**/*.js',
-      'nuxt.config.js'
+      "tw-jit-classes.txt",
+      "components/**/*.vue",
+      "layouts/**/*.vue",
+      "pages/**/*.vue",
+      "plugins/**/*.js",
+      "nuxt.config.js"
     ]
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
+      transparent: "transparent",
+      current: "currentColor",
       green: {
-        light: '#3EB084',
-        DEFAULT: '#2D8262',
-        dark: '#006E44',
+        light: "#3EB084",
+        DEFAULT: "#2D8262",
+        dark: "#006E44"
       },
       red: {
-        light: '#FF6E6E',
-        DEFAULT: '#DB3232',
-        dark: '#CC1616',
+        light: "#FF6E6E",
+        DEFAULT: "#DB3232",
+        dark: "#CC1616"
       },
       blue: {
-        light: '#5BD8EB',
-        DEFAULT: '#057EA6',
-        dark: '#006F94',
+        light: "#5BD8EB",
+        DEFAULT: "#057EA6",
+        dark: "#006F94"
       },
       yellow: {
-        light: '#ffd324',
-        DEFAULT: '#ffcc00',
-        dark: '#fefc9f',
+        light: "#ffd324",
+        DEFAULT: "#ffcc00",
+        dark: "#fefc9f"
       },
       cyan: {
-        light: '#0EADC2',
-        DEFAULT: '#0A7F8F',
-        dark: '#096F7D',
+        light: "#0EADC2",
+        DEFAULT: "#0A7F8F",
+        dark: "#096F7D"
       },
       dark: {
-        light: '#42413b',
-        DEFAULT: '#36342E',
-        dark: '#343432',
+        light: "#42413b",
+        DEFAULT: "#36342E",
+        dark: "#343432",
+        panelBorder: "rgba(54,52,46,.5)"
       },
       light: {
-        light: '#FFF',
-        DEFAULT: '#F4F4F4',
-        dark: '#FFFDF5',
+        light: "#FFF",
+        DEFAULT: "#F4F4F4",
+        dark: "#FFFDF5",
+        panelBorder: "rgba(255,255,255,.5)"
       },
       muted: {
-        DEFAULT: '#757575',
-      },
+        DEFAULT: "#757575"
+      }
     },
     extend: {
+      fontSize: {
+        xxs: ".69rem"
+      },
       fontFamily: {
         display: ["Raleway", ...defaultTheme.fontFamily.sans],
         body: ["Overpass", ...defaultTheme.fontFamily.sans]
       },
       spacing: {
-        'grd': '0.9375rem',
-        'grd-half': '0.4688rem',
+        grd: "0.9375rem",
+        "grd-half": "0.4688rem",
+        "160": "40rem"
       },
       borderWidth: {
-        '5': '6px',
+        "5": "6px"
       }
       // maxWidth: {
       //   'content': '1600px'
@@ -74,9 +80,7 @@ module.exports = {
     }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
-}
+  plugins: [require("@tailwindcss/typography")]
+};

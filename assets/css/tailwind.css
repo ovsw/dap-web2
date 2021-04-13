@@ -3,22 +3,35 @@
 @tailwind utilities;
 
 @layer base {
-
   body {
     @apply font-body text-dark text-lg;
   }
 
-  h1, h2 {
-    @apply text-4xl font-extrabold uppercase font-display;
+  h1,
+  h2 {
+    @apply text-2xl lg:text-4xl font-extrabold uppercase font-display;
   }
 
   /* .magSection + .magSection {
     flex-direction: row-reverse!important;
   } */
   .magSection:nth-child(even) {
-    flex-direction: row-reverse!important;
+    flex-direction: row-reverse !important;
   }
   .magSection:nth-child(even) .magSection__image {
     @apply md:mr-0 md:ml-grd;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply mx-auto max-w-screen-2xl lg:px-0;
+  }
+
+  .button {
+    @apply py-4 px-6 inline-flex items-center no-underline text-center bg-green text-light hover:text-yellow-light rounded uppercase font-semibold tracking-wider;
+  }
+  .newTag {
+    @apply ml-1 bg-red text-yellow px-2 py-1 relative leading-none rounded-full uppercase font-bold text-xxs;
   }
 }

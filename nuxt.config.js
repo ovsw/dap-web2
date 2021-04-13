@@ -1,17 +1,17 @@
-import { createClient } from '@nuxtjs/sanity'
-import fetch from 'node-fetch'
+import { createClient } from "@nuxtjs/sanity";
+import fetch from "node-fetch";
 if (!globalThis.fetch) {
-  globalThis.fetch = fetch
+  globalThis.fetch = fetch;
 }
 
 const configSanity = {
-  projectId: '0un18sqx',
+  projectId: "0un18sqx",
   useCdn: false,
   minimal: true,
-  dataset: 'production',
+  dataset: "production"
   // token: process.env.NODE_ENV == "development" ? process.env.SANITY_READ_TOKEN : ''
-}
-const client = createClient(configSanity)
+};
+const client = createClient(configSanity);
 
 export default {
   // privateRuntimeConfig: {
@@ -20,40 +20,38 @@ export default {
   //   },
   // },
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: "static",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'web',
+    title: "web",
     htmlAttrs: {
-      lang: 'en'
+      lang: "en"
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: "" }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
   googleFonts: {
-    subsets: 'latin',
-    display: 'swap',
+    subsets: "latin",
+    display: "swap",
     // download: true,
     // overwriting: true,
     // fontsDir: 'fonts',
     // fontsPath: '~assets/fonts',
     families: {
-      'Overpass': true,
-      'Open+Sans': {
+      Overpass: true,
+      "Open+Sans": {
         wght: [400, 600, 700],
         ital: [400, 600]
       },
-      'Raleway': {
+      Raleway: {
         wght: [400, 800, 900]
-      },
+      }
     }
   },
 
@@ -67,11 +65,11 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~plugins/sanity.js',
-    '~plugins/preview.client.js',
-    '~plugins/image-builder.js',
-    '~/plugins/to-link.js',
-    '~/plugins/lightbox.client.js'
+    "~plugins/sanity.js",
+    "~plugins/preview.client.js",
+    "~plugins/image-builder.js",
+    "~/plugins/to-link.js",
+    "~/plugins/lightbox.client.js"
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -79,18 +77,17 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/google-fonts',
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/sanity'
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/google-fonts",
+    "@nuxtjs/svg-sprite",
+    "@nuxtjs/sanity/module"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  },
+  build: {},
 
   // GENERATE DYNAMIC PAGES FROM SANITY
   generate: {
@@ -98,36 +95,34 @@ export default {
     fallback: true,
     crawler: false,
     async routes() {
-      const pages = await client.fetch(`*[_type == "page"]`)
-      const newsItems = await client.fetch(`*[_type == "newsItem"]`)
+      const pages = await client.fetch(`*[_type == "page"]`);
+      const newsItems = await client.fetch(`*[_type == "newsItem"]`);
 
       return [
-        ...pages.map((page) => {
+        ...pages.map(page => {
           // console.log('creting route for: ', `/${page.content.slug.current}/`)
           return {
             route: `/${page.content.slug.current}/`,
-            payload: page,
-          }
-        }), 
-        ...newsItems.map((page) => {
+            payload: page
+          };
+        }),
+        ...newsItems.map(page => {
           // console.log('creting route for: ', `/news/${page.content.slug.current}/`)
           return {
             route: `/news/${page.content.slug.current}/`,
-            payload: page,
-          }
+            payload: page
+          };
         })
-      ]
-    },
+      ];
+    }
   },
 
   router: {
-    trailingSlash: true,
+    trailingSlash: true
   },
 
   sanity: {
     ...configSanity,
-    withCredentials: true,
-  },
-}
-
-
+    withCredentials: true
+  }
+};
