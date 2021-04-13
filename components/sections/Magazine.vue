@@ -88,18 +88,18 @@
         "
       :class="`border-${sectionThemeOptions.color}`"
     >
-      <div class="flow">
+      <div class="space-y-10">
         <h2>{{ section.title }}</h2>
 
         <div class="magSection__subHeadingWrapper">
-          <h3 class="[ subtitle ]">{{ section.subtitle }}</h3>
+          <h3 class="[ subtitle text-xl font-bold ]">{{ section.subtitle }}</h3>
         </div>
 
         <div class="magSection__rteWrapper [  ]">
           <SanityContent
             :blocks="section.text"
             :serializers="serializers"
-            class="prose"
+            class="prose text-lg"
           />
         </div>
       </div>
