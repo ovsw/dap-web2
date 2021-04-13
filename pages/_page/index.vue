@@ -54,6 +54,8 @@ export default {
         return "SectionsFaqSection";
       } else if (sectionType == "ctaSection") {
         return "SectionsCtaSection";
+      } else if (sectionType == "bigHeading") {
+        return "SectionsBigHeading";
       }
       return "SectionsDefault";
     }
