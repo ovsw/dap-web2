@@ -4,22 +4,72 @@
 
 @layer base {
   body {
-    @apply font-body text-dark text-lg;
+    @apply font-body text-dark text-base leading-normal;
   }
 
   h1,
   h2 {
-    @apply text-2xl lg:text-4xl font-extrabold uppercase font-display;
+    @apply text-2xl lg:text-4xl font-extrabold uppercase font-display leading-tight;
   }
 
-  /* .magSection + .magSection {
-    flex-direction: row-reverse!important;
-  } */
+  main:focus {
+    outline: none;
+  }
+
+  ::selection {
+    color: white;
+    /* // We set this as an RGBA because that’s how you get a solid color, by using 0.99
+    // alpha value. Browsers are wild. */
+    background: rgba(54, 52, 46, 0.99);
+  }
+
+  /* /// Scrollbar styles */
+  ::-webkit-scrollbar {
+    height: 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    border: 1px solid #2d8262;
+    border-radius: 0.25rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #2d8262;
+    border-radius: 0.25rem;
+    border: 1px solid white;
+  }
+
+  .cognito:not(.c-forms-actionBar) {
+    max-width: 100% !important;
+  }
+
+  /* PREVIEW STYLES */
+  .refreshPreview {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .refreshPreview:hover {
+    background-color: rgb(49, 49, 49);
+    font-weight: bold;
+  }
+  .bodyPreviewActive {
+    padding-top: 2rem !important;
+  }
+  /* END PREVIEW STYLES */
+
+  /* ALTERNATING MAG SECTIONS */
   .magSection:nth-child(even) {
     flex-direction: row-reverse !important;
   }
-  .magSection:nth-child(even) .magSection__image {
-    @apply md:mr-0 md:ml-grd;
+  .magSection:nth-child(even) .magSection__content {
+    @apply md:ml-0 md:mr-grd;
   }
 }
 

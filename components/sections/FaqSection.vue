@@ -1,36 +1,53 @@
 <template>
-  <section class="faqSection [ grid-margin ]">
-    <div class="[ wrapper grid-padding ]">
-      <div class="[ pannel frame-thick ]">
-        <h2 class="faqSection__heading">{{ section.title }}</h2>
+  <section class="faqSection">
+    <div class="[ wrapper max-w-screen-lg ] pb-10">
+      <div class="">
+        <h2 class="faqSection__heading my-10">{{ section.title }}</h2>
 
-        <dl class="[ flow ]">
+        <dl class=" space-y-10 text-xl">
           <div
             v-for="(item, index) in section.faqItems"
             class="faqsWrapper"
             :key="index"
           >
-            <dt>
-              <button
-                :id="'accordion' + sectionIndex + '-header-' + index"
-                :aria-controls="'accordion' + sectionIndex + '-panel-' + index"
-                @click="
-                  index != selected ? (selected = index) : (selected = -1)
-                "
-                :aria-expanded="selected == index ? 'true' : 'false'"
-              >
-                {{ item.question }}
-                <span>+</span>
-              </button>
-            </dt>
-
-            <dd
-              :id="'accordion' + sectionIndex + '-panel-' + index"
-              :aria-labelledby="'accordion' + sectionIndex + '-header-' + index"
-              v-show="selected == index"
+            <h3
+              v-if="!item._type"
+              class="text-2xl font-display lg:text-3xl font-bold mt-16"
             >
-              <SanityContent :blocks="item.answer" />
-            </dd>
+              {{ item.value }}
+            </h3>
+            <div v-if="item._type">
+              <dt>
+                <button
+                  :id="'accordion' + sectionIndex + '-header-' + index"
+                  :aria-controls="
+                    'accordion' + sectionIndex + '-panel-' + index
+                  "
+                  @click="
+                    index != selected ? (selected = index) : (selected = -1)
+                  "
+                  :aria-expanded="selected == index ? 'true' : 'false'"
+                  class="bg-green text-light p-6 pt-8 block w-full text-left focus:outline-green-large"
+                >
+                  {{ item.question }}
+                  <span class="float-right text-2xl">+</span>
+                </button>
+              </dt>
+
+              <dd
+                class="p-6 lg:pt-8 bg-gray-100"
+                :id="'accordion' + sectionIndex + '-panel-' + index"
+                :aria-labelledby="
+                  'accordion' + sectionIndex + '-header-' + index
+                "
+                v-show="selected == index"
+              >
+                <SanityContent
+                  :blocks="item.answer"
+                  class="prose text-xl max-w-screen-lg"
+                />
+              </dd>
+            </div>
           </div>
         </dl>
       </div>
@@ -56,36 +73,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.faqSection {
-  h3 {
-    margin-top: get-size("800");
-    margin-bottom: get-size("600");
-  }
-
-  dt {
-    display: block;
-  }
-
-  dt button {
-    cursor: pointer;
-    background: get-color("primary");
-    border: none;
-    color: get-color("light-glare");
-    padding: get-size("400") get-size("600");
-    padding-top: calc(#{get-size("400")} * 1.3);
-
-    display: block !important;
-    width: 100%;
-    text-align: left;
-
-    span {
-      float: right;
-    }
-  }
-}
-
-.faqSection__heading {
-  margin-bottom: get-size("700");
-}
-</style>
+<style></style>
