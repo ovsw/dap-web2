@@ -99,7 +99,7 @@
     @apply py-4 px-6 inline-flex items-center no-underline text-center bg-green text-light hover:text-yellow-light rounded uppercase font-semibold tracking-wider;
   }
   .newTag {
-    @apply ml-1 bg-red text-yellow px-2 py-1 relative leading-none rounded-full uppercase font-bold text-xxs;
+    @apply ml-1 bg-red text-yellow px-2 py-1 relative -inset-y-1 inset-x-1 leading-none rounded-full uppercase font-bold text-xxs;
   }
   .footer__col h4 {
     @apply uppercase tracking-widest mb-4 font-semibold;

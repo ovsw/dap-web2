@@ -213,7 +213,7 @@
           {
             "name": "Hours & Schedule",
             "description": "for 2021",
-            "new": false,
+            "new": true,
             "url": "/hours-and-schedule-of-operation/",
             "icon": "calendar-alt-duotone"
           },
