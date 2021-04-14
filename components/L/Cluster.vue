@@ -1,14 +1,18 @@
 <template>
-  <div class="cluster-l" :class="classObject">
+  <component :is="wrapper" class="cluster-l" :class="classObject">
     <div>
       <slot></slot>
     </div>
-  </div>
+  </component>
 </template>
 
 <script>
 export default {
   props: {
+    wrapper: {
+      type: String,
+      default: "div"
+    },
     justify: {
       type: String,
       default: "center"

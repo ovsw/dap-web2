@@ -42,6 +42,17 @@
   .cognito:not(.c-forms-actionBar) {
     max-width: 100% !important;
   }
+  .visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
 
   /* PREVIEW STYLES */
   .refreshPreview {
@@ -74,11 +85,19 @@
   .wrapper {
     @apply mx-auto max-w-screen-2xl lg:px-0;
   }
-
+  .svgIcon {
+    @apply inset-y-px relative;
+  }
   .button {
     @apply py-4 px-6 inline-flex items-center no-underline text-center bg-green text-light hover:text-yellow-light rounded uppercase font-semibold tracking-wider;
   }
   .newTag {
     @apply ml-1 bg-red text-yellow px-2 py-1 relative leading-none rounded-full uppercase font-bold text-xxs;
+  }
+  .footer__col h4 {
+    @apply uppercase tracking-widest mb-4 font-semibold;
+  }
+  .footer__col ul {
+    @apply space-y-3 lg:space-y-2;
   }
 }

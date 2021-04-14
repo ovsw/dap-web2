@@ -81,10 +81,22 @@ module.exports = {
       },
       borderWidth: {
         "5": "5px"
-      }
+      },
       // maxWidth: {
       //   'content': '1600px'
       // }
+      typography: {
+        dark: {
+          css: {
+            a: {
+              color: "white",
+              "&:hover": {
+                color: "#ffcc00"
+              }
+            }
+          }
+        }
+      }
     }
   },
   variants: {

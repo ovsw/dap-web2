@@ -12,6 +12,7 @@
     <div class="site-wrap">
       <SiteHeader />
       <Nuxt />
+      <SiteFooter />
     </div>
   </div>
 </template>
