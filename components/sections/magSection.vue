@@ -21,8 +21,8 @@
         class="object-cover w-full h-full"
         :src="
           $urlFor(section.image)
-            .width(700)
-            .height(300)
+            .width(500)
+            .height(400)
         "
         :alt="section.image.alt"
         :srcset="
@@ -41,7 +41,7 @@
             $urlFor(section.image)
               .width(928)
               .height(500) +
-            ' 1200w, '
+            ' 1200w'
         "
       />
 
@@ -71,7 +71,7 @@
                 $urlFor(section.image)
                   .width(928)
                   .height(500) +
-                ' 1200w, '
+                ' 1200w'
             "
           />
         </video-light-box>
