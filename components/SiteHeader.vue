@@ -9,20 +9,32 @@
     <!-- <Header-TopBar /> -->
 
     <!-- .wrapper -->
-    <div class="wrapper">
+    <div class="wrapper px-4">
       <div class="site-head__inner flex items-center">
-        <a class="logo block md:mr-10 w-full lg:w-48 pl-6" href="/">
+        <a class="logo block md:mr-10 w-full sm:w-auto md:w-48" href="/">
           <img
             class="block w-36"
             src="~/assets/images/logos/delgrosso-amusement-park-and-laguna-splash-wordmark.png"
             alt="DelGrossos Amusement Park and Laguna Splash Water Park logo"
           />
-          <!-- <span class="md:hidden text-base sm:text-lg pl-4">
-            DelGrossos Amusement Park & Laguna Splash Water Park
-          </span> -->
         </a>
 
         <Header-Nav />
+
+        <a href="tel:814-684-3538" class="hidden lg:flex ml-auto items-center">
+          <svg-icon
+            name="icon-phone"
+            title="Telephone Icon"
+            height="2em"
+            width="2em"
+            class="svgIcon mr-2 text-green"
+          />
+          <div>
+            <span class="uppercase tracking-wider font-sm">Call us</span>
+            <br />
+            <span class="text-xl">814-684-3538</span>
+          </div>
+        </a>
       </div>
     </div>
     <!-- <HeaderAlert /> -->
