@@ -9,3 +9,5 @@
 .bg-blue
 .bg-cyan
 .bg-yellow
+
+.text-dark

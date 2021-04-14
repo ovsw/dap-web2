@@ -18,7 +18,7 @@
 
     <div class="[ wrapper ]">
       <div
-        class="[ ctaSection__content ] [ pannel ] border-4 md:border-5 p-10 md:p-24 "
+        class="[ ctaSection__content ] [ pannel ] border-4 md:border-4 p-10 md:p-24 "
         :class="contentClasses"
       >
         <div class="ctaSection__leftColumn space-y-6 ">
@@ -38,6 +38,8 @@
             v-if="section.button1"
             :url="section.button1.url"
             class="[ button ]"
+            :bgColor="sectionThemeOptions.buttonBgColor"
+            :color="sectionThemeOptions.buttonTextColor"
           >
             {{ section.button1.text }}
           </ButtonC>
@@ -70,13 +72,11 @@ export default {
           ? "light"
           : "dark";
 
-        let buttonStyle = themeBgValue == "light" ? "colored-bg" : "light-bg";
-
         const themeOptions = {
           color: themeColor,
           bgValue: themeBgValue,
-          buttonColor: buttonColor,
-          buttonStyle: buttonStyle
+          buttonBgColor: buttonColor,
+          buttonTextColor: themeBgValue
         };
 
         return themeOptions;

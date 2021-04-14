@@ -1,9 +1,14 @@
 <template>
   <section class="tableSection">
     <div class="[ wrapper ]">
-      <div role="region" :aria-labelledby="section._key" tabindex="0">
+      <div
+        role="region"
+        :aria-labelledby="section._key"
+        tabindex="0"
+        class="lg:mr-4"
+      >
         <table
-          class="border-collapse border border-green-800 table-fixed  w-full"
+          class="border-collapse border border-green-800 table-fixed w-full"
         >
           <caption
             :id="section._key"
@@ -17,7 +22,7 @@
           <thead>
             <tr>
               <th
-                class="first:w-2/12 p-6 bg-green text-light"
+                class="w-1/3 p-6 bg-green text-light"
                 v-for="cell in section.sectionTable.rows[0].cells"
                 :key="cell"
               >

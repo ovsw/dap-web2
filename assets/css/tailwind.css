@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-body text-dark text-base leading-normal;
+    @apply font-body text-dark text-base leading-normal bg-light;
   }
 
   h1,
@@ -67,9 +67,6 @@
   /* ALTERNATING MAG SECTIONS */
   .magSection:nth-child(even) {
     flex-direction: row-reverse !important;
-  }
-  .magSection:nth-child(even) .magSection__content {
-    @apply md:ml-0 md:mr-grd;
   }
 }
 

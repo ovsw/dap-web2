@@ -105,13 +105,13 @@
       </div>
       <div v-if="sectionButtons" class="magSection__buttonWrapper">
         <l-cluster>
-          <Button
+          <ButtonC
             v-for="(button, index) in sectionButtons"
             :url="button.url || '#'"
             :key="index"
           >
             {{ button.text }}
-          </Button>
+          </ButtonC>
         </l-cluster>
       </div>
     </div>
