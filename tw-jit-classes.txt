@@ -1,0 +1,13 @@
+.border-red
+.border-green
+.border-blue
+.border-cyan
+.border-yellow
+
+.bg-red
+.bg-green
+.bg-blue
+.bg-cyan
+.bg-yellow
+
+.text-dark

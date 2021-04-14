@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body text-dark text-base leading-normal bg-light;
+  }
+
+  h1,
+  h2 {
+    @apply text-2xl lg:text-4xl font-extrabold uppercase font-display leading-tight;
+  }
+
+  main:focus {
+    outline: none;
+  }
+
+  ::selection {
+    color: white;
+    /* // We set this as an RGBA because that’s how you get a solid color, by using 0.99
+    // alpha value. Browsers are wild. */
+    background: rgba(54, 52, 46, 0.99);
+  }
+
+  /* /// Scrollbar styles */
+  ::-webkit-scrollbar {
+    height: 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    border: 1px solid #2d8262;
+    border-radius: 0.25rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #2d8262;
+    border-radius: 0.25rem;
+    border: 1px solid white;
+  }
+
+  .cognito:not(.c-forms-actionBar) {
+    max-width: 100% !important;
+  }
+  .visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+
+  /* PREVIEW STYLES */
+  .refreshPreview {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .refreshPreview:hover {
+    background-color: rgb(49, 49, 49);
+    font-weight: bold;
+  }
+  .bodyPreviewActive {
+    padding-top: 2rem !important;
+  }
+  /* END PREVIEW STYLES */
+
+  /* ALTERNATING MAG SECTIONS */
+  /* .magSection:nth-child(even) {
+    flex-direction: row-reverse !important;
+  } */
+  .magSection + .magSection:nth-child(odd) {
+    /* background-color: red !important; */
+    flex-direction: row-reverse !important;
+  }
+  .magSection + .magSection:nth-child(odd) .magSection__image {
+    @apply 2xl:ml-0 2xl:mr-grd;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply mx-auto max-w-screen-2xl lg:px-0;
+  }
+  .svgIcon {
+    @apply inset-y-px relative;
+  }
+  .button {
+    @apply py-4 px-6 inline-flex items-center no-underline text-center bg-green text-light hover:text-yellow-light rounded uppercase font-semibold tracking-wider;
+  }
+  .newTag {
+    @apply ml-1 bg-red text-yellow px-2 py-1 relative leading-none rounded-full uppercase font-bold text-xxs;
+  }
+  .footer__col h4 {
+    @apply uppercase tracking-widest mb-4 font-semibold;
+  }
+  .footer__col ul {
+    @apply space-y-3 lg:space-y-2;
+  }
+}

@@ -1,0 +1,278 @@
+[
+  {
+    "name": "For Groups",
+    "megaMenu": [
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "Group Picnics",
+            "description": "The Perfect Picnic Day",
+            "new": false,
+            "url": "/group-picnics/",
+            "icon": "users-duotone"
+          },
+          {
+            "name": "School Picnics",
+            "description": "Late May / Early June",
+            "new": false,
+            "url": "/school-picnics/",
+            "icon": "bus-school-duotone"
+          },
+          {
+            "name": "Birthday Parties",
+            "description": "At the Birthday Roundhouse!",
+            "new": false,
+            "url": "/kids-birthday-parties-at-the-park/",
+            "icon": "birthday-cake-duotone"
+          },
+          {
+            "name": "Specialty Groups",
+            "description": "Boy & Girls Scouts, YMCA, 4H",
+            "new": false,
+            "url": "/specialty-groups/",
+            "icon": "star-duotone"
+          },
+          {
+            "name": "Group Pricing",
+            "description": "2021 All-Day Fun Pass",
+            "new": false,
+            "url": "/groups-pricing/",
+            "icon": "money-check-alt-duotone"
+          }
+        ]
+      },
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "Cabana Rentals",
+            "description": "at Laguna Splash Water Park",
+            "new": false,
+            "url": "/waterpark-cabana-rental-information/",
+            "icon": "umbrella-beach-duotone"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Famous Food",
+    "megaMenu": [
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "Food Menus",
+            "description": "and allergen info",
+            "new": false,
+            "url": "/famous-food/food-menus/",
+            "icon": "list-alt-duotone"
+          },
+          {
+            "name": "Spagetti Wednesdays",
+            "description": "2021 weekly pasta features",
+            "new": false,
+            "url": "/food/spaghetti-wednesdays/",
+            "icon": "noun-spaghetti"
+          },
+          {
+            "name": "DelGrosso Food Tradition",
+            "description": "since 1914",
+            "new": false,
+            "url": "/famous-food/the-delgrosso-food-tradition/",
+            "icon": "book-heart-duotone"
+          },
+          {
+            "name": "Pick-Up & Delivery Catering",
+            "description": "for your next event",
+            "new": false,
+            "url": "/famous-food/pick-up-delivery-catering/",
+            "icon": "truck-duotone"
+          }
+        ]
+      },
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "DG2Go",
+            "description": "miss our park food?",
+            "subitems": [],
+            "new": true,
+            "url": "https://www.dg2gofood.com/",
+            "icon": "exclamation-solid"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Explore",
+    "megaMenu": [
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "Park Rides",
+            "description": "30+ rides to enjoy",
+            "new": false,
+            "url": "/amusement-park-rides/",
+            "icon": "star-duotone"
+          },
+          {
+            "name": "Water Park Attractions",
+            "description": "something for everyone to enjoy",
+            "new": false,
+            "url": "/laguna-splash-water-park-attractions/",
+            "icon": "umbrella-beach-duotone"
+          },
+          {
+            "name": "Famous Food",
+            "description": "menus & allergen info",
+            "new": false,
+            "url": "/famous-food/food-menus/",
+            "icon": "utensils-alt-duotone"
+          }
+        ]
+      },
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "COVID-19 Safety",
+            "description": "guidelines & procedures",
+            "new": false,
+            "url": "/covid-19-safety-guidelines/",
+            "icon": "star-of-life-duotone"
+          },
+          {
+            "name": "Park News",
+            "description": "and updates",
+            "new": false,
+            "url": "/news/",
+            "icon": "newspaper-duotone"
+          },
+          {
+            "name": "Policies, Info, FAQs",
+            "description": "to know before you visit",
+            "new": false,
+            "url": "/policies-info-and-faqs/",
+            "icon": "question-solid"
+          },
+          {
+            "name": "Closures",
+            "description": "for rides and attractions",
+            "new": false,
+            "url": "/",
+            "icon": "store-slash-duotone"
+          }
+        ]
+      },
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "Our History",
+            "description": "from 1907 to today",
+            "new": false,
+            "url": "/our-history/",
+            "icon": "history-duotone"
+          },
+          {
+            "name": "DelGrosso Companies",
+            "description": "one family, multiple companies",
+            "new": false,
+            "url": "/a-delgrosso-family-of-companies/",
+            "icon": "building-duotone"
+          },
+          {
+            "name": "Sponsors",
+            "description": "and partners",
+            "new": false,
+            "url": "/sponsors/",
+            "icon": "hand-heart-duotone"
+          },
+          {
+            "name": "Friends of the Park",
+            "description": "and collaborators",
+            "new": false,
+            "url": "/friends-of-the-park/",
+            "icon": "handshake-alt-duotone"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Passes & Tickets",
+    "megaMenu": [
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "Hours & Schedule",
+            "description": "for 2021",
+            "new": false,
+            "url": "/hours-and-schedule-of-operation/",
+            "icon": "calendar-alt-duotone"
+          },
+          {
+            "name": "Gift Cards",
+            "description": "abailable year-round!",
+            "new": false,
+            "url": "/gift-cards/",
+            "icon": "gift-card-duotone"
+          },
+          {
+            "name": "Rain Check Info",
+            "description": "& inclement weather policy",
+            "new": false,
+            "url": "/rain-check-info/",
+            "icon": "umbrella-duotone"
+          },
+          {
+            "name": "Ride Tickets",
+            "description": "at the park Ticket Booth",
+            "new": false,
+            "url": "/ride-tickets/",
+            "icon": "ticket-duotone"
+          }
+        ]
+      },
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "All-Day Fun Pass",
+            "description": "Includes Rides & Water Park!",
+            "new": false,
+            "url": "/passes/all-day-fun-pass/",
+            "icon": "sun-duotone"
+          },
+          {
+            "name": "Sundowner Pass",
+            "description": "After 4:00 pm, Mon. - Fri.",
+            "new": false,
+            "url": "/passes/sundowner-fun-pass/",
+            "icon": "sunset-duotone"
+          },
+          {
+            "name": "Season Pass",
+            "description": "for 2021",
+            "new": false,
+            "url": "/passes/season-pass/",
+            "icon": "star-duotone"
+          },
+          {
+            "name": "2020 Season Pass Info",
+            "description": "and refunds",
+            "new": false,
+            "url": "/2020-season-pass-information/",
+            "icon": "exclamation-solid"
+          }
+        ]
+      }
+    ]
+  }
+]

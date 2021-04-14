@@ -36,11 +36,36 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
+  googleFonts: {
+    subsets: "latin",
+    display: "swap",
+    // download: true,
+    // overwriting: true,
+    // fontsDir: 'fonts',
+    // fontsPath: '~assets/fonts',
+    families: {
+      Overpass: true,
+      "Open+Sans": {
+        wght: [400, 600, 700],
+        ital: [400, 600]
+      },
+      Raleway: {
+        wght: [400, 800, 900]
+      }
+    }
+  },
+
+  tailwindcss: {
+    jit: true
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["@/assets/scss/critical.scss"],
+  css: [
+    // 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    "~plugins/filters.js",
     "~plugins/sanity.js",
     "~plugins/preview.client.js",
     "~plugins/image-builder.js",
@@ -53,31 +78,11 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "@nuxtjs/svg-sprite",
-    "@nuxtjs/style-resources",
     "@nuxtjs/sanity"
   ],
-
-  googleFonts: {
-    display: "swap",
-    download: true,
-    overwriting: false,
-    families: {
-      Overpass: {
-        wght: [400, 600, 700],
-        ital: [400]
-      },
-      Raleway: {
-        wght: [800, 900]
-      }
-    }
-  },
-
-  styleResources: {
-    // your settings here
-    scss: ["assets/scss/_gorko.scss"]
-  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],

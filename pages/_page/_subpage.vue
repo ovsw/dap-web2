@@ -1,18 +1,22 @@
 <template>
   <article>
-    <h1>{{ page.content.title }}</h1>
-    <!-- <img :src="$urlFor(page.poster)" :alt="page.title + ' poster'" />
-    <SanityContent :blocks="page.overview" :serializers="serializers" /> -->
+    <PageHeader :title="page.content.title" :image="page.content.mainImage" />
+    <component
+      v-for="(section, index) in page.content.sections"
+      :is="getComponentFromSectionType(section._type)"
+      :key="index"
+      :section="section"
+    />
   </article>
 </template>
 
 <script>
-import externalLink from '@/components/serializers/externalLink'
+import externalLink from "@/components/serializers/externalLink";
 
-const query = /* groq */ `{ "page": *[_type == 'page' && content.slug.current == $slug] | order(_updatedAt desc)[0]}`
+const query = /* groq */ `{ "page": *[_type == 'page' && content.slug.current == $slug] | order(_updatedAt desc)[0]}`;
 
 export default {
-  name: 'Page',
+  name: "Page",
 
   validate({ params, store, query }) {
     // console.log('params:', params)
@@ -22,30 +26,48 @@ export default {
     // console.log("what is in store.state.pagesSlugs", store.state.pagesSlugs)
     // console.log("is the curent page slug found in the pageslug store?", store.state.pagesSlugs.includes(`${params.page}/${params.subpage}`))
     return (
-      query.preview === 'true' || store.state.pagesSlugs.includes(`${params.page}/${params.subpage}`)
-    )
+      query.preview === "true" ||
+      store.state.pagesSlugs.includes(`${params.page}/${params.subpage}`)
+    );
   },
 
   asyncData({ $sanity, params, payload }) {
-    const fullSlug = `${params.page}/${params.subpage}`
+    const fullSlug = `${params.page}/${params.subpage}`;
     // console.log('params: ', fullSlug)
     if (payload) {
-      return { page: payload }
+      return { page: payload };
     }
     // console.log('no payload, refetching')
     return $sanity.fetch(query, {
-      slug: fullSlug,
-    })
+      slug: fullSlug
+    });
   },
 
   data() {
     return {
       serializers: {
         marks: {
-          link: externalLink,
-        },
-      },
-    }
+          link: externalLink
+        }
+      }
+    };
   },
-}
+
+  methods: {
+    getComponentFromSectionType(sectionType) {
+      if (sectionType == "magSection") {
+        return "SectionsMagazine";
+      } else if (sectionType == "faqSection") {
+        return "SectionsFaqSection";
+      } else if (sectionType == "ctaSection") {
+        return "SectionsCtaSection";
+      } else if (sectionType == "bigHeading") {
+        return "SectionsBigHeading";
+      } else if (sectionType == "tableSection") {
+        return "SectionsTableSection";
+      }
+      return "SectionsDefault";
+    }
+  }
+};
 </script>
