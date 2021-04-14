@@ -9,7 +9,7 @@
     <!-- <Header-TopBar /> -->
 
     <!-- .wrapper -->
-    <div class="wrapper px-4">
+    <div class="wrapper px-4 lg:py-4">
       <div class="site-head__inner flex items-center">
         <a class="logo block md:mr-10 w-full sm:w-auto md:w-48" href="/">
           <img
