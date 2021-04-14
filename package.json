@@ -9,7 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/sanity": "^0.9.0",
+    "@nuxtjs/sanity": "^0.7.1",
     "@nuxtjs/svg-sprite": "^0.5.2",
     "@sanity/image-url": "^0.140.22",
     "core-js": "^3.9.1",
