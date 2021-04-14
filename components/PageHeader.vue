@@ -19,7 +19,7 @@
     </component>
 
     <div
-      class="[ page-header ] bg-cover bg-fixed pt-160 relative"
+      class="[ page-header ] bg-cover bg-fixed pt-96 md:pt-160 relative"
       :id="12312321"
       :data-id="12312321"
     >
