@@ -81,7 +81,7 @@ export default {
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "@nuxtjs/svg-sprite",
-    "@nuxtjs/sanity"
+    "@nuxtjs/sanity/module"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
