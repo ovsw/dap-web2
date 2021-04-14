@@ -85,6 +85,9 @@ module.exports = {
       // maxWidth: {
       //   'content': '1600px'
       // }
+      borderRadius: {
+        large: "50px"
+      },
       typography: {
         dark: {
           css: {

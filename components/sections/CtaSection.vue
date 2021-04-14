@@ -16,7 +16,7 @@
 
     <div class="[ ctaSection__color-overlay ] [ pinned ]"></div>
 
-    <div class="[ wrapper ]">
+    <div class="[ wrapper 2xl:px-grd ]">
       <div
         class="[ ctaSection__content ] [ pannel ] border-4 md:border-4 p-10 md:p-24 "
         :class="contentClasses"

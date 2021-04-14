@@ -1,5 +1,5 @@
 <template>
-  <section class="faqSection pt-px">
+  <section class="faqSection py-20">
     <div class="[ wrapper max-w-screen-lg ] pb-10">
       <div class="">
         <h2 class="faqSection__heading my-10">{{ section.title }}</h2>

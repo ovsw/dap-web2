@@ -8,7 +8,7 @@
     data-theme="frame"
     data-theme-color="green"
   >
-    <div class="[ magSection__image ] relative flex-grow">
+    <div class="[ magSection__image ] relative flex-grow 2xl:ml-grd">
       <!-- FIXME: images look like shit -->
       <img
         class="object-cover w-full h-full"
@@ -44,11 +44,11 @@
               .height(1500) +
             ' 2500w'
         "
-        sizes="
+      />
+      <!-- sizes="
           (min-width: 1500px) 860px,
           100vw
-        "
-      />
+        " -->
 
       <client-only v-if="section.video">
         <silent-box
@@ -80,11 +80,11 @@
         flex-auto 
         border-4 border-green
 
-        my-grd p-6 space-y-6
+        m-grd p-6 space-y-6
 
         md:border-5 md:p-10 
         
-        lg:max-w-3xl lg:p-20  lg:ml-grd lg:my-0 mx-grd
+        lg:max-w-2xl lg:p-20   lg:my-0
         "
       :class="`border-${sectionThemeOptions.color}`"
     >

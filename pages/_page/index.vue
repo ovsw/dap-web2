@@ -1,7 +1,6 @@
 <template>
   <article>
-    <h1>{{ page.content.title }}</h1>
-
+    <PageHeader :title="page.content.title" :image="page.content.mainImage" />
     <component
       v-for="(section, index) in page.content.sections"
       :is="getComponentFromSectionType(section._type)"
