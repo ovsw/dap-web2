@@ -8,7 +8,7 @@
     data-theme="frame"
     data-theme-color="green"
   >
-    <div class="[ magSection__image ] relative flex-grow 2xl:ml-grd">
+    <div class="[ magSection__image ] relative flex-1 2xl:ml-grd">
       <!-- FIXME: images look like shit -->
       <img
         class="object-cover w-full h-full"
@@ -77,7 +77,7 @@
 
     <div
       class="[ magSection__content ] 
-        flex-auto 
+        flex-1
         border-4 border-green
 
         m-grd p-6 space-y-6

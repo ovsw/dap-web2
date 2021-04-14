@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pt-18 bg-yellow-200">
     <component :is="'style'" v-if="image">
       .page-header[data-id="12312321"] { background-image: url('{{
         $urlFor(image)
@@ -13,8 +13,8 @@
       }}')!important; } } @media screen and (min-width: 1200px) {
       .page-header[data-id="12312321"] { background-image: url('{{
         $urlFor(image)
-          .width(1900)
-          .height(1400)
+          .width(1600)
+          .height(1200)
       }}')!important; } }
     </component>
 

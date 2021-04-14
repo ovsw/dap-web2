@@ -9,20 +9,24 @@
     <ul
       class="nav__list 
       
-      absolute z-10 md:static
-
-      shadow-lg
+      absolute z-10 
+      shadow-lg md:shadow-none 
+      space-y-4
+      justify-center 
+      overflow-y-scroll
 
       w-full bg-light left-0 right-0 top-0
 
-      px-2 pb-32 md:pb-2 md:pt-2
-      mt-8 md:mt-0
+      h-screen 
 
-      md:flex justify-center 
-      uppercase tracking-wide font-bold
-      
-       overflow-y-scroll md:overflow-y-visible
-        h-screen md:h-auto
+      px-2 pb-32 
+      mt-8 
+
+      md:static md:flex md:mt-0  md:pb-2 md:pt-2 
+      md:overflow-y-visible
+      md:h-auto  
+       
+      lg:space-y-0
     "
       style="top: 2.5rem;"
       :class="menuOpen ? 'block' : 'hidden'"
@@ -40,13 +44,13 @@
       <li class="nav__item ">
         <HeaderMegamenu :menuData="nav[3]" :menuIndex="4" />
       </li>
-      <li class="nav__item">
+      <!-- <li class="nav__item">
         <NuxtLink
           to="/programs/general-camp-program/"
           class="block text-base focus:outline-none md:p-4 focus:bg-green focus:text-light-light font-bold uppercase"
           >Contact Us</NuxtLink
         >
-      </li>
+      </li> -->
     </ul>
 
     <div class="hamburger-menu__container flex md:hidden">

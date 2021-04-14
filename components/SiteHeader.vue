@@ -1,7 +1,7 @@
 <template>
   <header
     role="banner"
-    class="site-head shadow"
+    class="site-head shadow-lg fixed z-50 w-full bg-light"
     :class="[
       $store.state.showDrafPreviewBanner == true ? 'bodyPreviewActive' : ''
     ]"
@@ -11,15 +11,15 @@
     <!-- .wrapper -->
     <div class="wrapper">
       <div class="site-head__inner flex items-center">
-        <a class="logo  flex md:block items-center" href="/">
+        <a class="logo block md:mr-10 w-full lg:w-48 pl-6" href="/">
           <img
-            class="hidden md:block"
+            class="block w-36"
             src="~/assets/images/logos/delgrosso-amusement-park-and-laguna-splash-wordmark.png"
             alt="DelGrossos Amusement Park and Laguna Splash Water Park logo"
           />
-          <span class="md:hidden text-base sm:text-lg pl-4">
+          <!-- <span class="md:hidden text-base sm:text-lg pl-4">
             DelGrossos Amusement Park & Laguna Splash Water Park
-          </span>
+          </span> -->
         </a>
 
         <Header-Nav />
@@ -42,7 +42,6 @@ export default {
 
   z-index: 500;
   & img {
-    width: 90px;
   }
 }
 
