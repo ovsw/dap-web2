@@ -1,12 +1,16 @@
 <template>
   <article>
-    <PageHeader :title="page.content.title" :image="page.content.mainImage" />
-    <component
-      v-for="(section, index) in page.content.sections"
-      :is="getComponentFromSectionType(section._type)"
-      :key="index"
-      :section="section"
+    <PageHeader
+      :title="page.content.title"
+      :image="page.content.mainImage"
+      :narrow="page._type == 'pageSimple' ? true : false"
     />
+    <template v-if="page._type == 'page'">
+      <SectionsRenderer :sections="page.content.sections" />
+    </template>
+    <template v-if="page._type == 'pageSimple'">
+      <SimplePageContent :page="page" />
+    </template>
   </article>
 </template>
 
@@ -33,33 +37,6 @@ export default {
     return $sanity.fetch(query, {
       slug: params.page
     });
-  },
-
-  data() {
-    return {
-      serializers: {
-        marks: {
-          link: externalLink
-        }
-      }
-    };
-  },
-
-  methods: {
-    getComponentFromSectionType(sectionType) {
-      if (sectionType == "magSection") {
-        return "SectionsMagazine";
-      } else if (sectionType == "faqSection") {
-        return "SectionsFaqSection";
-      } else if (sectionType == "ctaSection") {
-        return "SectionsCtaSection";
-      } else if (sectionType == "bigHeading") {
-        return "SectionsBigHeading";
-      } else if (sectionType == "tableSection") {
-        return "SectionsTableSection";
-      }
-      return "SectionsDefault";
-    }
   }
 };
 </script>

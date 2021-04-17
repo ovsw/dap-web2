@@ -105,6 +105,9 @@
       </div>
       <div v-if="sectionButtons" class="magSection__buttonWrapper">
         <l-cluster>
+          <!-- <div v-for="(button, index) in sectionButtons" :key="index">
+            {{ button.url }} - {{button.text}}
+          </div> -->
           <ButtonC
             v-for="(button, index) in sectionButtons"
             :url="button.url || '#'"
@@ -131,7 +134,7 @@ export default {
   },
   computed: {
     sectionButtons() {
-      return this.section.button1 || [];
+      return this.section.buttons || [];
     },
     sectionThemeOptions: function() {
       // generates an object from the string passed from the Sanity BE
