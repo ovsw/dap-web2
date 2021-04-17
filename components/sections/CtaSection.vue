@@ -18,10 +18,10 @@
 
     <div class="[ wrapper 2xl:px-grd ]">
       <div
-        class="[ ctaSection__content ] [ pannel ] border-4 md:border-4 p-10 md:p-24 "
+        class="[ ctaSection__content ] [ pannel ] border-4 md:border-4 p-10 md:p-24 relative"
         :class="contentClasses"
       >
-        <div class="ctaSection__leftColumn space-y-6 ">
+        <div class="ctaSection__leftColumn space-y-6 relative z-20">
           <h2>{{ section.title }}</h2>
           <!-- <p>
             {{ this.section.theme }}: {{ sectionThemeOptions }} -
@@ -43,6 +43,23 @@
           >
             {{ section.button1.text }}
           </ButtonC>
+        </div>
+
+        <div
+          v-if="section.image"
+          class="w-2/3 absolute top-0 right-0 h-full opacity-30 hidden lg:block"
+        >
+          <img
+            :src="
+              $urlFor(section.image)
+                .width(800)
+                .height(400)
+            "
+            class="absolute top-0 right-0 h-full w-full z-0 object-cover"
+          />
+          <div
+            class="absolute top-0 left-0 right-0 h-full w-full z-10 bg-gradient-to-r from-red to-transparent  "
+          ></div>
         </div>
       </div>
     </div>
