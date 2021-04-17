@@ -1,6 +1,6 @@
 <<template>
   <section
-    class="[ ctaSection ] p-grd my-grd"
+    class="[ ctaSection ] p-grd my-grd 2xl:px-0"
     :class="bgClasses"
     data-theme-color="green"
     data-theme="dark"
@@ -18,7 +18,7 @@
 
     <div class="[ wrapper 2xl:px-grd ]">
       <div
-        class="[ ctaSection__content ] [ pannel ] border-4 md:border-4 p-10 md:p-24 relative"
+        class="[ ctaSection__content ] [ pannel ] border-4 md:border-4 p-10 md:p-24 relative "
         :class="contentClasses"
       >
         <div class="ctaSection__leftColumn space-y-6 relative z-20">
