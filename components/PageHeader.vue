@@ -19,15 +19,18 @@
     </component>
 
     <div
-      class="[ page-header ] bg-cover bg-fixed pt-96 md:pt-160 relative"
+      class="[ page-header ] bg-cover bg-fixed pt-96  2xl:pt-160 relative"
       :id="12312321"
       :data-id="12312321"
     >
-      <div class="[ wrapper ] z-10 relative">
+      <div
+        class="[ wrapper ] z-10 relative lg:mt-36"
+        :class="{ 'max-w-screen-xl': narrow }"
+      >
         <div
           class="page-header__content bg-light inline-block p-14 rounded-tr-large"
         >
-          <h1 class="text-5xl">{{ title }}</h1>
+          <h1 class="text-5xl">{{ title }} - {{ narrow }}</h1>
         </div>
       </div>
     </div>
@@ -44,6 +47,10 @@ export default {
     image: {
       type: Object,
       required: true
+    },
+    narrow: {
+      type: Boolean,
+      default: false
     }
   }
 };
@@ -51,45 +58,7 @@ export default {
 
 <style lang="scss" scoped>
 .page-header {
-  background-position: center center;
   // background-image: url("https://cdn.sanity.io/images/lwnx6aqb/production/192addb25424b75a86ef70b629971457e081c9a0-1200x794.jpg?fit=crop&w=1600&h=500");
-
-  &::before {
-    background-color: #000;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.3;
-    z-index: 1;
-  }
-  // &::before {
-  //   background-color: rgb(131,187,65);
-  //   content: '';
-  //   display: block;
-  //   width: 100%;
-  //   height: 100%;
-  //   mix-blend-mode: darken;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  // }
-
-  // &::after {
-  //   background-color: rgb(34,48,19);
-  //   content: '';
-  //   display: block;
-  //   width: 100%;
-  //   height: 100%;
-  //   mix-blend-mode: lighten;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   bottom:0;
-  // }
 }
 
 // .narrow .wrapper {

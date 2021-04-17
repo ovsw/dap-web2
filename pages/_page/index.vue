@@ -2,13 +2,13 @@
   <article>
     <PageHeader
       :title="page.content.title"
-      :image="page.content.mainImage"
-      :narrow="page._type == 'pageSimple' ? true : false"
+      :image="pageHeaderImage"
+      :narrow="page._type == 'simplePage' ? true : false"
     />
     <template v-if="page._type == 'page'">
       <SectionsRenderer :sections="page.content.sections" />
     </template>
-    <template v-if="page._type == 'pageSimple'">
+    <template v-if="page._type == 'simplePage'">
       <SimplePageContent :page="page" />
     </template>
   </article>
@@ -17,7 +17,7 @@
 <script>
 import externalLink from "@/components/serializers/externalLink";
 
-const query = /* groq */ `{ "page": *[_type == 'page' && content.slug.current == $slug] | order(_updatedAt desc)[0]}`;
+const query = /* groq */ `{ "page": *[(_type == 'page' || _type== 'simplePage') && content.slug.current == $slug] | order(_updatedAt desc)[0]}`;
 
 export default {
   name: "Page",
@@ -37,6 +37,14 @@ export default {
     return $sanity.fetch(query, {
       slug: params.page
     });
+  },
+
+  computed: {
+    pageHeaderImage() {
+      return this.page._type == "simplePage"
+        ? this.page.content.image
+        : this.page.content.headerImage;
+    }
   }
 };
 </script>

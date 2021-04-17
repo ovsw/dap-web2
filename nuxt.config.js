@@ -96,7 +96,9 @@ export default {
     fallback: true,
     crawler: false,
     async routes() {
-      const pages = await client.fetch(`*[_type == "page"]`);
+      const pages = await client.fetch(
+        `*[_type == "page" || _type == "simplePage"]`
+      );
       const newsItems = await client.fetch(`*[_type == "newsItem"]`);
 
       return [

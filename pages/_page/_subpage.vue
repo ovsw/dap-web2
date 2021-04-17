@@ -3,12 +3,12 @@
     <PageHeader
       :title="page.content.title"
       :image="page.content.mainImage"
-      :narrow="page._type == 'pageSimple' ? true : false"
+      :narrow="page._type == 'simplePage' ? true : false"
     />
     <template v-if="page._type == 'page'">
       <SectionsRenderer :sections="page.content.sections" />
     </template>
-    <template v-if="page._type == 'pageSimple'">
+    <template v-if="page._type == 'simplePage'">
       <SimplePageContent :page="page" />
     </template>
   </article>
