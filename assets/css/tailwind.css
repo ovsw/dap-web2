@@ -92,7 +92,7 @@
   .wrapper {
     /* @apply mx-auto max-w-screen-2xl lg:px-0; */
     max-width: 100rem;
-    padding: 0 0.9375rem;
+    /* padding: 0 0.9375rem; */
     margin-left: auto;
     margin-right: auto;
     position: relative;
