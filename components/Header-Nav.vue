@@ -11,6 +11,9 @@
       
       absolute z-10 
       shadow-lg md:shadow-none 
+      pt-20
+      pl-6
+      bg-light-dark
       space-y-4
       justify-center 
       overflow-y-scroll
@@ -22,7 +25,9 @@
       px-2 pb-32 
       mt-8 
 
-      md:static md:flex md:mt-0  md:pb-2 md:pt-2 
+      md:p-0 md:bg-light
+
+      md:static md:flex md:items-center md:mt-0  md:pb-2 md:pt-2 
       md:overflow-y-visible
       md:h-auto  
        
