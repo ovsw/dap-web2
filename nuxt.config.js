@@ -65,6 +65,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    "~plugins/vue-instantsearch.js",
     "~plugins/filters.js",
     "~plugins/sanity.js",
     "~plugins/preview.client.js",
@@ -88,7 +89,9 @@ export default {
   modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ["vue-instantsearch", "instantsearch.js/es"]
+  },
 
   // GENERATE DYNAMIC PAGES FROM SANITY
   generate: {

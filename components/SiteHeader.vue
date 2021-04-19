@@ -20,6 +20,7 @@
         </a>
 
         <Header-Nav />
+    <Search />
 
         <a href="tel:814-684-3538" class="hidden lg:flex ml-auto items-center">
           <svg-icon
