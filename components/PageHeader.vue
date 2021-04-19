@@ -30,7 +30,7 @@
         <div
           class="page-header__content bg-light inline-block p-14 rounded-tr-large"
         >
-          <h1 class="text-5xl">{{ title }} - {{ narrow }}</h1>
+          <h1 class="text-5xl">{{ title }}</h1>
         </div>
       </div>
     </div>
