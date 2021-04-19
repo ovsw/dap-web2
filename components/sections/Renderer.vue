@@ -22,13 +22,15 @@ export default {
       if (sectionType == "magSection") {
         return "SectionsMagazine";
       } else if (sectionType == "faqSection") {
-        return "SectionsFaqSection";
+        return "SectionsFaq";
       } else if (sectionType == "ctaSection") {
-        return "SectionsCtaSection";
+        return "SectionsCta";
       } else if (sectionType == "bigHeading") {
         return "SectionsBigHeading";
       } else if (sectionType == "tableSection") {
-        return "SectionsTableSection";
+        return "SectionsTable";
+      }else if (sectionType == "reusedSection") {
+        return "SectionsReused";
       }
       return "SectionsDefault";
     }
