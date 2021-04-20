@@ -102,6 +102,12 @@ export default {
       const pages = await client.fetch(
         `*[_type == "page" || _type == "simplePage"]`
       );
+      const parkRides = await client.fetch(
+        `*[ _type == "attraction" && content.category match "Amusement"]`
+      );
+      const waerParkAttractions = await client.fetch(
+        `*[ _type == "attraction" && content.category match "Amusement"]`
+      );
       const newsItems = await client.fetch(`*[_type == "newsItem"]`);
 
       return [
@@ -109,6 +115,20 @@ export default {
           // console.log('creting route for: ', `/${page.content.slug.current}/`)
           return {
             route: `/${page.content.slug.current}/`,
+            payload: page
+          };
+        }),
+        ...parkRides.map(page => {
+          // console.log('creting route for: ', `/${page.content.slug.current}/`)
+          return {
+            route: `/amusement-park-rides/${page.content.slug.current}/`,
+            payload: page
+          };
+        }),
+        ...waerParkAttractions.map(page => {
+          // console.log('creting route for: ', `/${page.content.slug.current}/`)
+          return {
+            route: `/laguna-splash-water-park-attractions/${page.content.slug.current}/`,
             payload: page
           };
         }),

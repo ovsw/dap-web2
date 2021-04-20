@@ -1,5 +1,6 @@
 <template>
   <component v-bind="linkProps(url)" class="button" :class="buttonClasses">
+    <!-- TODO: hover color on light buttons -->
     <slot></slot>
     <svg-icon
       name="icon-chevron-right-light"
