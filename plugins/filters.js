@@ -10,3 +10,14 @@ Vue.filter("formatDate", value => {
     minute: "2-digit"
   });
 });
+
+Vue.filter("slugify", value => {
+  return value
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "")
+    .replace(/\-\-+/g, "-")
+    .replace(/^-+/, "")
+    .replace(/-+$/, "");
+});

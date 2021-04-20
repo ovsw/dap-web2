@@ -113,6 +113,12 @@
     @apply space-y-3 lg:space-y-2;
   }
   .subtitle {
-    @apply: uppercase tracking-wider;
+    @apply uppercase tracking-wider;
+  }
+  .gridWrapper {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row gap-8;
+  }
+  .pill {
+    @apply ml-2 px-3 py-1 rounded-full text-sm font-semibold;
   }
 }

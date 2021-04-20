@@ -12,9 +12,7 @@
     <section class="py-24">
       <div class="container mx-auto">
         <h2 class="mb-10">Laguna Splash Water Park Attractions List</h2>
-        <ul
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row gap-6 "
-        >
+        <ul class="gridWrapper">
           <CardGrid
             v-for="ride in rides"
             :key="ride._id"

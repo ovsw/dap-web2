@@ -1,19 +1,30 @@
 <template>
-  <li class="card flex flex-col shadow-md rounded-tr-3xl relative">
+  <li
+    class="card  bg-white transition-transform flex flex-col shadow-md rounded-tr-3xl relative hover:shadow-lg"
+  >
     <div class="order-2 p-4 space-y-2">
-      <h3 class="text-2xl font-black font-display flex items-center">
-        <NuxtLink :to="url" class="cardLink">{{ title }}</NuxtLink>
-        <span
-          :class="eyebrowColor"
-          v-if="eyebrow"
-          class="ml-2 px-2 py-1 rounded-full text-sm"
-          >{{ eyebrow }}</span
+      <h3 class="text-2xl font-bold font-display ">
+        <NuxtLink
+          :to="url"
+          class="cardLink flex items-center"
+          aria-describedby="${title}-ride` | slugify"
         >
+          {{ title }}
+          <span :class="eyebrowColor" v-if="eyebrow" class="pill">{{
+            eyebrow
+          }}</span>
+        </NuxtLink>
       </h3>
       <p v-if="description" class=" text-muted">
         {{ description }}
       </p>
-      <p class="underline font-bold">Learn more</p>
+      <p
+        class="underline font-bold"
+        aria-hidden="true"
+        :id="`${title}-ride` | slugify"
+      >
+        Learn more
+      </p>
     </div>
     <img
       :src="
@@ -76,10 +87,13 @@ export default {
 .cardLink:focus {
   outline: none !important;
 }
-
 .card:focus-within {
   // box-shadow: 0 0 0 0.25rem #10722d;
   outline: 2px dashed green;
   outline-offset: 0.5rem;
+  transform: scale(1.03);
+}
+.card:hover {
+  transform: scale(1.03);
 }
 </style>
