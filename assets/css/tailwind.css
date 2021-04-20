@@ -112,4 +112,7 @@
   .footer__col ul {
     @apply space-y-3 lg:space-y-2;
   }
+  .subtitle {
+    @apply: uppercase tracking-wider;
+  }
 }

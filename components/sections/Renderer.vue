@@ -33,6 +33,8 @@ export default {
         return "SectionsTable";
       } else if (sectionType == "reusedSection") {
         return "SectionsReused";
+      } else if (sectionType == "cardSection") {
+        return "SectionsCards";
       }
       return "SectionsDefault";
     }

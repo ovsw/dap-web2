@@ -86,7 +86,8 @@ module.exports = {
       //   'content': '1600px'
       // }
       borderRadius: {
-        large: "50px"
+        medium: "50px",
+        large: "100px"
       },
       typography: {
         dark: {

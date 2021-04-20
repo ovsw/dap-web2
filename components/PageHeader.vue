@@ -28,7 +28,7 @@
         :class="{ 'max-w-screen-xl': narrow }"
       >
         <div
-          class="page-header__content bg-light inline-block p-14 rounded-tr-large"
+          class="page-header__content bg-light inline-block p-14 rounded-tr-medium"
         >
           <h1 class="text-5xl">{{ title }}</h1>
         </div>

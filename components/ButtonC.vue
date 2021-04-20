@@ -23,7 +23,7 @@ export default {
     },
     color: {
       type: String,
-      default: "dark"
+      default: "light"
     }
   },
   computed: {
