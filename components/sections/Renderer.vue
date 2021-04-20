@@ -14,7 +14,9 @@ export default {
   props: {
     sections: {
       type: Array,
-      default: []
+      default: function() {
+        return [];
+      }
     }
   },
   methods: {
@@ -29,7 +31,7 @@ export default {
         return "SectionsBigHeading";
       } else if (sectionType == "tableSection") {
         return "SectionsTable";
-      }else if (sectionType == "reusedSection") {
+      } else if (sectionType == "reusedSection") {
         return "SectionsReused";
       }
       return "SectionsDefault";
