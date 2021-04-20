@@ -1,10 +1,15 @@
 <template>
   <div class="lg:relative" v-on-click-outside="hideMenu">
+    <!-- FIXME: keyboard navigation: close menu on esc on child item doesnt work -->
     <!-- @mouseover="showMenu" @mouseleave="hideMenu" -->
     <button
       class=" text-base focus:outline-none md:p-4 focus:bg-green focus:text-light-light font-bold uppercase"
       @click="toggleMenu"
+      @keydown.enter.exact.prevent="toggleMenu"
+      @keydown.space.exact.prevent="toggleMenu"
+      @keydown.esc.exact.prevent="hideMenu"
     >
+      <!-- @click="toggleMenu" -->
       {{ menuData.name }}
     </button>
     <!-- @keydown.shift.tab="hideMenu"
