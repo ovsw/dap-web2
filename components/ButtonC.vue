@@ -1,7 +1,8 @@
 <template>
   <component v-bind="linkProps(url)" class="button" :class="buttonClasses">
-    <!-- TODO: hover color on light buttons -->
-    <slot></slot>
+    <span class="relative inset-y-0.5 mr-2">
+      <slot></slot>
+    </span>
     <svg-icon
       name="icon-chevron-right-light"
       title="chevron right icon"
@@ -29,7 +30,9 @@ export default {
   },
   computed: {
     buttonClasses: function() {
-      // `this` points to the vm instance
+      if (this.bgColor == "yellow") {
+        return `bg-${this.bgColor} text-${this.color} hover:text-dark-dark`;
+      }
       return `bg-${this.bgColor} text-${this.color}`;
     }
   },
