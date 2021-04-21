@@ -158,6 +158,35 @@
               <!-- end extra links -->
             </li>
           </ul>
+          <div
+            v-if="block.type == 'bannerSection'"
+            :key="index"
+            class="bg-red text-light p-6"
+          >
+            <a
+              href="https://www.dg2gofood.com/"
+              target="_blank"
+              class="flex flex-wrap md:flex-nowrap space-x-8 dg2goLink"
+            >
+              <span class="mx-auto mb-6 md:mb-0">
+                <img
+                  src="@/assets/images/logos/DG2GO-logo-transparent-white.png"
+                  alt="DG2Go Logo"
+                  class="w-56  lg:w-72"
+                />
+              </span>
+              <span class="space-y-2">
+                <span class="block mt-2">
+                  Miss Our Food? Try DG2GO!
+                </span>
+                <span class="block opacity-70">
+                  Always-fresh, homemade, Meals, Pizza &amp; more! Ready for
+                  Pickup.
+                </span>
+                <span class="underline block">Click Here</span>
+              </span>
+            </a>
+          </div>
         </template>
       </div>
     </transition>
@@ -235,5 +264,8 @@ export default {
 .mega-menu-fade-leave-to {
   opacity: 0;
   transform: translateY(-12px);
+}
+.dg2goLink:focus {
+  outline: 2px dashed white !important;
 }
 </style>
