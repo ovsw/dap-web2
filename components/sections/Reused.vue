@@ -5,7 +5,17 @@
 </template>
 
 <script>
-const query = /* groq */ `*[_type == 'reusableSection' && _id == $reusableSectionId][0]`;
+const query = /* groq */ `*[_type == 'reusableSection' && _id == $reusableSectionId]{
+  ...,
+  sections[] {
+    ...,
+    _type == "sponsorsSection" => {
+      sponsorsList[]->{
+        ...
+      }
+    }
+  }
+}[0]`;
 
 export default {
   props: {
