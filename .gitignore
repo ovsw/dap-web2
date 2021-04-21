@@ -92,3 +92,4 @@ sw.*
 # credentials and tokens
 .env.development
 .env
+.vscode/settings.json
