@@ -25,31 +25,33 @@
           >
             <div class="rounded-md shadow-lg overflow-hidden">
               <div
-                class="relative grid gap-6 bg-green-900 text-green-100 px-5 py-6 sm:gap-8 sm:p-8"
+                class="relative grid gap-6 bg-light text-dark px-5 py-6 sm:gap-8 sm:p-8"
               >
                 <div
                   v-if="currentRefinement"
                   v-for="section in indices"
                   :key="section.objectID"
-                  class="divide-y divide-green-900"
+                  class="divide-y divide-gray-200"
                 >
                   <nuxt-link
                     :to="`/${hit.slug}/`"
                     v-for="(hit, index) in section.hits"
                     :key="hit.objectID"
                     class="block text-sm col-span-2 py-2 transition ease-in-out duration-150"
-                    :class="{ 'bg-green-900': isCurrentIndex(index) }"
+                    :class="{
+                      'bg-light-light': isCurrentIndex(index)
+                    }"
                   >
                     <div class="px-2" @mouseover="highlightedIndex = index">
                       <ais-highlight
                         attribute="title"
                         :hit="hit"
-                        class="block text-green-300 font-medium"
+                        class="block text-dark font-medium"
                       />
                       <ais-snippet
                         attribute="seoDescription"
                         :hit="hit"
-                        class="block text-green-100 font-base"
+                        class="block text-green-900 font-base"
                       />
                     </div>
                   </nuxt-link>

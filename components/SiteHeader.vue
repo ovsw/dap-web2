@@ -9,9 +9,12 @@
     <!-- <Header-TopBar /> -->
 
     <!-- .wrapper -->
-    <div class="wrapper px-4 lg:py-4">
-      <div class="site-head__inner flex items-center">
-        <a class="logo block md:mr-10 w-full sm:w-auto md:w-48" href="/">
+    <div class="wrapper px-4 py-4 pt-0 lg:pt-4">
+      <div class="site-head__inner flex flex-wrap items-center">
+        <a
+          class="logo block md:mr-10 flex-grow md:flex-grow-0 sm:w-auto md:w-48"
+          href="/"
+        >
           <img
             class="block w-36"
             src="~/assets/images/logos/delgrosso-amusement-park-and-laguna-splash-wordmark.png"
@@ -20,7 +23,9 @@
         </a>
 
         <Header-Nav />
-        <Search />
+        <Search
+          class="w-full flex-grow lg:pr-8 lg:pl-4 order-5 lg:order-none lg:w-auto mt-1"
+        />
 
         <!-- TODO: status badges -->
         <!-- TODO: alert bar -->
