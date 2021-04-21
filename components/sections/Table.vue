@@ -23,8 +23,8 @@
             <tr>
               <th
                 class="w-1/3 p-6 bg-green text-light"
-                v-for="cell in section.sectionTable.rows[0].cells"
-                :key="cell"
+                v-for="(cell, index) in section.sectionTable.rows[0].cells"
+                :key="index"
               >
                 {{ cell }}
               </th>
@@ -35,8 +35,8 @@
             <template v-for="(row, index) in section.sectionTable.rows">
               <tr v-if="index != 0" :key="index" class=" even:bg-gray-100">
                 <td
-                  v-for="cell in row.cells"
-                  :key="cell"
+                  v-for="(cell, index) in row.cells"
+                  :key="index"
                   :inner-html.prop="cell"
                   class="p-6 text-center"
                 >
