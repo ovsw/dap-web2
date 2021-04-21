@@ -43,7 +43,7 @@ export default {
     pageHeaderImage() {
       return this.page._type == "simplePage"
         ? this.page.content.image
-        : this.page.content.headerImage;
+        : this.page.content.mainImage;
     }
   }
 };
