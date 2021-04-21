@@ -11,16 +11,16 @@
     <!-- .wrapper -->
     <div class="wrapper px-4 py-4 pt-0 lg:pt-4">
       <div class="site-head__inner flex flex-wrap items-center">
-        <a
+        <NuxtLink
           class="logo block md:mr-10 flex-grow md:flex-grow-0 sm:w-auto md:w-48"
-          href="/"
+          to="/"
         >
           <img
             class="block w-36"
             src="~/assets/images/logos/delgrosso-amusement-park-and-laguna-splash-wordmark.png"
             alt="DelGrossos Amusement Park and Laguna Splash Water Park logo"
           />
-        </a>
+        </NuxtLink>
 
         <Header-Nav />
         <Search
