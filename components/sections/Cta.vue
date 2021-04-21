@@ -46,7 +46,7 @@
         </div>
 
         <div
-          v-if="section.image"
+          v-if="section.image && section.image.asset"
           class="w-2/3 absolute top-0 right-0 h-full opacity-30 hidden lg:block"
         >
           <img
@@ -58,7 +58,8 @@
             class="absolute top-0 right-0 h-full w-full z-0 object-cover"
           />
           <div
-            class="absolute top-0 left-0 right-0 h-full w-full z-10 bg-gradient-to-r from-red to-transparent  "
+            class="absolute top-0 left-0 right-0 h-full w-full z-10 bg-gradient-to-r to-transparent"
+            :class="`from-${sectionThemeOptions.color}`"
           ></div>
         </div>
       </div>
