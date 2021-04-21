@@ -11,3 +11,8 @@
 .bg-yellow
 
 .text-dark
+
+.from-red
+.from-green
+.from-blue
+.from-yellow
