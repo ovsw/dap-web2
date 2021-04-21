@@ -1,6 +1,6 @@
 <template>
   <article>
-    <PageHeader :title="page.content.name" :image="page.content.mainImage" />
+    <PageHeader :title="page.content.title" :image="page.content.mainImage" />
     <SectionsRenderer :sections="page.content.sections" />
   </article>
 </template>
