@@ -17,7 +17,22 @@
 <script>
 import externalLink from "@/components/serializers/externalLink";
 
-const query = /* groq */ `{ "page": *[(_type == 'page' || _type== 'simplePage') && content.slug.current == $slug] | order(_updatedAt desc)[0]}`;
+const query = /* groq */ `{ 
+  "page": *[(_type == 'page' || _type== 'simplePage') && content.slug.current == $slug] {
+          ...,
+          content {
+            ...,
+            sections[] {
+              ...,
+              _type == "sponsorsSection" => {
+                sponsorsList[]->{
+                  ...
+                }
+              }
+            }
+          }
+        } | order(_updatedAt desc)[0]
+  }`;
 
 export default {
   name: "Page",

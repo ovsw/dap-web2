@@ -100,7 +100,20 @@ export default {
     crawler: false,
     async routes() {
       const pages = await client.fetch(
-        `*[_type == "page" || _type == "simplePage"]`
+        `*[_type == "page" || _type == "simplePage"] {
+          ...,
+          content {
+            ...,
+            sections[] {
+              ...,
+              _type == "sponsorsSection" => {
+                sponsorsList[]->{
+                  ...
+                }
+              }
+            }
+          }
+        }`
       );
       const parkRides = await client.fetch(
         `*[ _type == "attraction" && content.category match "Amusement"]`
@@ -109,7 +122,20 @@ export default {
         `*[ _type == "attraction" && content.category match "Amusement"]`
       );
       const newsItems = await client.fetch(`*[_type == "newsItem"]`);
-      const events = await client.fetch(`*[_type == "event"]`);
+      const events = await client.fetch(`*[_type == "event"] {
+          ...,
+          content {
+            ...,
+            sections[] {
+              ...,
+              _type == "sponsorsSection" => {
+                sponsorsList[]->{
+                  ...
+                }
+              }
+            }
+          }
+        }`);
 
       return [
         ...pages.map(page => {

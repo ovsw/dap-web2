@@ -6,7 +6,20 @@
 </template>
 
 <script>
-const query = /* groq */ `{ "page": *[_type == 'event' && content.slug.current == $slug] | order(content.date desc)[0]}`;
+const query = /* groq */ `{ "page": *[_type == 'event' && content.slug.current == $slug] {
+          ...,
+          content {
+            ...,
+            sections[] {
+              ...,
+              _type == "sponsorsSection" => {
+                sponsorsList[]->{
+                  ...
+                }
+              }
+            }
+          }
+        } | order(content.date desc)[0]}`;
 
 export default {
   name: "EventPage",
