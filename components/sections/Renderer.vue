@@ -40,6 +40,8 @@ export default {
         return "SectionsCards";
       } else if (sectionType == "sponsorsSection") {
         return "SectionsSponsors";
+      } else if (sectionType == "menuSection") {
+        return "SectionsMenu";
       }
       return "SectionsDefault";
     }
