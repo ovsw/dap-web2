@@ -133,6 +133,13 @@
             "new": false,
             "url": "/famous-food/food-menus/",
             "icon": "utensils-alt-duotone"
+          },
+          {
+            "name": "Special Events",
+            "description": "concerts, festivals, celebrations",
+            "new": false,
+            "url": "/events/",
+            "icon": "calendar-alt-duotone"
           }
         ]
       },

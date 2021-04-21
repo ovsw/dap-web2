@@ -2,24 +2,38 @@
   <li
     class="card  bg-white transition-transform flex flex-col shadow-md rounded-tr-3xl relative hover:shadow-lg"
   >
-    <div class="order-2 p-4 space-y-2">
-      <h3 class="text-2xl font-bold font-display ">
+    <div class="order-2 p-4 space-y-2 flex-1 flex flex-col justify-between">
+      <h3 class="">
         <NuxtLink
           :to="url"
-          class="cardLink flex items-center"
+          class="cardLink"
           aria-describedby="${title}-ride` | slugify"
         >
-          {{ title }}
-          <span :class="eyebrowColor" v-if="eyebrow" class="pill">{{
-            eyebrow
-          }}</span>
+          <span class="block text-xl font-bold font-display mb-3">
+            {{ title }}
+          </span>
+
+          <span class="flex space-x-2 items-baseline">
+            <span v-if="date" class="pill bg-gray-300">{{
+              date | formatDateShort
+            }}</span>
+            <template v-if="tags.length">
+              <span
+                v-for="(tag, index) in tags"
+                :key="index"
+                :class="tagColor(tag)"
+                class="pill"
+                >{{ tagText(tag) }}</span
+              >
+            </template>
+          </span>
         </NuxtLink>
       </h3>
       <p v-if="description" class=" text-muted">
         {{ description }}
       </p>
       <p
-        class="underline font-bold"
+        class="underline font-bold mt-autp"
         aria-hidden="true"
         :id="`${title}-ride` | slugify"
       >
@@ -45,8 +59,9 @@ export default {
       type: String,
       default: "missing title"
     },
-    eyebrow: {
-      type: String
+    tags: {
+      type: Array,
+      default: () => []
     },
     image: {
       type: Object
@@ -54,22 +69,33 @@ export default {
     description: {
       type: String
     },
+    date: {
+      type: String
+    },
     url: {
       type: String,
       default: "/"
     }
   },
-  computed: {
-    eyebrowColor() {
-      if (this.eyebrow == "Thrill Ride") {
+  methods: {
+    tagColor(tag) {
+      if (["Thrill Ride", "food"].includes(tag)) {
         return "bg-red text-light";
-      } else if (this.eyebrow == "Family Ride") {
+      } else if (["Family Ride", "free"].includes(tag)) {
         return "bg-yellow text-dark";
-      } else if (this.eyebrow == "Kiddie Ride") {
-        return "bg-green  text-light";
+      } else if (["Kiddie Ride", "park"].includes(tag)) {
+        return "bg-green text-light";
+      } else if (["music"].includes(tag)) {
+        return "bg-blue text-light";
       }
 
       return "";
+    },
+    tagText(tag) {
+      if (tag == "free") {
+        return "free entry";
+      }
+      return tag;
     }
   }
 };

@@ -16,7 +16,7 @@
         :key="ride._id"
         :title="ride.content.name"
         :image="ride.content.mainImage"
-        :eyebrow="rideCategoryText(ride.content.category)"
+        :tags="rideTag(ride.content.category)"
         :description="ride.content.description"
         :url="`${ride.content.slug.current}/`"
       />
@@ -41,8 +41,9 @@ export default {
     return sanityCall;
   },
   methods: {
-    rideCategoryText(string) {
-      return string.split("|")[1];
+    rideTag(string) {
+      const tagText = string.split("|")[1];
+      return [tagText];
     }
   }
 };

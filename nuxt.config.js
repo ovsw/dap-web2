@@ -109,6 +109,7 @@ export default {
         `*[ _type == "attraction" && content.category match "Amusement"]`
       );
       const newsItems = await client.fetch(`*[_type == "newsItem"]`);
+      const events = await client.fetch(`*[_type == "event"]`);
 
       return [
         ...pages.map(page => {
@@ -136,6 +137,13 @@ export default {
           // console.log('creting route for: ', `/news/${page.content.slug.current}/`)
           return {
             route: `/news/${page.content.slug.current}/`,
+            payload: page
+          };
+        }),
+        ...events.map(page => {
+          // console.log('creting route for: ', `/news/${page.content.slug.current}/`)
+          return {
+            route: `/events/${page.content.slug.current}/`,
             payload: page
           };
         })

@@ -3,7 +3,8 @@ export const state = () => ({
   newsSlugs: [],
   pagesSlugs: [],
   ridesSlugs: [],
-  waterAttractionsSlugs: []
+  waterAttractionsSlugs: [],
+  eventsSlugs: []
 });
 
 export const mutations = {
@@ -21,6 +22,9 @@ export const mutations = {
   },
   setWaterParkAttractionSlugs(state, slugs) {
     state.waterAttractionsSlugs = slugs;
+  },
+  setEventsSlugs(state, slugs) {
+    state.eventsSlugs = slugs;
   }
 };
 
@@ -52,5 +56,11 @@ export const actions = {
       .catch(e => console.error(e));
     // console.log(ridesSlugs);
     commit("setWaterParkAttractionSlugs", waterParkAttractionSlugs);
+
+    const eventsSlugs = await $sanity
+      .fetch('*[ _type == "event"].content.slug.current')
+      .catch(e => console.error(e));
+    // console.log(ridesSlugs);
+    commit("setEventsSlugs", eventsSlugs);
   }
 };

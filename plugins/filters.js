@@ -11,6 +11,14 @@ Vue.filter("formatDate", value => {
   });
 });
 
+Vue.filter("formatDateShort", value => {
+  const date = new Date(value);
+  return date.toLocaleString(["en-US"], {
+    month: "short",
+    day: "2-digit"
+  });
+});
+
 Vue.filter("slugify", value => {
   return value
     .toString()
