@@ -20,7 +20,10 @@
         </a>
 
         <Header-Nav />
-    <Search />
+        <Search />
+
+        <!-- TODO: status badges -->
+        <!-- TODO: alert bar -->
 
         <a href="tel:814-684-3538" class="hidden lg:flex ml-auto items-center">
           <svg-icon

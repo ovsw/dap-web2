@@ -1,5 +1,6 @@
 <template>
-  <div class="pt-18 bg-yellow-200">
+  <div class="pt-18 bg-yellow-200 shadow-inner-lg">
+    <!-- FIXME: 2020 season pass information header image not displaying -->
     <component :is="'style'" v-if="image">
       .page-header[data-id="12312321"] { background-image: url('{{
         $urlFor(image)
@@ -25,7 +26,7 @@
     >
       <div
         class="[ wrapper ] z-10 relative lg:mt-36"
-        :class="{ 'max-w-screen-xl': narrow }"
+        :class="{ 'max-w-screen-lg': narrow, '-inset-x-10': narrow }"
       >
         <div
           class="page-header__content bg-light inline-block p-14 rounded-tr-medium"
@@ -45,7 +46,6 @@ export default {
       default: "Missing Title"
     },
     image: {
-      type: Object,
       required: true
     },
     narrow: {

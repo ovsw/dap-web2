@@ -9,21 +9,17 @@
     <!-- <script>
         console.log({{ ride }})
       </script> -->
-    <section class="py-24">
-      <div class="container mx-auto">
-        <h2 class="mb-10">Laguna Splash Water Park Attractions List</h2>
-        <ul class="gridWrapper">
-          <CardGrid
-            v-for="ride in rides"
-            :key="ride._id"
-            :title="ride.content.name"
-            :image="ride.content.mainImage"
-            :description="ride.content.description"
-            :url="`${ride.content.slug.current}/`"
-          />
-        </ul>
-      </div>
-    </section>
+
+    <CardGridWrapper title="Laguna Splash Water Park Attractions List">
+      <CardGrid
+        v-for="ride in rides"
+        :key="ride._id"
+        :title="ride.content.name"
+        :image="ride.content.mainImage"
+        :description="ride.content.description"
+        :url="`${ride.content.slug.current}/`"
+      />
+    </CardGridWrapper>
 
     <SectionsRenderer :sections="parkRidesPage.content.sectionsBottom" />
   </article>

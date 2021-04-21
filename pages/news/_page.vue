@@ -1,19 +1,21 @@
 <template>
   <article>
-    News Page
-    <h1>{{ page.content.title }}</h1>
-    <!-- <img :src="$urlFor(page.poster)" :alt="page.title + ' poster'" />
-    <SanityContent :blocks="page.overview" :serializers="serializers" /> -->
+    <PageHeader
+      :title="page.content.title"
+      :image="page.content.mainImage"
+      :narrow="true"
+    />
+    <SimplePageContent :page="page" />
   </article>
 </template>
 
 <script>
-import externalLink from '@/components/serializers/externalLink'
+import externalLink from "@/components/serializers/externalLink";
 
-const query = /* groq */ `{ "page": *[_type == 'newsItem' && content.slug.current == $slug] | order(_updatedAt desc)[0]}`
+const query = /* groq */ `{ "page": *[_type == 'newsItem' && content.slug.current == $slug] | order(_updatedAt desc)[0]}`;
 
 export default {
-  name: 'NewsItemPage',
+  name: "NewsItemPage",
 
   // validate({ params, store, query }) {
   //   // console.log('params:', params)
@@ -25,22 +27,22 @@ export default {
 
   asyncData({ $sanity, params, payload }) {
     if (payload) {
-      return { page: payload }
+      return { page: payload };
     }
     return $sanity.fetch(query, {
-      slug: params.page,
-    })
+      slug: params.page
+    });
   },
 
   data() {
     return {
       serializers: {
         marks: {
-          link: externalLink,
-        },
-      },
-    }
-  },
+          link: externalLink
+        }
+      }
+    };
+  }
 
   /* Possible implementation of real-time preview. Requires @sanity/client.
   mounted() {
@@ -65,6 +67,5 @@ export default {
           }
         })
   }, */
-
-}
+};
 </script>

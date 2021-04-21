@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>{{ siteHome.content.hero.title }}</h1>
+    <!-- TODO: hero -->
     <SectionsRenderer :sections="siteHome.content.sections" />
   </div>
 </template>

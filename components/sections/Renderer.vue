@@ -20,6 +20,9 @@ export default {
     }
   },
   methods: {
+    // TODO: sponsors section
+    // TODO: menu section
+    // TODO: embedsection
     getComponentFromSectionType(sectionType) {
       if (sectionType == "magSection") {
         return "SectionsMagazine";
