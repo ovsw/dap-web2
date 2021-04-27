@@ -3,9 +3,8 @@
     class="[ nav ] [ site-head__nav ] flex md:block mr-4 md:mr-0"
     id="nav-list"
     aria-label="Main Menu"
+    :aria-expanded="menuOpen"
   >
-    <!-- x-bind:data-open="mainMenuisOpen"
-    :aria-expanded="mainMenuisOpen" -->
     <ul
       class="nav__list 
       
@@ -31,22 +30,22 @@
       md:overflow-y-visible
       md:h-auto  
        
-      lg:space-y-0
+      md:space-y-0
     "
       style="top: 2.5rem;"
       :class="menuOpen ? 'block' : 'hidden'"
     >
-      <li class="nav__item ">
+      <li class="nav__item md:pt-2">
         <HeaderMegamenu :menuData="nav[0]" :menuIndex="1" />
       </li>
-      <li class="nav__item">
+      <li class="nav__item md:pt-2">
         <HeaderMegamenu :menuData="nav[1]" :menuIndex="2" />
       </li>
 
-      <li class="nav__item ">
+      <li class="nav__item md:pt-2">
         <HeaderMegamenu :menuData="nav[2]" :menuIndex="3" />
       </li>
-      <li class="nav__item ">
+      <li class="nav__item md:pt-2">
         <HeaderMegamenu :menuData="nav[3]" :menuIndex="4" />
       </li>
       <!-- <li class="nav__item">
