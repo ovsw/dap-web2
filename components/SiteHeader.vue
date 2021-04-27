@@ -9,10 +9,10 @@
     <!-- <Header-TopBar /> -->
 
     <!-- .wrapper -->
-    <div class="wrapper px-4 py-4 pt-0 lg:pt-4">
+    <div class="wrapper px-4 py-0 lg:py-4">
       <div class="site-head__inner flex flex-wrap items-center">
         <NuxtLink
-          class="logo block md:mr-10 flex-grow md:flex-grow-0 sm:w-auto md:w-48"
+          class="logo block  flex-grow md:flex-grow-0 sm:w-auto md:w-48"
           to="/"
         >
           <img
@@ -23,9 +23,9 @@
         </NuxtLink>
 
         <Header-Nav />
-        <Search
+        <!-- <Search
           class="w-full flex-grow lg:pr-8 lg:pl-4 order-5 lg:order-none lg:w-auto mt-1"
-        />
+        /> -->
 
         <!-- TODO: status badges -->
         <!-- TODO: alert bar -->

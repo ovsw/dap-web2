@@ -5,12 +5,12 @@
         $urlFor(image)
           .width(600)
           .height(400)
-      }}')!important; } @media screen and (min-width: 600px) {
+      }}')!important; } @media screen and (min-width: 640px) {
       .page-header[data-id="12312321"] { background-image: url('{{
         $urlFor(image)
           .width(1200)
           .height(800)
-      }}')!important; } } @media screen and (min-width: 1200px) {
+      }}')!important; } } @media screen and (min-width: 1280px) {
       .page-header[data-id="12312321"] { background-image: url('{{
         $urlFor(image)
           .width(1600)
@@ -30,7 +30,7 @@
         <div
           class="page-header__content bg-light inline-block p-14 rounded-tr-medium"
         >
-          <h1 class="text-5xl">{{ title }}</h1>
+          <h1 class=" text-3xl lg:text-5xl">{{ title }}</h1>
         </div>
       </div>
     </div>

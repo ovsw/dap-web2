@@ -8,6 +8,7 @@
       @keydown.enter.exact.prevent="toggleMenu"
       @keydown.space.exact.prevent="toggleMenu"
       @keydown.esc.exact.prevent="hideMenu"
+      @keydown.esc.exact="hideMenu"
     >
       <!-- @click="toggleMenu" -->
       {{ menuData.name }}
@@ -57,9 +58,6 @@
                 class="flex group"
                 @click.native="hideMenu"
                 @keydown.esc.exact="hideMenu"
-                @keydown.tab.exact="focusNext(false)"
-                @keydown.down.exact.prevent="focusNext(true)"
-                @keydown.up.exact.prevent=""
               >
                 <svg-icon
                   class="text-green"

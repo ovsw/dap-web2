@@ -9,6 +9,7 @@
         Draft Preview. Click here to refresh
       </button>
     </client-only>
+
     <div class="site-wrap">
       <SiteHeader />
       <Nuxt />
