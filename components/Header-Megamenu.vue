@@ -48,6 +48,7 @@
               flex-shrink-0
               p-2 
               text-base md:text-lg
+              text-left
               "
               :class="[
                 item.subitems && item.subitems.length > 0 ? 'md:w-full' : ''

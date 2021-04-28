@@ -10,9 +10,12 @@
       
       absolute z-10 
       shadow-lg md:shadow-none 
-      pt-20
+
+      pt-6
       pl-6
+      
       bg-light-dark
+
       space-y-4
       justify-center 
       overflow-y-scroll
@@ -35,25 +38,26 @@
       style="top: 2.5rem;"
       :class="menuOpen ? 'block' : 'hidden'"
     >
-      <li class="nav__item md:pt-2">
+      <li class="nav__item md:pt-2 text-center md:text-left">
         <HeaderMegamenu :menuData="nav[0]" :menuIndex="1" />
       </li>
-      <li class="nav__item md:pt-2">
+      <li class="nav__item md:pt-2 text-center md:text-left">
         <HeaderMegamenu :menuData="nav[1]" :menuIndex="2" />
       </li>
 
-      <li class="nav__item md:pt-2">
+      <li class="nav__item md:pt-2 text-center md:text-left">
         <HeaderMegamenu :menuData="nav[2]" :menuIndex="3" />
       </li>
-      <li class="nav__item md:pt-2">
+      <li class="nav__item md:pt-2 text-center md:text-left">
         <HeaderMegamenu :menuData="nav[3]" :menuIndex="4" />
       </li>
       <!-- <li class="nav__item">
         <NuxtLink
-          to="/programs/general-camp-program/"
-          class="block text-base focus:outline-none md:p-4 focus:bg-green focus:text-light-light font-bold uppercase"
-          >Contact Us</NuxtLink
+          to="/contact/"
+          class="block text-base focus:outline-none md:pt-2 focus:bg-green focus:text-light-light font-bold uppercase  md:px-4 text-center md:text-left "
         >
+          Contact Us
+        </NuxtLink>
       </li> -->
     </ul>
 
