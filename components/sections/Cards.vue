@@ -6,7 +6,7 @@
       </h2>
 
       <div
-        class="px-4 md:px-0 flex flex-wrap justify-center lg:flex-nowrap mt-24 space-y-10 lg:space-y-0 lg:space-x-10"
+        class="px-4 flex flex-wrap justify-center lg:flex-nowrap mt-24 space-y-10 lg:space-y-0 lg:space-x-10"
       >
         <!--       cardSection__{{cardCount}} 
       cardSection__{{cardCountType}}  -->
