@@ -9,7 +9,7 @@
     <!-- <Header-TopBar /> -->
 
     <!-- .wrapper -->
-    <div class="wrapper px-4 py-0 lg:py-4">
+    <div class="wrapper px-4 py-0 lg:py-2">
       <div class="site-head__inner flex flex-wrap items-center">
         <NuxtLink
           class="logo block  flex-grow md:flex-grow-0 sm:w-auto md:w-48"

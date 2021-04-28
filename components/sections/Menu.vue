@@ -1,7 +1,7 @@
 <template>
   <section class="faqSection m-grd">
     <div class="[ wrapper px-grd ]">
-      <div class="[ pannel border-4 border-green p-10 md:p-20 ]">
+      <div class="[ pannel border-4 border-green p-10 md:p-20 bg-light ]">
         <h2 class="menuSection__heading mb-10">{{ section.title }}</h2>
 
         <dl class="space-y-16">

@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:relative pt-24 lg:pt-28 mb-grd bg-green-dark">
+  <div class="lg:relative pt-24 lg:pt-24 mb-grd bg-green-dark">
     <!-- <component :is="'style'" v-if="image">
       .heroImage[data-id="heroImage"] { background-image: url('{{
         $urlFor(image)
@@ -20,10 +20,14 @@
 
     <div class="lg:pr-16 w-full pb-grd  lg:py-grd">
       <div
-        class="px-4 lg:w-1/2 sm:px-8 xl:pr-16 border-indigo-100 border-5 pt-16 pb-20  lg:py-24 mx-grd"
+        class="  border-indigo-100 border-5   lg:w-1/2
+           p-4 md:p10
+          lg:p-20 xl:pr-16
+           mx-grd
+        "
       >
         <h1
-          class="text-4xl tracking-tight font-extrabold text-yellow sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl"
+          class="text-3xl tracking-tight font-extrabold text-yellow sm:text-4xl md:text-5xl lg:text-5xl"
         >
           {{ title }}
           <!-- <span class="block xl:inline">Data to enrich your</span>
@@ -50,12 +54,12 @@
           >
             {{ buttonText }}
           </NuxtLink>
-          <NuxtLink
+          <!-- <NuxtLink
             to="/contact/"
             class=" button [ button ] bg-light text-dark hover:text-dark-dark mt-4"
           >
             Contact
-          </NuxtLink>
+          </NuxtLink> -->
         </div>
       </div>
     </div>
