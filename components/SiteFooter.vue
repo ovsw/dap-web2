@@ -68,10 +68,10 @@
         <div class="footer__col col1">
           <h4>Passes &amp; Tickets</h4>
           <ul>
-            <li><a href="/passes/all-day-fun-pass/">All-Day Fun Pass</a></li>
-            <li><a href="/passes/sundowner-fun-pass/">Sundowner Pass</a></li>
-            <li><a href="/passes/season-pass/">Season Pass</a></li>
-            <li><a href="/ride-tickets/">Ride Tickets</a></li>
+            <li><NuxtLink to="/passes/all-day-fun-pass/">All-Day Fun Pass</NuxtLink></li>
+            <li><NuxtLink to="/passes/sundowner-fun-pass/">Sundowner Pass</NuxtLink></li>
+            <li><NuxtLink to="/passes/season-pass/">Season Pass</NuxtLink></li>
+            <li><NuxtLink to="/ride-tickets/">Ride Tickets</NuxtLink></li>
           </ul>
         </div>
 
@@ -79,12 +79,12 @@
         <div class="footer__col col2">
           <h4>Groups</h4>
           <ul>
-            <li><a href="/group-picnics/">Group Picnics</a></li>
-            <li><a href="/school-picnics/">School Picnics</a></li>
+            <li><NuxtLink to="/group-picnics/">Group Picnics</NuxtLink></li>
+            <li><NuxtLink to="/school-picnics/">School Picnics</NuxtLink></li>
             <li>
-              <a href="/kids-birthday-parties-at-the-park/">Birthday Parties</a>
+              <NuxtLink to="/kids-birthday-parties-at-the-park/">Birthday Parties</NuxtLink>
             </li>
-            <li><a href="/specialty-groups/">Specialty Groups</a></li>
+            <li><NuxtLink to="/specialty-groups/">Specialty Groups</NuxtLink></li>
           </ul>
         </div>
 
@@ -93,25 +93,25 @@
           <h4>About</h4>
           <ul>
             <li>
-              <a href="/hours-and-schedule-of-operation/"
-                >Hours &amp; Schedule</a
+              <NuxtLink to="/hours-and-schedule-of-operation/"
+                >Hours &amp; Schedule</NuxtLink
               >
             </li>
-            <li><a href="/policies-info-and-faqs/">FAQs</a></li>
+            <li><NuxtLink to="/policies-info-and-faqs/">FAQs</NuxtLink></li>
             <li>
-              <a href="/famous-food/the-delgrosso-food-tradition/"
-                >Famous Food</a
+              <NuxtLink to="/famous-food/the-delgrosso-food-tradition/"
+                >Famous Food</NuxtLink
               >
             </li>
 
-            <li><a href="/our-history/">History</a></li>
+            <li><NuxtLink to="/our-history/">History</NuxtLink></li>
             <li>
-              <a
-                href="https://recruiting.ultipro.com/DEL1006DFOOD/JobBoard/6e776796-7545-42f2-9d1a-e6841f2719de/?q=&o=postedDateDesc"
-                >Join Our Team</a
+              <NuxtLink
+                to="https://recruiting.ultipro.com/DEL1006DFOOD/JobBoard/6e776796-7545-42f2-9d1a-e6841f2719de/?q=&o=postedDateDesc"
+                >Join Our Team</NuxtLink
               >
             </li>
-            <li><a href="/donation-requests/">Donation Requests</a></li>
+            <li><NuxtLink to="/donation-requests/">Donation Requests</NuxtLink></li>
           </ul>
         </div>
 
@@ -119,16 +119,16 @@
         <div class="footer__col col4">
           <h4>Legal</h4>
           <ul>
-            <li><a href="/contact/">Contact Us</a></li>
-            <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><NuxtLink to="/contact/">Contact Us</NuxtLink></li>
+            <li><NuxtLink to="/terms-and-conditions/">Terms &amp; Conditions</NuxtLink></li>
+            <li><NuxtLink to="/privacy-policy/">Privacy Policy</NuxtLink></li>
             <li>
-              <a href="/website-accessibility-statement/"
-                >Accessibility Statement</a
+              <NuxtLink to="/website-accessibility-statement/"
+                >Accessibility Statement</NuxtLink
               >
             </li>
             <li>
-              <a href="/website-accessibility-policy/">Accessibility Policy</a>
+              <NuxtLink to="/website-accessibility-policy/">Accessibility Policy</NuxtLink>
             </li>
           </ul>
         </div>
