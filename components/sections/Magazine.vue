@@ -84,7 +84,7 @@
 
         md:border-5 md:p-10 
         
-        lg:max-w-2xl lg:p-20   lg:my-0
+        lg:max-w-2xl lg:p-20   lg:my-0 flex items-center
         "
       :class="`border-${sectionThemeOptions.color}`"
     >
