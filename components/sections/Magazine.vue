@@ -9,7 +9,6 @@
     data-theme-color="green"
   >
     <div class="[ magSection__image ] relative flex-1 2xl:ml-grd">
-      <!-- FIXME: images look like shit -->
       <img
         class="object-cover w-full h-full"
         :src="

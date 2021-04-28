@@ -40,6 +40,10 @@ export default {
         return "SectionsSponsors";
       } else if (sectionType == "menuSection") {
         return "SectionsMenu";
+      } else if (sectionType == "rteSection") {
+        return "SectionsRte";
+      } else if (sectionType == "embedSection") {
+        return "SectionsEmbed";
       }
       return "SectionsDefault";
     }
