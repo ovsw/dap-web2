@@ -83,7 +83,7 @@
 
         md:border-5 md:p-10 
         
-        lg:max-w-2xl lg:p-20   lg:my-0 flex items-center
+        lg:max-w-2xl lg:p-20   lg:my-0 flex flex-col justify-center
         "
       :class="`border-${sectionThemeOptions.color}`"
     >
