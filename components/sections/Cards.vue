@@ -25,7 +25,6 @@
           >
             <SanityContent
               :blocks="card.text"
-              serializers="serializers"
               class="prose"
             />
           </CardGeneric>
