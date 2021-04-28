@@ -32,7 +32,7 @@
           </div>
 
           <div v-if="section.text">
-            <SanityContent :blocks="section.text" />
+            <SanityContent :blocks="section.text" :serializers="serializers" />
           </div>
           <ButtonC
             v-if="section.button1"
@@ -68,6 +68,8 @@
 </template>
 
 <script>
+import externalLink from "@/components/serializers/externalLink";
+
 export default {
   props: {
     section: {
@@ -75,6 +77,17 @@ export default {
       required: true
     }
   },
+
+  data() {
+    return {
+      serializers: {
+        marks: {
+          link: externalLink
+        }
+      }
+    };
+  },
+
   computed: {
     sectionThemeOptions: function() {
       // generates an object from the string passed from the Sanity BE
@@ -116,95 +129,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-// $sectionColors: (
-//   "green": get-color("primary"),
-//   "blue": get-color("secondary"),
-//   "red": get-color("accent"),
-//   "yellow": get-color("tertiary")
-// );
-
-// .ctaSection {
-//   position: relative;
-//   margin: var(--grid-space) 0;
-//   padding: var(--grid-space) 0;
-
-//   &__image img {
-//     // pinned
-
-//     -webkit-filter: grayscale(100%);
-//     -moz-filter: grayscale(100%);
-//     -ms-filter: grayscale(100%);
-//     -o-filter: grayscale(100%);
-//     filter: gray;
-//     z-index: 10;
-//     opacity: 15%;
-//   }
-//   &__color-overlay {
-//     // background-color: get-color('secondary');
-//     z-index: 5;
-
-//     @each $name, $color in $sectionColors {
-//       section[data-theme-color="#{$name}"] & {
-//         background-color: $color;
-//       }
-//     }
-//   }
-
-//   &__content {
-//     position: relative;
-//     z-index: 20;
-
-//     section[data-theme="dark"] & {
-//       color: get-color("light-glare");
-//       border: 3px solid rgba($color: get-color("light-glare"), $alpha: 0.5);
-//     }
-//     section[data-theme="light"] & {
-//       color: get-color("dark");
-//       border: 5px solid rgba($color: get-color("dark"), $alpha: 0.5);
-//     }
-
-//     > * + * {
-//       margin-top: var(--flow-space);
-//     }
-
-//     @include media-query("lg") {
-//       display: flex;
-//       align-items: center;
-//     }
-
-//     h2,
-//     h3 {
-//       font-size: get-size("700");
-//       @include media-query("md") {
-//         font-size: get-size("800");
-//       }
-//     }
-
-//     .subtitle {
-//       @include media-query("lg") {
-//         font-size: 28px !important;
-//       }
-//     }
-
-//     a {
-//       text-decoration-color: currentColor;
-//     }
-//   }
-
-//   &__leftColumn {
-//     flex: 2;
-//     @include media-query("lg") {
-//       padding-right: calc(var(--grid-space) * 2);
-//     }
-//   }
-
-//   &__rightColumn {
-//     flex: 0 1 auto;
-//   }
-// }
-
-// .bigHeadingSection + .ctaSection {
-//   margin-top: 0 !important;
-// }
-</style>
+<style lang="scss" scoped></style>

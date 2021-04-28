@@ -23,7 +23,11 @@
             :buttonUrl="card.button.url"
             class="flex-1"
           >
-            <SanityContent :blocks="card.text" class="prose" />
+            <SanityContent
+              :blocks="card.text"
+              serializers="serializers"
+              class="prose"
+            />
           </CardGeneric>
         </div>
 

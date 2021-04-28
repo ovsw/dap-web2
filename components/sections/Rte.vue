@@ -20,6 +20,7 @@
 
 <script>
 import iframe from "@/components/serializers/iframe";
+import externalLink from "@/components/serializers/externalLink";
 
 export default {
   props: {
@@ -34,9 +35,9 @@ export default {
         // marks: {
         //   link: externalLink
         // },
-        // TODO: form serializer
         types: {
-          iframeEmbed: iframe
+          iframeEmbed: iframe,
+          link: externalLink
         }
       }
     };

@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import externalLink from "@/components/serializers/externalLink";
 import iframe from "@/components/serializers/iframe";
 
 export default {
@@ -27,7 +28,8 @@ export default {
         // },
         // TODO: form serializer
         types: {
-          iframeEmbed: iframe
+          iframeEmbed: iframe,
+          link: externalLink
         }
       }
     };
