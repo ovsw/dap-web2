@@ -88,6 +88,10 @@
   .magSection:first-child .magSection__image {
     @apply 2xl:ml-0 2xl:mr-grd;
   }
+
+  .ctaSection + .ctaSection {
+    margin-top: -0.9375rem !important;
+  }
 }
 
 @layer components {
