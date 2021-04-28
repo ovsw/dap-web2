@@ -22,7 +22,7 @@
       <div
         class="  border-indigo-100 border-5   lg:w-1/2
            p-4 md:p10
-          lg:p-20 xl:pr-16
+          lg:p-20 xl:pr-16 2xl:py-44
            mx-grd
         "
       >
