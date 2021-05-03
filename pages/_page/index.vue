@@ -28,6 +28,11 @@ const query = /* groq */ `{
                 sponsorsList[]->{
                   ...
                 }
+              },
+              _type == "faqSection" => {
+                faqItems[]->{
+                  ...
+                }
               }
             }
           }

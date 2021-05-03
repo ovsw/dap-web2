@@ -15,7 +15,25 @@
 </template>
 
 <script>
-const query = /* groq */ `{ "page": *[_type == 'page' && content.slug.current == $slug] | order(_updatedAt desc)[0]}`;
+const query = /* groq */ `{ "page": *[_type == 'page' && content.slug.current == $slug] {
+          ...,
+          content {
+            ...,
+            sections[] {
+              ...,
+              _type == "sponsorsSection" => {
+                sponsorsList[]->{
+                  ...
+                }
+              },
+              _type == "faqSection" => {
+                faqItems[]->{
+                  ...
+                }
+              }
+            }
+          }
+        } | order(_updatedAt desc)[0]}`;
 
 export default {
   name: "Page",

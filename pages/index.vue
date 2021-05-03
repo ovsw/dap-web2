@@ -64,8 +64,24 @@
 <script>
 const query = /* groq */ `{
   "siteHome": *[_type == 'siteHome'] {
-    ...
-  }[0]
+          ...,
+          content {
+            ...,
+            sections[] {
+              ...,
+              _type == "sponsorsSection" => {
+                sponsorsList[]->{
+                  ...
+                }
+              },
+              _type == "faqSection" => {
+                faqItems[]->{
+                  ...
+                }
+              }
+            }
+          }
+        }[0]
 }
 `;
 
