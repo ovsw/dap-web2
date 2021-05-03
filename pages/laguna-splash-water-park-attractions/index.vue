@@ -1,10 +1,10 @@
 <template>
   <article>
     <PageHeader
-      :title="parkRidesPage.content.title"
-      :image="parkRidesPage.content.mainImage"
+      :title="waterAttractionsPage.content.title"
+      :image="waterAttractionsPage.content.mainImage"
     />
-    <SectionsRenderer :sections="parkRidesPage.content.sectionsTop" />
+    <SectionsRenderer :sections="waterAttractionsPage.content.sectionsTop" />
 
     <!-- <script>
         console.log({{ ride }})
@@ -21,19 +21,19 @@
       />
     </CardGridWrapper>
 
-    <SectionsRenderer :sections="parkRidesPage.content.sectionsBottom" />
+    <SectionsRenderer :sections="waterAttractionsPage.content.sectionsBottom" />
   </article>
 </template>
 
 <script>
 const query = /* groq */ `{
-  "parkRidesPage": *[_id == 'parkRides'][0],
+  "waterAttractionsPage": *[_id == 'waterParkAttractions'][0],
   "rides": *[ _type == "attraction" && content.category match 'Water']
 }
 `;
 
 export default {
-  name: "parkRidesPage",
+  name: "waterParkAttractionsPage",
   asyncData({ $sanity }) {
     const sanityCall = $sanity.fetch(query);
     // console.log("🎈 asyncData: called", sanityCall);
