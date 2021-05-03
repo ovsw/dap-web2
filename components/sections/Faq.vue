@@ -2,54 +2,61 @@
   <section class="faqSection py-20">
     <div class="[ wrapper max-w-screen-lg ] pb-10">
       <div class="">
-        <h2 class="faqSection__heading my-10">{{ section.title }}</h2>
+        <h2 class="faqSection__heading my-10">
+          {{ section.title }}
+        </h2>
 
-        <dl class=" space-y-10 text-xl">
-          <div
-            v-for="(item, index) in section.faqItems"
-            class="faqsWrapper"
-            :key="index"
-          >
+        <div class="faqsWrapper space-y-10 text-xl">
+          <template v-for="(item, index) in section.faqItems" class="">
+            <!-- heading item -->
             <h3
+              :key="index"
               v-if="!item._type"
               class="text-2xl font-display lg:text-3xl font-bold mt-16"
             >
               {{ item.value }}
             </h3>
-            <div v-if="item._type">
-              <dt>
+            <!-- Q&A item -->
+            <div v-if="item._type" :key="index">
+              <component :is="`h${itemHeadingLvl}`">
                 <button
-                  :id="'accordion' + sectionIndex + '-header-' + index"
-                  :aria-controls="
-                    'accordion' + sectionIndex + '-panel-' + index
-                  "
                   @click="
                     index != selected ? (selected = index) : (selected = -1)
                   "
                   :aria-expanded="selected == index ? 'true' : 'false'"
-                  class="bg-green text-light p-6 pt-8 block w-full text-left focus:outline-green-large"
+                  class="bg-green text-light-light p-6 pt-8 block w-full text-left focus:outline-green-large"
                 >
                   {{ item.question }}
-                  <span class="float-right text-2xl">+</span>
+                  <span class="float-right text-2xl">
+                    <svg
+                      viewBox="0 0 10 10"
+                      aria-hidden="true"
+                      focusable="false"
+                      class="w-6 h-6 text-current fill-current"
+                    >
+                      <rect
+                        class="vert"
+                        height="8"
+                        width="2"
+                        y="1"
+                        x="4"
+                        rx="1"
+                      />
+                      <rect height="2" width="8" y="4" x="1" rx="1" />
+                    </svg>
+                  </span>
                 </button>
-              </dt>
+              </component>
 
-              <dd
-                class="p-6 lg:pt-8 bg-gray-100"
-                :id="'accordion' + sectionIndex + '-panel-' + index"
-                :aria-labelledby="
-                  'accordion' + sectionIndex + '-header-' + index
-                "
-                v-show="selected == index"
-              >
+              <div class="p-6 lg:pt-8 bg-gray-100" v-show="selected == index">
                 <SanityContent
                   :blocks="item.answer"
                   class="prose text-xl max-w-screen-lg"
                 />
-              </dd>
+              </div>
             </div>
-          </div>
-        </dl>
+          </template>
+        </div>
       </div>
     </div>
   </section>
@@ -63,6 +70,16 @@ export default {
     },
     sectionIndex: {
       type: Number
+    }
+  },
+  computed: {
+    itemHeadingLvl() {
+      // check if there are heading items among the FAQ items list
+      const headingItems = this.section.faqItems.filter(item => !item._type);
+
+      // return object with heading levels
+      // if we have category headings, the Q headings should be 4 (category headings are 3), else default to 3
+      return headingItems.length > 0 ? "4" : "3";
     }
   },
   data() {
@@ -81,5 +98,9 @@ export default {
   background-size: cover; */
   \background-color: #ffffff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 20 20'%3E%3Cg fill-opacity='0.13'%3E%3Cpolygon fill='%23ffefc2' points='20 10 10 0 0 0 20 20'/%3E%3Cpolygon fill='%23ffefc2' points='0 10 0 20 10 20'/%3E%3C/g%3E%3C/svg%3E");
+}
+/* plus minus styles */
+[aria-expanded="true"] .vert {
+  display: none;
 }
 </style>
