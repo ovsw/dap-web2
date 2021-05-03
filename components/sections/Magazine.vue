@@ -90,7 +90,7 @@
       <div class="space-y-10">
         <h2>{{ section.title }}</h2>
 
-        <div class="magSection__subHeadingWrapper">
+        <div v-if="section.subtitle" class="magSection__subHeadingWrapper">
           <h3 class="[ subtitle text-xl font-bold ]">{{ section.subtitle }}</h3>
         </div>
 

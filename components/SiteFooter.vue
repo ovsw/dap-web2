@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer bg-cyan text-light pt-20">
+  <footer class="footer bg-cyan text-light-light pt-20">
     <div class="container mx-auto px-4 md:px-6 pb-10">
       <div
         class="footer__grid md:grid gap-5 md:grid-cols-3 lg:grid-cols-6 space-y-10 md:space-y-0"
@@ -27,12 +27,14 @@
           >
         </div>
         <!-- social icons -->
-        <ul class="footer__social-wrapper text-3xl self-center lg:col-span-2">
-          <SocialLinks />
-        </ul>
+        <SocialLinks
+          class="footer__social-wrapper text-3xl self-center lg:col-span-2 flex space-x-4"
+        />
 
         <!-- footer address -->
-        <div class="footer__address space-y-3 md:col-span-2 py-6 text-light">
+        <div
+          class="footer__address space-y-3 md:col-span-2 py-6 text-light-light max-w-xs"
+        >
           <p>
             Italian-themed Family Amusement &amp; Water Park in Tipton, PA, with
             famous food.
@@ -66,10 +68,20 @@
 
         <!-- menu 1 -->
         <div class="footer__col col1">
-          <h4>Passes &amp; Tickets</h4>
+          <p class="uppercase text-sm tracking-wider mb-4 mt-6 font-semibold">
+            Passes &amp; Tickets
+          </p>
           <ul>
-            <li><NuxtLink to="/passes/all-day-fun-pass/">All-Day Fun Pass</NuxtLink></li>
-            <li><NuxtLink to="/passes/sundowner-fun-pass/">Sundowner Pass</NuxtLink></li>
+            <li>
+              <NuxtLink to="/passes/all-day-fun-pass/"
+                >All-Day Fun Pass</NuxtLink
+              >
+            </li>
+            <li>
+              <NuxtLink to="/passes/sundowner-fun-pass/"
+                >Sundowner Pass</NuxtLink
+              >
+            </li>
             <li><NuxtLink to="/passes/season-pass/">Season Pass</NuxtLink></li>
             <li><NuxtLink to="/ride-tickets/">Ride Tickets</NuxtLink></li>
           </ul>
@@ -77,20 +89,28 @@
 
         <!-- menu 2 -->
         <div class="footer__col col2">
-          <h4>Groups</h4>
+          <p class="uppercase text-sm tracking-wider mb-4 mt-6 font-semibold">
+            Groups
+          </p>
           <ul>
             <li><NuxtLink to="/group-picnics/">Group Picnics</NuxtLink></li>
             <li><NuxtLink to="/school-picnics/">School Picnics</NuxtLink></li>
             <li>
-              <NuxtLink to="/kids-birthday-parties-at-the-park/">Birthday Parties</NuxtLink>
+              <NuxtLink to="/kids-birthday-parties-at-the-park/"
+                >Birthday Parties</NuxtLink
+              >
             </li>
-            <li><NuxtLink to="/specialty-groups/">Specialty Groups</NuxtLink></li>
+            <li>
+              <NuxtLink to="/specialty-groups/">Specialty Groups</NuxtLink>
+            </li>
           </ul>
         </div>
 
         <!-- menu 3 -->
         <div class="footer__col col3">
-          <h4>About</h4>
+          <p class="uppercase text-sm tracking-wider mb-4 mt-6 font-semibold">
+            About
+          </p>
           <ul>
             <li>
               <NuxtLink to="/hours-and-schedule-of-operation/"
@@ -111,16 +131,24 @@
                 >Join Our Team</NuxtLink
               >
             </li>
-            <li><NuxtLink to="/donation-requests/">Donation Requests</NuxtLink></li>
+            <li>
+              <NuxtLink to="/donation-requests/">Donation Requests</NuxtLink>
+            </li>
           </ul>
         </div>
 
         <!-- menu 4 -->
         <div class="footer__col col4">
-          <h4>Legal</h4>
+          <p class="uppercase text-sm tracking-wider mb-4 mt-6 font-semibold">
+            Legal
+          </p>
           <ul>
             <li><NuxtLink to="/contact/">Contact Us</NuxtLink></li>
-            <li><NuxtLink to="/terms-and-conditions/">Terms &amp; Conditions</NuxtLink></li>
+            <li>
+              <NuxtLink to="/terms-and-conditions/"
+                >Terms &amp; Conditions</NuxtLink
+              >
+            </li>
             <li><NuxtLink to="/privacy-policy/">Privacy Policy</NuxtLink></li>
             <li>
               <NuxtLink to="/website-accessibility-statement/"
@@ -128,7 +156,9 @@
               >
             </li>
             <li>
-              <NuxtLink to="/website-accessibility-policy/">Accessibility Policy</NuxtLink>
+              <NuxtLink to="/website-accessibility-policy/"
+                >Accessibility Policy</NuxtLink
+              >
             </li>
           </ul>
         </div>

@@ -1,5 +1,5 @@
 <template>
-  <l-cluster wrapper="ul">
+  <ul>
     <li>
       <a
         href="https://www.facebook.com/DelGrossosPark/"
@@ -10,8 +10,8 @@
         <svg-icon
           name="icon-fb"
           title="Facebook icon"
-          height="1em"
-          width="1em"
+          height="1.5em"
+          width="1.5em"
         />
       </a>
     </li>
@@ -25,8 +25,8 @@
         <svg-icon
           name="tripadvisor-brands"
           title="Facebook icon"
-          height="1em"
-          width="1em"
+          height="1.5em"
+          width="1.5em"
         />
       </a>
     </li>
@@ -40,8 +40,8 @@
         <svg-icon
           name="icon-youtube"
           title="YouTube icon"
-          height="1em"
-          width="1em"
+          height="1.5em"
+          width="1.5em"
         />
       </a>
     </li>
@@ -55,16 +55,10 @@
         <svg-icon
           name="icon-instagram"
           title="Instagram icon"
-          height="1em"
-          width="1em"
+          height="1.5em"
+          width="1.5em"
         />
       </a>
     </li>
-  </l-cluster>
+  </ul>
 </template>
-
-<script>
-export default {};
-</script>
-
-<style></style>

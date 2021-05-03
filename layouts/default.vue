@@ -12,7 +12,9 @@
 
     <div class="site-wrap">
       <SiteHeader />
-      <Nuxt />
+      <main tabindex="-1" id="main-content">
+        <Nuxt />
+      </main>
       <SiteFooter />
     </div>
   </div>

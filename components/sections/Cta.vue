@@ -56,6 +56,7 @@
                 .height(400)
             "
             class="absolute top-0 right-0 h-full w-full z-0 object-cover"
+            alt="section.image.alt"
           />
           <div
             class="absolute top-0 left-0 right-0 h-full w-full z-10 bg-gradient-to-r to-transparent"
