@@ -22,7 +22,7 @@
           <thead>
             <tr>
               <th
-                class="w-1/3 p-6 bg-green text-light"
+                class="w-1/3 p-6 bg-green text-light-light"
                 v-for="(cell, index) in section.sectionTable.rows[0].cells"
                 :key="index"
               >
