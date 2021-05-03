@@ -16,6 +16,11 @@ const query = /* groq */ `{ "page": *[_type == 'event' && content.slug.current =
                 sponsorsList[]->{
                   ...
                 }
+              },
+              _type == "faqSection" => {
+                faqItems[]->{
+                  ...
+                }
               }
             }
           }
