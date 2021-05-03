@@ -78,7 +78,7 @@
                     </span>
                   </span>
                   <span
-                    class="block text-sm text-gray-600 group-hover:text-green"
+                    class="block text-sm text-gray-800 group-hover:text-green"
                     >{{ item.description }}</span
                   >
                 </span>
@@ -160,7 +160,7 @@
           <div
             v-if="block.type == 'bannerSection'"
             :key="index"
-            class="bg-red text-light p-6"
+            class="bg-red text-light-light p-6"
           >
             <a
               href="https://www.dg2gofood.com/"
@@ -178,7 +178,7 @@
                 <span class="block mt-2">
                   Miss Our Food? Try DG2GO!
                 </span>
-                <span class="block opacity-70">
+                <span class="block ">
                   Always-fresh, homemade, Meals, Pizza &amp; more! Ready for
                   Pickup.
                 </span>
