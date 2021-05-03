@@ -18,7 +18,7 @@
       }}')!important; } }
     </component> -->
 
-    <Hero
+    <Hero2
       :title="siteHome.content.hero.title"
       :subtitle="siteHome.content.hero.subTitle"
       :buttonText="siteHome.content.hero.button.text"

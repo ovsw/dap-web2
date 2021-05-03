@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:relative pt-24 mb-grd ">
+  <div class="heroWrapper lg:relative md:pt-24 mb-grd ">
     <component :is="'style'" v-if="image">
       .heroImage[data-id="heroImage"] { background-image: url('{{
         $urlFor(image)
@@ -19,36 +19,69 @@
     </component>
 
     <div class="heroImage relative bg-cover" data-id="heroImage">
-      <div class="absolute inset-x-0 bottom-0 h-1/2 py-20" />
-      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
-          <div class="absolute inset-0">
-            <!-- <img
-              class="h-full w-full object-cover"
-              src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
-              alt="People working on laptops"
-            /> -->
-            <div class="absolute inset-0 bg-green-dark" style="opacity:0.95" />
-            <!-- style="mix-blend-mode: multiply;" -->
-          </div>
-          <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+      <div
+        class="wrapper  
+      sm:px-6 sm:py-6
+      md:py-20
+      lg:px-8"
+      >
+        <div
+          class="relative 
+            sm:rounded-2xl sm:overflow-hidden
+            md:shadow-xl 
+            lg:max-w-xl
+        "
+        >
+          <div
+            class="relative px-4 py-16  bg-light bg-opacity-95
+            
+              sm:px-6 sm:py-24 md:py-16 
+              lg:py-16 lg:px-16 
+            "
+          >
             <h1
-              class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl"
+              class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl 
+              lg:text-6xl lg:text-left
+              "
             >
-              <span class="block text-white">Take control of your</span>
-              <span class="block text-indigo-200">customer support</span>
+              <span
+                class="
+              block text-dark max-w-2xl mx-auto
+              lg:mx-0
+              "
+                >{{ title }}</span
+              >
+              <!-- <span class="block text-indigo-200">customer support</span> -->
             </h1>
             <p
-              class="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl"
+              class="mt-6  mx-auto text-center text-xl text-dark sm:max-w-3xl
+                lg:text-left lg:mx-0
+              "
             >
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
+              Visit The Kid's Kingdom &middot; Enjoy our thrilling midway rides
+              and games &middot; Dig into our famous food &middot; Cool off at
+              our Water Park
             </p>
             <div
-              class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center"
+              class="mt-10 max-w-sm mx-auto 
+              sm:max-w-none sm:flex sm:justify-center 
+              lg:justify-start
+              "
             >
               <div
+                class="space-y-4 text-center
+                  sm:space-y-0 sm:mx-auto sm:gap-5 
+                  lg:mx-0 lg:text-left
+                "
+              >
+                <NuxtLink
+                  :to="buttonUrl"
+                  class="button [ button ] bg-yellow text-dark hover:text-dark-dark mt-4 md:mr-4"
+                >
+                  {{ buttonText }}
+                </NuxtLink>
+              </div>
+              <!-- <div
                 class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5"
               >
                 <a
@@ -63,7 +96,7 @@
                 >
                   Live demo
                 </a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -99,4 +132,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped>
+.heroWrapper {
+  padding-top: 73px;
+}
+</style>
