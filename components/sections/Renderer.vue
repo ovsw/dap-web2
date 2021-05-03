@@ -44,6 +44,8 @@ export default {
         return "SectionsRte";
       } else if (sectionType == "embedSection") {
         return "SectionsEmbed";
+      } else if (sectionType == "fileSection") {
+        return "SectionsFile";
       }
       return "SectionsDefault";
     }
