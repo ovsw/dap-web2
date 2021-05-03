@@ -111,6 +111,12 @@ export default {
                 sponsorsList[]->{
                   ...
                 }
+              },
+              _type == "faqSection" => {
+                ...,
+                faqItems[]->{
+                  ...
+                }
               }
             }
           }
@@ -132,6 +138,12 @@ export default {
               _type == "sponsorsSection" => {
                 sponsorsList[]->{
                   ...
+                },
+                _type == "faqSection" => {
+                  ...,
+                  faqItems[]->{
+                    ...
+                  }
                 }
               }
             }
@@ -185,6 +197,5 @@ export default {
   sanity: {
     ...configSanity,
     withCredentials: true,
-    useCdn: false
   }
 };

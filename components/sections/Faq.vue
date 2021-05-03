@@ -5,8 +5,6 @@
         <h2 class="faqSection__heading my-10">
           {{ section.title }}
         </h2>
-
-        {{section}}
         <div class="faqsWrapper space-y-10 text-xl">
           <template v-for="(item, index) in section.faqItems" class="">
             <!-- heading item -->
