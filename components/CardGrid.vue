@@ -7,7 +7,7 @@
         <NuxtLink
           :to="url"
           class="cardLink"
-          aria-describedby="${title}-ride` | slugify"
+          :aria-describedby="`${title}-ride` | slugify"
         >
           <span class="block text-xl font-bold font-display mb-3">
             {{ title }}
