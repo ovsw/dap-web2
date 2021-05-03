@@ -39,17 +39,33 @@
       :class="menuOpen ? 'block' : 'hidden'"
     >
       <li class="nav__item md:pt-2 text-center md:text-left">
-        <HeaderMegamenu :menuData="nav[0]" :menuIndex="1" />
+        <HeaderMegamenu
+          :menuData="nav[0]"
+          :menuIndex="1"
+          @close-mobile-menu="hideMenu"
+        />
       </li>
       <li class="nav__item md:pt-2 text-center md:text-left">
-        <HeaderMegamenu :menuData="nav[1]" :menuIndex="2" />
+        <HeaderMegamenu
+          :menuData="nav[1]"
+          :menuIndex="2"
+          @close-mobile-menu="hideMenu"
+        />
       </li>
 
       <li class="nav__item md:pt-2 text-center md:text-left">
-        <HeaderMegamenu :menuData="nav[2]" :menuIndex="3" />
+        <HeaderMegamenu
+          :menuData="nav[2]"
+          :menuIndex="3"
+          @close-mobile-menu="hideMenu"
+        />
       </li>
       <li class="nav__item md:pt-2 text-center md:text-left">
-        <HeaderMegamenu :menuData="nav[3]" :menuIndex="4" />
+        <HeaderMegamenu
+          :menuData="nav[3]"
+          :menuIndex="4"
+          @close-mobile-menu="hideMenu"
+        />
       </li>
       <!-- <li class="nav__item">
         <NuxtLink
@@ -88,6 +104,9 @@ export default {
   methods: {
     toggleMenu() {
       this.menuOpen = !this.menuOpen;
+    },
+    hideMenu() {
+      this.menuOpen = false;
     }
   }
 };

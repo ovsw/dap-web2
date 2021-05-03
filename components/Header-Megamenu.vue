@@ -229,6 +229,7 @@ export default {
     hideMenu() {
       this.isVisible = false;
       this.focusedIndex = 0;
+      this.$emit("close-mobile-menu");
     },
     startArrowKeys() {
       this.menuItems[0].focus();
