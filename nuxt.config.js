@@ -184,6 +184,7 @@ export default {
 
   sanity: {
     ...configSanity,
-    withCredentials: true
+    withCredentials: true,
+    useCdn: false
   }
 };
