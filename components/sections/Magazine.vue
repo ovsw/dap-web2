@@ -109,7 +109,7 @@
           </div> -->
           <ButtonC
             v-for="(button, index) in sectionButtons"
-            :url="button.url || '#'"
+            :url="`${button.url}/` || '#'"
             :key="index"
           >
             {{ button.text }}
