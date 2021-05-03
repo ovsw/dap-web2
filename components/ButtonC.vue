@@ -30,7 +30,7 @@ export default {
   },
   computed: {
     buttonClasses: function() {
-      if (this.bgColor == "yellow") {
+      if (this.bgColor == "yellow" || this.bgColor == "light") {
         return `bg-${this.bgColor} text-${this.color} hover:text-dark-dark`;
       }
       return `bg-${this.bgColor} text-${this.color}`;
