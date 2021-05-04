@@ -38,14 +38,14 @@
       style="top: 2.5rem;"
       :class="menuOpen ? 'block' : 'hidden'"
     >
-      <li class="nav__item md:pt-2 text-center md:text-left">
+      <li class="nav__item">
         <HeaderMegamenu
           :menuData="nav[0]"
           :menuIndex="1"
           @close-mobile-menu="hideMenu"
         />
       </li>
-      <li class="nav__item md:pt-2 text-center md:text-left">
+      <li class="nav__item">
         <HeaderMegamenu
           :menuData="nav[1]"
           :menuIndex="2"
@@ -53,28 +53,29 @@
         />
       </li>
 
-      <li class="nav__item md:pt-2 text-center md:text-left">
+      <li class="nav__item">
         <HeaderMegamenu
           :menuData="nav[2]"
           :menuIndex="3"
           @close-mobile-menu="hideMenu"
         />
       </li>
-      <li class="nav__item md:pt-2 text-center md:text-left">
+      <li class="nav__item">
         <HeaderMegamenu
           :menuData="nav[3]"
           :menuIndex="4"
           @close-mobile-menu="hideMenu"
         />
       </li>
-      <!-- <li class="nav__item">
-        <NuxtLink
-          to="/contact/"
-          class="block text-base focus:outline-none md:pt-2 focus:bg-green focus:text-light-light font-bold uppercase  md:px-4 text-center md:text-left "
+      <li class="nav__item ">
+        <a
+          href="https://delgrossos.centeredgeonline.com/"
+          target="_blank" rel="noopener"
+          class="block text-base focus:outline-none focus:text-light-light focus:bg-green md:pt-2 md:text-sm lg:text-base font-bold uppercase  md:px-2 text-center md:text-left "
         >
-          Contact Us
-        </NuxtLink>
-      </li> -->
+           Store
+        </a>
+      </li>
     </ul>
 
     <div class="hamburger-menu__container flex md:hidden">

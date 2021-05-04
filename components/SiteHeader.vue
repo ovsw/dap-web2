@@ -10,7 +10,7 @@
 
     <!-- .wrapper -->
     <div class="wrapper px-4 py-0 lg:py-2">
-      <div class="site-head__inner flex flex-wrap items-center">
+      <div class="site-head__inner flex flex-wrap items-center justify-between">
         <NuxtLink
           class="logo block  flex-grow md:flex-grow-0 sm:w-auto md:w-48"
           to="/"
@@ -31,7 +31,7 @@
         <!-- TODO: status badges -->
         <!-- TODO: alert bar -->
 
-        <a href="tel:814-684-3538" class="hidden lg:flex ml-auto items-center">
+        <a href="tel:814-684-3538" class="hidden lg:flex items-center">
           <svg-icon
             name="icon-phone"
             title="Telephone Icon"
