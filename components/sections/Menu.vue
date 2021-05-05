@@ -32,7 +32,9 @@
             </div>
           </template>
         </dl>
-        <p class="font-bold text-red mt-10">Menu & Pricing Subject To Change</p>
+        <p class="font-bold text-red-dark mt-10">
+          Menu & Pricing Subject To Change
+        </p>
       </div>
     </div>
   </section>
