@@ -30,6 +30,7 @@ const query = /* groq */ `{
                 }
               },
               _type == "faqSection" => {
+                faqItems[]{
                   ...
                 }
               }
