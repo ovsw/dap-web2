@@ -23,9 +23,10 @@
                 >
                   <span class="menuSection__listItemName">{{ item.name }}</span>
                   <span class="menuSection__dots mx-4"></span>
-                  <span class="menuSection__price text-red font-bold text-lg">{{
-                    item.price
-                  }}</span>
+                  <span
+                    class="menuSection__price text-red-dark font-bold text-lg"
+                    >{{ item.price }}</span
+                  >
                 </p>
               </dd>
             </div>
