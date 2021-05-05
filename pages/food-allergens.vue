@@ -29,7 +29,7 @@
                 >
                   <strong class="">{{ dish.name }}</strong>
                   <span v-if="allergenListing(dish.allergenList) == 'none'">
-                    <span class="pill bg-green text-light"
+                    <span class="pill bg-green text-light-light"
                       >no allergens</span
                     ></span
                   >
@@ -82,13 +82,13 @@ export default {
       );
       const out = specialConditions.map(item => {
         if (item === "* Grilled") {
-          return `<span class="pill inline-block bg-red text-light">${item}</span>`;
+          return `<span class="pill inline-block bg-red text-light-light">${item}</span>`;
         } else if (item === "** Fried") {
           return `<span class="pill inline-block bg-yellow">${item}</span>`;
         } else if (item === "*** Can Be Adapted") {
-          return `<span class="pill inline-block bg-blue text-light">${item}</span>`;
+          return `<span class="pill inline-block bg-blue text-light-light">${item}</span>`;
         } else if (item === "**** Manufactured") {
-          return `<span class="pill inline-block bg-cyan text-light">**** Allergen Traces from manufacturing</span>`;
+          return `<span class="pill inline-block bg-cyan text-light-light">**** Allergen Traces from manufacturing</span>`;
         }
         return item;
       });
