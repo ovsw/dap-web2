@@ -25,7 +25,7 @@
                   :aria-expanded="selected == index ? 'true' : 'false'"
                   class="bg-green text-light-light p-6 pt-8 block w-full text-left focus:outline-green-large"
                 >
-                  {{ item.question }}
+                  "{{ item.question }}"
                   <span class="float-right text-2xl">
                     <svg
                       viewBox="0 0 10 10"

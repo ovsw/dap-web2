@@ -13,6 +13,12 @@ const query = /* groq */ `*[_type == 'reusableSection' && _id == $reusableSectio
       sponsorsList[]->{
         ...
       }
+    },
+    _type == "faqSection" => {
+      ...,
+      faqItems[]->{
+        ...
+      }
     }
   }
 }[0]`;
