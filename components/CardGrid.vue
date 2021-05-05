@@ -80,13 +80,13 @@ export default {
   methods: {
     tagColor(tag) {
       if (["Thrill Ride", "food"].includes(tag)) {
-        return "bg-red text-light";
+        return "bg-red text-light-light";
       } else if (["Family Ride", "free"].includes(tag)) {
         return "bg-yellow text-dark";
       } else if (["Kiddie Ride", "park"].includes(tag)) {
-        return "bg-green text-light";
+        return "bg-green text-light-light";
       } else if (["music"].includes(tag)) {
-        return "bg-blue text-light";
+        return "bg-blue text-light-light";
       }
 
       return "";
