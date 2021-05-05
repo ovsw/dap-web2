@@ -6,7 +6,7 @@
   >
     <div
       class="header space-y-4 text-light rounded-tr-large p-10"
-      :class="`bg-${colorTheme}`"
+      :class="`bg-${colorTheme}-dark`"
     >
       <component
         :is="`h${headingLvl}`"
@@ -18,7 +18,7 @@
 
     <div
       class="body bg-light flex-1 p-10 border-5 flex flex-col justify-around items-start rounded-br-large"
-      :class="`border-${colorTheme}`"
+      :class="`border-${colorTheme}-dark`"
     >
       <slot></slot>
 

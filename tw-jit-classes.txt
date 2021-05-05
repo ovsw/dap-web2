@@ -3,6 +3,11 @@
 .border-blue
 .border-cyan
 .border-yellow
+.border-red-dark
+.border-green-dark
+.border-blue-dark
+.border-cyan-dark
+.border-yellow-dark
 
 .bg-red
 .bg-green
