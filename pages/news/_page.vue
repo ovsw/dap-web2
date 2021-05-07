@@ -42,6 +42,65 @@ export default {
         }
       }
     };
+  },
+
+  computed: {
+    seoTitle() {
+      if (this.page.content.seo && this.page.content.seo.title)
+        return this.page.content.seo.title;
+      return undefined;
+    },
+    seoDescription() {
+      if (this.page.content.seo && this.page.content.seo.description)
+        return this.page.content.seo.description;
+      return undefined;
+    },
+    seoImage() {
+      return undefined;
+    },
+    seoPageUrl() {
+      return `https://www.mydelgrossopark.com/${this.page.content.slug.current}/`;
+    },
+    seoShareImage() {
+      return undefined;
+    }
+  },
+
+  head() {
+    return {
+      title: this.seoTitle,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.seoDescription
+        },
+        {
+          hid: "ogtitle",
+          name: "og:title",
+          content: this.seoTitle
+        },
+        {
+          hid: "ogdescription",
+          name: "og:description",
+          content: this.seoDescription
+        },
+        {
+          hid: "ogimage",
+          name: "og:image",
+          content: this.seoShareImage
+        },
+        {
+          hid: "ogurl",
+          name: "og:url",
+          content: this.seoPageUrl
+        }
+      ],
+      link: [{ rel: "cannonical", href: this.seoPageUrl }],
+      __dangerouslyDisableSanitizersByTagID: {
+        ogimage: ["content"]
+      }
+    };
   }
 
   /* Possible implementation of real-time preview. Requires @sanity/client.

@@ -40,6 +40,68 @@ export default {
     const sanityCall = $sanity.fetch(query);
     // console.log("🎈 asyncData: called", sanityCall);
     return sanityCall;
+  },
+
+  computed: {
+    seoTitle() {
+      if (this.eventsPage.content.seo && this.eventsPage.content.seo.title)
+        return this.eventsPage.content.seo.title;
+      return undefined;
+    },
+    seoDescription() {
+      if (
+        this.eventsPage.content.seo &&
+        this.eventsPage.content.seo.description
+      )
+        return this.eventsPage.content.seo.description;
+      return undefined;
+    },
+    seoImage() {
+      return undefined;
+    },
+    seoPageUrl() {
+      return `https://www.mydelgrossopark.com/${this.eventsPage.content.slug.current}/`;
+    },
+    seoShareImage() {
+      return undefined;
+    }
+  },
+
+  head() {
+    return {
+      title: this.seoTitle,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.seoDescription
+        },
+        {
+          hid: "ogtitle",
+          name: "og:title",
+          content: this.seoTitle
+        },
+        {
+          hid: "ogdescription",
+          name: "og:description",
+          content: this.seoDescription
+        },
+        {
+          hid: "ogimage",
+          name: "og:image",
+          content: this.seoShareImage
+        },
+        {
+          hid: "ogurl",
+          name: "og:url",
+          content: this.seoPageUrl
+        }
+      ],
+      link: [{ rel: "cannonical", href: this.seoPageUrl }],
+      __dangerouslyDisableSanitizersByTagID: {
+        ogimage: ["content"]
+      }
+    };
   }
 };
 </script>

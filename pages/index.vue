@@ -91,6 +91,65 @@ export default {
     const sanityCall = $sanity.fetch(query);
     // console.log("🎈 asyncData: called", sanityCall);
     return sanityCall;
+  },
+
+  computed: {
+    seoTitle() {
+      if (this.siteHome.content.seo && this.siteHome.content.seo.title)
+        return this.siteHome.content.seo.title;
+      return undefined;
+    },
+    seoDescription() {
+      if (this.siteHome.content.seo && this.siteHome.content.seo.description)
+        return this.siteHome.content.seo.description;
+      return undefined;
+    },
+    seoImage() {
+      return undefined;
+    },
+    seoPageUrl() {
+      return `https://www.mydelgrossopark.com/${this.siteHome.content.slug.current}/`;
+    },
+    seoShareImage() {
+      return undefined;
+    }
+  },
+
+  head() {
+    return {
+      title: this.seoTitle,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.seoDescription
+        },
+        {
+          hid: "ogtitle",
+          name: "og:title",
+          content: this.seoTitle
+        },
+        {
+          hid: "ogdescription",
+          name: "og:description",
+          content: this.seoDescription
+        },
+        {
+          hid: "ogimage",
+          name: "og:image",
+          content: this.seoShareImage
+        },
+        {
+          hid: "ogurl",
+          name: "og:url",
+          content: this.seoPageUrl
+        }
+      ],
+      link: [{ rel: "cannonical", href: this.seoPageUrl }],
+      __dangerouslyDisableSanitizersByTagID: {
+        ogimage: ["content"]
+      }
+    };
   }
 };
 </script>
