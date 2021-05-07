@@ -15,6 +15,25 @@ const configSanity = {
 };
 const client = createClient(configSanity);
 
+const getdefaultSeoInfo = async function seoInfo() {
+  const response = await client.fetch(/* groq */ `*[ _id == "siteSettings"] {
+      "seo": content.seo
+    }[0]`);
+  return response;
+};
+
+getdefaultSeoInfo().then(response => console.log("xxxxxxx", response));
+
+// console.log("xxxxxxxxxxxxxx", defaultSeoInfo());
+
+const seoTitle =
+  "DelGrosso's Amusement Park & Laguna Splash Water Park in Tipton, PA";
+const seoDescription =
+  "DelGrosso's Pennsylvania amusement park offers family fun at an affordable price, including kids and adults games, rides, and an amazing water park!";
+const seoSocialShareImage =
+  "/delgrosso-amusement-park-laguna-splash-default-social-image.jpg";
+const seoCannonicalUrl = "https://www.mydelgrossopark.com";
+
 export default {
   // privateRuntimeConfig: {
   //   sanity: {
@@ -26,16 +45,73 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "web",
+    title: seoTitle,
     htmlAttrs: {
       lang: "en"
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+      {
+        hid: "description",
+        name: "description",
+        content: seoDescription
+      },
+      {
+        hid: "ogtitle",
+        name: "og:title",
+        content: seoTitle
+      },
+      {
+        hid: "ogdescription",
+        name: "og:description",
+        content: seoDescription
+      },
+      {
+        hid: "ogimage",
+        name: "og:image",
+        content: seoSocialShareImage
+      },
+      {
+        hid: "msTitleColor",
+        name: "msapplication-TileColor",
+        content: "#2D8262"
+      },
+      {
+        hid: "theme-color",
+        name: "msapplication-TileColor",
+        content: "#ffffff"
+      }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "/apple-touch-icon.png"
+      },
+      {
+        rel: "apple-touch-icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/apple-touch-icon.png"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/favicon-32x32.png"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "/favicon-16x16.png"
+      },
+      { rel: "manifest", href: "/site.webmanifest" },
+      { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#ff7700" }
+      // { rel: "cannonical", href: seoCannonicalUrl }
+    ]
   },
 
   googleFonts: {
