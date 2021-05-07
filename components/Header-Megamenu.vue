@@ -1,5 +1,8 @@
 <template>
-  <div class="text-center md:text-left md:pt-2 lg:relative" v-on-click-outside="hideMenu">
+  <div
+    class="text-center md:text-left md:pt-2 lg:relative"
+    v-on-click-outside="hideMenu"
+  >
     <!-- FIXME: keyboard navigation: close menu on esc on child item doesnt work -->
     <!-- @mouseover="showMenu" @mouseleave="hideMenu" -->
     <button
@@ -179,8 +182,7 @@
                   Miss Our Food? Try DG2GO!
                 </span>
                 <span class="block ">
-                  Always-fresh, homemade, Meals, Pizza &amp; more! Ready for
-                  Pickup.
+                  Delicious, homemade Meals, Pizza &amp; More! Ready for Pickup.
                 </span>
                 <span class="underline block">Click Here</span>
               </span>
