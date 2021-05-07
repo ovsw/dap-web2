@@ -10,13 +10,13 @@
             <!-- heading item -->
             <h3
               :key="index"
-              v-if="!item._type"
+              v-if="item.type == 'heading'"
               class="text-2xl font-display lg:text-3xl font-bold mt-16"
             >
               {{ item.value }}
             </h3>
             <!-- Q&A item -->
-            <div v-if="item._type" :key="index">
+            <div v-if="item.type == 'faqItem'" :key="index">
               <component :is="`h${itemHeadingLvl}`">
                 <button
                   @click="
@@ -25,7 +25,7 @@
                   :aria-expanded="selected == index ? 'true' : 'false'"
                   class="bg-green text-light-light p-6 pt-8 block w-full text-left focus:outline-green-large"
                 >
-                  "{{ item.question }}"
+                  {{ item.faqItem.question }}
                   <span class="float-right text-2xl">
                     <svg
                       viewBox="0 0 10 10"
@@ -49,7 +49,7 @@
 
               <div class="p-6 lg:pt-8 bg-gray-100" v-show="selected == index">
                 <SanityContent
-                  :blocks="item.answer"
+                  :blocks="item.faqItem.answer"
                   class="prose text-xl max-w-screen-lg"
                 />
               </div>

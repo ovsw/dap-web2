@@ -15,22 +15,15 @@
 </template>
 
 <script>
+import sectionQueries from "@/sanityFragments/sectionQueries";
+
 const query = /* groq */ `{ "page": *[_type == 'page' && content.slug.current == $slug] {
           ...,
           content {
             ...,
             sections[] {
               ...,
-              _type == "sponsorsSection" => {
-                sponsorsList[]->{
-                  ...
-                }
-              },
-              _type == "faqSection" => {
-                faqItems[]{
-                  ...
-                }
-              }
+              ${sectionQueries}
             }
           }
         } | order(_updatedAt desc)[0]}`;

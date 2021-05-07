@@ -1,5 +1,7 @@
 import { createClient } from "@nuxtjs/sanity";
 import fetch from "node-fetch";
+import sectionQueries from "./sanityFragments/sectionQueries";
+
 if (!globalThis.fetch) {
   globalThis.fetch = fetch;
 }
@@ -100,52 +102,30 @@ export default {
     fallback: true,
     crawler: false,
     async routes() {
-      const pages = await client.fetch(
-        `*[_type == "page" || _type == "simplePage"] {
+      const pages = await client.fetch(/* groq */ `*[_type == "page" || _type == "simplePage"] {
           ...,
           content {
             ...,
             sections[] {
               ...,
-              _type == "sponsorsSection" => {
-                sponsorsList[]->{
-                  ...
-                }
-              },
-              _type == "faqSection" => {
-                ...,
-                faqItems[]->{
-                  ...
-                }
-              }
+              ${sectionQueries}
             }
           }
-        }`
-      );
+        }`);
       const parkRides = await client.fetch(
-        `*[ _type == "attraction" && content.category match "Amusement"]`
+        /* groq */ `*[ _type == "attraction" && content.category match "Amusement"]`
       );
       const waterParkAttractions = await client.fetch(
-        `*[ _type == "attraction" && content.category match "Water"]`
+        /* groq */ `*[ _type == "attraction" && content.category match "Water"]`
       );
       const newsItems = await client.fetch(`*[_type == "newsItem"]`);
-      const events = await client.fetch(`*[_type == "event"] {
+      const events = await client.fetch(/* groq */ `*[_type == "event"] {
           ...,
           content {
             ...,
             sections[] {
               ...,
-              _type == "sponsorsSection" => {
-                sponsorsList[]->{
-                  ...
-                },
-                _type == "faqSection" => {
-                  ...,
-                  faqItems[]->{
-                    ...
-                  }
-                }
-              }
+              ${sectionQueries}
             }
           }
         }`);
@@ -196,6 +176,6 @@ export default {
 
   sanity: {
     ...configSanity,
-    withCredentials: true,
+    withCredentials: true
   }
 };

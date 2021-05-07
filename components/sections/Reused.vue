@@ -5,21 +5,13 @@
 </template>
 
 <script>
+import sectionQueries from "@/sanityFragments/sectionQueries";
+
 const query = /* groq */ `*[_type == 'reusableSection' && _id == $reusableSectionId]{
   ...,
   sections[] {
     ...,
-    _type == "sponsorsSection" => {
-      sponsorsList[]->{
-        ...
-      }
-    },
-    _type == "faqSection" => {
-      ...,
-      faqItems[]->{
-        ...
-      }
-    }
+    ${sectionQueries}
   }
 }[0]`;
 

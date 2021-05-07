@@ -16,6 +16,7 @@
 
 <script>
 import externalLink from "@/components/serializers/externalLink";
+import sectionQueries from "@/sanityFragments/sectionQueries";
 
 const query = /* groq */ `{ 
   "page": *[(_type == 'page' || _type== 'simplePage') && content.slug.current == $slug] {
@@ -24,16 +25,7 @@ const query = /* groq */ `{
             ...,
             sections[] {
               ...,
-              _type == "sponsorsSection" => {
-                sponsorsList[]->{
-                  ...
-                }
-              },
-              _type == "faqSection" => {
-                faqItems[]{
-                  ...
-                }
-              }
+              ${sectionQueries}
             }
           }
         } | order(_updatedAt desc)[0]
