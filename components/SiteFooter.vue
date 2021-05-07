@@ -42,8 +42,8 @@
           <p>
             <a href="mailto:info@mydelgrossopark.com" class="flex items-start">
               <svg-icon
-                name="icon-fb"
-                title="Facebook icon"
+                name="at-solid"
+                title="@ icon"
                 height="1em"
                 width="1em"
                 class="svgIcon mr-2"
@@ -53,8 +53,8 @@
           </p>
           <div class="flex items-start">
             <svg-icon
-              name="icon-fb"
-              title="Facebook icon"
+              name="envelope-regular"
+              title="envelope icon"
               height="1em"
               width="1em"
               class="svgIcon mr-2"
