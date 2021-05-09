@@ -3,6 +3,7 @@ import Vue from "vue";
 Vue.filter("formatDate", value => {
   const date = new Date(value);
   return date.toLocaleString(["en-US"], {
+    timeZone: "Europe/Bucharest",
     month: "short",
     day: "2-digit",
     year: "numeric",
@@ -14,6 +15,7 @@ Vue.filter("formatDate", value => {
 Vue.filter("formatDateShort", value => {
   const date = new Date(value);
   return date.toLocaleString(["en-US"], {
+    timeZone: "Europe/Bucharest",
     month: "short",
     day: "2-digit"
   });
