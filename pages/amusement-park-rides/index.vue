@@ -68,7 +68,7 @@ export default {
       return undefined;
     },
     seoPageUrl() {
-      return `https://www.mydelgrossopark.com/${this.parkRidesPage.content.slug.current}/`;
+      return `https://www.mydelgrossopark.com/amusement-park-rides/`;
     },
     seoShareImage() {
       return undefined;

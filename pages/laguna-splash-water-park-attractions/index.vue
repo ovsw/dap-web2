@@ -61,7 +61,7 @@ export default {
       return undefined;
     },
     seoPageUrl() {
-      return `https://www.mydelgrossopark.com/${this.waterAttractionsPage.content.slug.current}/`;
+      return `https://www.mydelgrossopark.com/laguna-splash-water-park-attractions/`;
     },
     seoShareImage() {
       return undefined;

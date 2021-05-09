@@ -60,7 +60,7 @@ export default {
       return undefined;
     },
     seoPageUrl() {
-      return `https://www.mydelgrossopark.com/${this.eventsPage.content.slug.current}/`;
+      return `https://www.mydelgrossopark.com/events/`;
     },
     seoShareImage() {
       return undefined;
