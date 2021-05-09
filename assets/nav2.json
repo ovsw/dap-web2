@@ -212,6 +212,98 @@
     ]
   },
   {
+    "name": "Info Booth",
+    "megaMenu": [
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "Hours & Schedule",
+            "description": "for 2021",
+            "new": true,
+            "url": "/hours-and-schedule-of-operation/",
+            "icon": "clock-duotone"
+          },
+          {
+            "name": "Directions",
+            "description": "to the park",
+            "new": false,
+            "url": "/directions/",
+            "icon": "map-signs-duotone"
+          }
+
+        ]
+      },
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "COVID-19 Safety",
+            "description": "guidelines & procedures",
+            "new": false,
+            "url": "/covid-19-safety-guidelines/",
+            "icon": "star-of-life-duotone"
+          },
+          {
+            "name": "Policies, Info, FAQs",
+            "description": "to know before you visit",
+            "new": false,
+            "url": "/policies-info-and-faqs/",
+            "icon": "question-solid"
+          },
+          {
+            "name": "Park News",
+            "description": "and updates",
+            "new": false,
+            "url": "/news/",
+            "icon": "newspaper-duotone"
+          },
+          {
+            "name": "Closures",
+            "description": "for rides and attractions",
+            "new": false,
+            "url": "/",
+            "icon": "store-slash-duotone"
+          }
+        ]
+      },
+      {
+        "type": "columnsSection",
+        "items": [
+          
+          {
+            "name": "First Aid",
+            "description": "& Infant Care Center",
+            "new": false,
+            "url": "/first-aid-infant-and-care-center/",
+            "icon": "first-aid-duotone"
+          },
+          {
+            "name": "Rental Lockers",
+            "description": "strollers & scooters",
+            "new": false,
+            "url": "/locker-scooter-and-stroller-rentals/",
+            "icon": "door-closed-duotone"
+          },
+          {
+            "name": "Guest Relations",
+            "description": "& info booth",
+            "new": false,
+            "url": "/guest-relations-and-info-booth/",
+            "icon": "comment-alt-smile-duotone"
+          },
+          {
+            "name": "Contact Us",
+            "description": "anytime",
+            "new": false,
+            "url": "/contact/",
+            "icon": "paper-plane-duotone"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Passes & Tickets",
     "megaMenu": [
       {
@@ -222,11 +314,11 @@
             "description": "for 2021",
             "new": true,
             "url": "/hours-and-schedule-of-operation/",
-            "icon": "calendar-alt-duotone"
+            "icon": "clock-duotone"
           },
           {
             "name": "Gift Cards",
-            "description": "abailable year-round!",
+            "description": "available year-round!",
             "new": false,
             "url": "/gift-cards/",
             "icon": "gift-card-duotone"

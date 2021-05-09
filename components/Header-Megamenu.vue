@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-center md:text-left md:pt-2 lg:relative"
+    class="text-center md:text-left md:pt-2 lg:relative lg:px-2"
     v-on-click-outside="hideMenu"
   >
     <!-- FIXME: keyboard navigation: close menu on esc on child item doesnt work -->

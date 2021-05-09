@@ -67,6 +67,13 @@
           @close-mobile-menu="hideMenu"
         />
       </li>
+      <li class="nav__item">
+        <HeaderMegamenu
+          :menuData="nav[4]"
+          :menuIndex="4"
+          @close-mobile-menu="hideMenu"
+        />
+      </li>
       <li class="nav__item ">
         <a
           href="https://delgrossos.centeredgeonline.com/"
