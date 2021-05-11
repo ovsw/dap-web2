@@ -50,7 +50,7 @@ export default {
       return undefined;
     },
     seoPageUrl() {
-      return `https://www.mydelgrossopark.com/${this.parkNewsPage.content.slug.current}/`;
+      return `https://www.mydelgrossopark.com/news/`;
     },
     seoShareImage() {
       return undefined;
