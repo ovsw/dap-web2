@@ -37,20 +37,24 @@ export default {
     }
   },
   methods: {
+    cleanUrl(url) {
+      return url.replace(/\/\/$/, "/");
+    },
     linkProps(url) {
       if (
         url.match(/((mailto:\w+)|(tel:\w+)|(http:\/\/\w+)|(https:\/\/\w+)).+/)
       ) {
-        return {
-          is: "a",
-          href: url,
-          target: "_blank",
-          rel: "noopener"
-        };
+        if (url)
+          return {
+            is: "a",
+            href: url,
+            target: "_blank",
+            rel: "noopener"
+          };
       }
       return {
         is: "router-link",
-        to: url
+        to: this.cleanUrl(url)
       };
     }
   }
