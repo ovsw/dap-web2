@@ -1,5 +1,5 @@
 <template>
-  <section class="py-24">
+  <section class="py-24 px-4">
     <div class="container mx-auto">
       <h2 v-if="title" class="mb-10">{{ title }}</h2>
       <ul class="gridWrapper">
