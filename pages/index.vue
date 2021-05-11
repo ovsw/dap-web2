@@ -108,7 +108,7 @@ export default {
       return undefined;
     },
     seoPageUrl() {
-      return `https://www.mydelgrossopark.com/${this.siteHome.content.slug.current}/`;
+      return `https://www.mydelgrossopark.com/`;
     },
     seoShareImage() {
       return undefined;
