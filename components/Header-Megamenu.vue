@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-center md:text-left md:pt-2 lg:relative lg:px-2"
+    class="text-center md:text-left md:pt-2 lg:relative lg:px-1 xl:px-2"
     v-on-click-outside="hideMenu"
   >
     <!-- FIXME: keyboard navigation: close menu on esc on child item doesnt work -->
@@ -32,9 +32,9 @@
 
         md:w-auto md:absolute md:left-2 md:right-2
         
-        lg:w-160 lg:z-10 lg:-left-8 xl:-left-16 left-
+        lg:w-160 lg:z-10 lg:-left-8 xl:-left-16
         "
-        :class="{ 'lg:-left-80': thirdItem }"
+        :class="leftAdjustmentClasses"
       >
         <!-- megamenu components -->
         <template v-for="(block, index) in menuData.megaMenu">
@@ -96,10 +96,10 @@
                   :key="index"
                   class="block lg:inline"
                 >
-                  <span v-if="index != 0" class="hidden lg:inline">, </span
-                  ><NuxtLink :to="subitem.url" class="underline">{{
-                    subitem.name
-                  }}</NuxtLink>
+                  <span v-if="index != 0" class="hidden lg:inline">, </span>
+                  <NuxtLink :to="subitem.url" class="underline">
+                    {{ subitem.name }}
+                  </NuxtLink>
                 </span>
               </span>
               <!-- end extra links -->
@@ -207,8 +207,27 @@ export default {
     this.menuItems = document.querySelectorAll(".mega-menu a");
   },
   computed: {
+    leftAdjustmentClasses: function() {
+      return {
+        "lg:-left-80": this.menuIndex == 3 || this.menuIndex == 4,
+        "lg:-left-96": this.menuIndex == 5,
+        "xl:-left-60 2xl:-left-0": this.menuIndex == 5
+      };
+    },
     thirdItem: function() {
       if (this.menuIndex == 3) {
+        return true;
+      }
+      return false;
+    },
+    fourthItem: function() {
+      if (this.menuIndex == 4) {
+        return true;
+      }
+      return false;
+    },
+    fifthItem: function() {
+      if (this.menuIndex == 5) {
         return true;
       }
       return false;

@@ -31,7 +31,7 @@
         <!-- TODO: status badges -->
         <!-- TODO: alert bar -->
 
-        <a href="tel:814-684-3538" class="hidden lg:flex items-center">
+        <a href="tel:814-684-3538" class="hidden xl:flex items-center">
           <svg-icon
             name="icon-phone"
             title="Telephone Icon"

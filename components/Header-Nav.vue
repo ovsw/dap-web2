@@ -70,17 +70,18 @@
       <li class="nav__item">
         <HeaderMegamenu
           :menuData="nav[4]"
-          :menuIndex="4"
+          :menuIndex="5"
           @close-mobile-menu="hideMenu"
         />
       </li>
       <li class="nav__item ">
         <a
           href="https://delgrossos.centeredgeonline.com/"
-          target="_blank" rel="noopener"
-          class="block text-base focus:outline-none focus:text-light-light focus:bg-green md:pt-2 md:text-sm lg:text-base font-bold uppercase  md:px-2 text-center md:text-left "
+          target="_blank"
+          rel="noopener"
+          class="block text-base focus:outline-none focus:text-light-light focus:bg-green md:pt-2 md:text-sm lg:text-base font-bold uppercase  md:px-2  text-center md:text-left "
         >
-           Store
+          Store
         </a>
       </li>
     </ul>
