@@ -1,17 +1,17 @@
 <template>
   <div class="pt-18 bg-yellow-200 shadow-inner-lg">
     <component :is="'style'" v-if="image">
-      .page-header[data-id="12312321"] { background-image: url('{{
+      .page-header[data-id="pageheader"] { background-image: url('{{
         $urlFor(image)
           .width(600)
           .height(400)
       }}')!important; } @media screen and (min-width: 640px) {
-      .page-header[data-id="12312321"] { background-image: url('{{
+      .page-header[data-id="pageheader"] { background-image: url('{{
         $urlFor(image)
           .width(1200)
           .height(800)
       }}')!important; } } @media screen and (min-width: 1280px) {
-      .page-header[data-id="12312321"] { background-image: url('{{
+      .page-header[data-id="pageheader"] { background-image: url('{{
         $urlFor(image)
           .width(1600)
           .height(1200)
@@ -20,8 +20,8 @@
 
     <div
       class="[ page-header ] bg-cover bg-fixed pt-96  2xl:pt-160 relative"
-      :id="12312321"
-      :data-id="12312321"
+      id="pageheader"
+      data-id="pageheader"
     >
       <div
         class="[ wrapper ] z-10 relative lg:mt-36"
@@ -30,7 +30,7 @@
         <div
           class="page-header__content bg-light inline-block p-14 rounded-tr-medium"
         >
-          <h1 class=" text-3xl lg:text-5xl">{{ title }}</h1>
+          <h1 class="text-3xl lg:text-4xl xl:text-5xl">{{ title }}</h1>
         </div>
       </div>
     </div>
