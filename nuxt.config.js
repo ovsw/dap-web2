@@ -333,7 +333,6 @@ export default {
       to: "donation-requests",
       statusCode: 301
     },
-    { from: "^/park-info/contact-us/", to: "", statusCode: 301 },
     { from: "^/park-info/contact-us/", to: "/contact/", statusCode: 301 }
   ],
 
