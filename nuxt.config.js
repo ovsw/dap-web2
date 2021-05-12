@@ -110,7 +110,7 @@ export default {
       },
       { rel: "manifest", href: "/site.webmanifest" },
       { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#2d8262" }
-      // { rel: "cannonical", href: seoCannonicalUrl }
+      // { rel: "canonical", href: seoCannonicalUrl }
     ]
   },
 

@@ -97,7 +97,7 @@ export default {
           content: this.seoPageUrl
         }
       ],
-      link: [{ rel: "cannonical", href: this.seoPageUrl }],
+      link: [{ rel: "canonical", href: this.seoPageUrl }],
       __dangerouslyDisableSanitizersByTagID: {
         ogimage: ["content"]
       }

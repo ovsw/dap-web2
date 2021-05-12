@@ -67,7 +67,6 @@
                   class="text-green"
                   style="position: relative; top: 0.5em;"
                   :name="item.icon"
-                  title="Facebook icon"
                   height="1.5em"
                   width="1.5em"
                 />

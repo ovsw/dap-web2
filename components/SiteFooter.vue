@@ -43,18 +43,16 @@
             <a href="mailto:info@mydelgrossopark.com" class="flex items-start">
               <svg-icon
                 name="at-solid"
-                title="@ icon"
                 height="1em"
                 width="1em"
                 class="svgIcon mr-2"
               />
-              info@mydelgrossopark.com</a
-            >
+              info@mydelgrossopark.com
+            </a>
           </p>
           <div class="flex items-start">
             <svg-icon
               name="envelope-regular"
-              title="envelope icon"
               height="1em"
               width="1em"
               class="svgIcon mr-2"
