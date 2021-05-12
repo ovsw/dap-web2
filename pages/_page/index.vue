@@ -60,7 +60,7 @@ export default {
     seoTitle() {
       if (this.page.content.seo && this.page.content.seo.title)
         return this.page.content.seo.title;
-      return undefined;
+      return this.page.title;
     },
     seoDescription() {
       if (this.page.content.seo && this.page.content.seo.description)
@@ -81,7 +81,6 @@ export default {
   head() {
     return {
       title: this.seoTitle,
-      titleTemplate: "%s | DelGrosso Amusement Park",
       meta: [
         {
           hid: "description",
