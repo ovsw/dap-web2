@@ -126,10 +126,7 @@
 
             <li><NuxtLink to="/our-history/">History</NuxtLink></li>
             <li>
-              <NuxtLink
-                to="https://recruiting.ultipro.com/DEL1006DFOOD/JobBoard/6e776796-7545-42f2-9d1a-e6841f2719de/?q=&o=postedDateDesc"
-                >Join Our Team</NuxtLink
-              >
+              <NuxtLink to="/employment/">Join Our Team</NuxtLink>
             </li>
             <li>
               <NuxtLink to="/donation-requests/">Donation Requests</NuxtLink>

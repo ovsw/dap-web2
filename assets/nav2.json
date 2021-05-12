@@ -140,6 +140,13 @@
             "new": false,
             "url": "/events/",
             "icon": "calendar-alt-duotone"
+          },
+          {
+            "name": "Park Map",
+            "description": "a bird's eye view",
+            "new": false,
+            "url": "/park-map/",
+            "icon": "map-marked-alt-duotone"
           }
         ]
       },
@@ -231,7 +238,6 @@
             "url": "/directions/",
             "icon": "map-signs-duotone"
           }
-
         ]
       },
       {
@@ -262,7 +268,7 @@
             "name": "Closures",
             "description": "for rides and attractions",
             "new": false,
-            "url": "/",
+            "url": "/closures/",
             "icon": "store-slash-duotone"
           }
         ]
@@ -270,7 +276,6 @@
       {
         "type": "columnsSection",
         "items": [
-          
           {
             "name": "First Aid",
             "description": "& Infant Care Center",
