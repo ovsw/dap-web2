@@ -75,7 +75,7 @@ export default {
       {
         hid: "msTitleColor",
         name: "msapplication-TileColor",
-        content: "#2D8262"
+        content: "#ffffff"
       },
       {
         hid: "theme-color",
@@ -109,7 +109,7 @@ export default {
         href: "/favicon-16x16.png"
       },
       { rel: "manifest", href: "/site.webmanifest" },
-      { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#ff7700" }
+      { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#2d8262" }
       // { rel: "cannonical", href: seoCannonicalUrl }
     ]
   },
