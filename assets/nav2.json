@@ -147,18 +147,6 @@
             "new": false,
             "url": "/park-map/",
             "icon": "map-marked-alt-duotone"
-          }
-        ]
-      },
-      {
-        "type": "columnsSection",
-        "items": [
-          {
-            "name": "COVID-19 Safety",
-            "description": "guidelines & procedures",
-            "new": false,
-            "url": "/covid-19-safety-guidelines/",
-            "icon": "star-of-life-duotone"
           },
           {
             "name": "Park News",
@@ -166,20 +154,6 @@
             "new": false,
             "url": "/news/",
             "icon": "newspaper-duotone"
-          },
-          {
-            "name": "Policies, Info, FAQs",
-            "description": "to know before you visit",
-            "new": false,
-            "url": "/policies-info-and-faqs/",
-            "icon": "question-solid"
-          },
-          {
-            "name": "Closures",
-            "description": "for rides and attractions",
-            "new": false,
-            "url": "/",
-            "icon": "store-slash-duotone"
           }
         ]
       },
