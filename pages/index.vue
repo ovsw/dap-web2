@@ -24,6 +24,7 @@
       :buttonText="siteHome.content.hero.button.text"
       :buttonUrl="siteHome.content.hero.button.url"
       :image="siteHome.content.hero.image"
+      :text="siteHome.content.hero.text"
     />
 
     <!-- <div class=" pt-24">

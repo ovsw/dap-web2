@@ -53,15 +53,13 @@
               >
               <!-- <span class="block text-indigo-200">customer support</span> -->
             </h1>
-            <p
-              class="mt-6  mx-auto text-center text-xl text-dark sm:max-w-3xl
+            <div
+              class="mt-8 md:mt-12  mx-auto text-center text-xl text-dark sm:max-w-3xl
                 lg:text-left lg:mx-0
               "
             >
-              Visit The Kid's Kingdom &middot; Enjoy our thrilling midway rides
-              and games &middot; Dig into our famous food &middot; Cool off at
-              our Water Park
-            </p>
+              <SanityContent :blocks="text" :serializers="serializers" />
+            </div>
             <div
               class="mt-10 max-w-sm mx-auto 
               sm:max-w-none sm:flex sm:justify-center 
@@ -106,6 +104,8 @@
 </template>
 
 <script>
+import externalLink from "@/components/serializers/externalLink";
+
 export default {
   props: {
     title: {
@@ -127,7 +127,19 @@ export default {
     image: {
       type: Object,
       required: true
+    },
+    text: {
+      type: Object
     }
+  },
+  data() {
+    return {
+      serializers: {
+        types: {
+          link: externalLink
+        }
+      }
+    };
   }
 };
 </script>
