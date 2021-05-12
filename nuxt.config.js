@@ -165,7 +165,177 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxtjs/redirect-module"],
+
+  redirect: [
+    // Redirect options here
+    { from: "^/groups/group-picnics/", to: "/group-picnics/", statusCode: 301 },
+    {
+      from: "^/attractions/rides/",
+      to: "/amusement-park-rides/",
+      statusCode: 301
+    },
+    {
+      from: "^/attractions/laguna-splash-water-park/",
+      to: "/laguna-splash-water-park-attractions/",
+      statusCode: 301
+    },
+    {
+      from: "^/attractions/cabana-rental-information/",
+      to: "/waterpark-cabana-rental-information/",
+      statusCode: 301
+    },
+    { from: "^/events/events-calendar/", to: "/events/", statusCode: 301 },
+    {
+      from: "^/food/spaghetti-wednesday/",
+      to: "/food/spaghetti-wednesdays/",
+      statusCode: 301
+    },
+    {
+      from: "^/hours/operating-hours/",
+      to: "/hours-and-schedule-of-operation/",
+      statusCode: 301
+    },
+    {
+      from: "^/tickets/all-day-fun-pass/",
+      to: "/passes/all-day-fun-pass/",
+      statusCode: 301
+    },
+    {
+      from: "^/tickets/sundowner-fun-passes/",
+      to: "/passes/sundowner-fun-pass/",
+      statusCode: 301
+    },
+    {
+      from: "^/tickets/season-pass/",
+      to: "/passes/season-pass/",
+      statusCode: 301
+    },
+    {
+      from: "^/tickets/individual-ride-tickets/",
+      to: "/ride-tickets/",
+      statusCode: 301
+    },
+    {
+      from: "^/tickets/2020-season-pass-information/",
+      to: "/2020-season-pass-information/",
+      statusCode: 301
+    },
+    { from: "^/tickets/gift-cards/", to: "/gift-cards/", statusCode: 301 },
+    { from: "^/groups/", to: "/group-picnics/", statusCode: 301 },
+    { from: "^/groups/group-picnics/", to: "/group-picnics/", statusCode: 301 },
+    {
+      from: "^/groups/groups-pricing/",
+      to: "/groups-pricing/",
+      statusCode: 301
+    },
+    {
+      from: "^/groups/buddy-bears-birthday-roundhouse/",
+      to: "/kids-birthday-parties-at-the-park/",
+      statusCode: 301
+    },
+    {
+      from: "^/groups/other-groups/",
+      to: "/specialty-groups/",
+      statusCode: 301
+    },
+    {
+      from: "^/food/dg2go/",
+      to: "https://www.dg2gofood.com/",
+      statusCode: 301
+    },
+    {
+      from: "^/food/pick-up-delivery-catering/",
+      to: "/famous-food/pick-up-delivery-catering/",
+      statusCode: 301
+    },
+    {
+      from: "^/food/food-menus/",
+      to: "/famous-food/food-menus/",
+      statusCode: 301
+    },
+    {
+      from: "^/food/food-allergen-information/",
+      to: "/food-allergens/",
+      statusCode: 301
+    },
+    {
+      from: "^/food/the-delgrosso-food-tradition/",
+      to: "/famous-food/the-delgrosso-food-tradition/",
+      statusCode: 301
+    },
+    { from: "^/news/current-news-releases/", to: "/news/", statusCode: 301 },
+    {
+      from: "^/park-info/covid-19-safety-guidelines/",
+      to: "/covid-19-safety-guidelines/",
+      statusCode: 301
+    },
+    {
+      from: "^/park-info/employment-opportunities/",
+      to: "/employment/",
+      statusCode: 301
+    },
+    { from: "^/park-info/directions/", to: "/directions/", statusCode: 301 },
+    { from: "^/park-info/closures/", to: "/closures/", statusCode: 301 },
+    {
+      from: "^/park-info/guest-policies/",
+      to: "/policies-info-and-faqs/",
+      statusCode: 301
+    },
+    // {
+    //   from: "^/park-info/rider-safety-accessibility-guide/",
+    //   to: "",
+    //   statusCode: 301
+    // },
+    {
+      from: "^/map/",
+      to: "/park-map/",
+      statusCode: 301
+    },
+    {
+      from: "^/park-info/faqs/",
+      to: "/policies-info-and-faqs/",
+      statusCode: 301
+    },
+    {
+      from: "^/park-info/locker-scooter-and-stroller-rentals/",
+      to: "/locker-scooter-and-stroller-rentals/",
+      statusCode: 301
+    },
+    {
+      from: "^/park-info/information-booth/",
+      to: "guest-relations-and-info-booth",
+      statusCode: 301
+    },
+    {
+      from: "^/park-info/first-aid-infant-care-center/",
+      to: "/first-aid-infant-and-care-center/",
+      statusCode: 301
+    },
+    { from: "^/park-info/history/", to: "/our-history/", statusCode: 301 },
+    {
+      from: "^/park-info/affiliations/",
+      to: "/friends-of-the-park/",
+      statusCode: 301
+    },
+    {
+      from: "^/park-info/affiliations/sponsors/",
+      to: "/sponsors/",
+      statusCode: 301
+    },
+    {
+      from: "^/park-info/affiliations/friends-of-the-park/",
+      to: "/friends-of-the-park/",
+      statusCode: 301
+    },
+    {
+      from: "^/park-info/donation-requests/",
+      to: "donation-requests",
+      statusCode: 301
+    },
+    { from: "^/park-info/contact-us/", to: "", statusCode: 301 },
+    { from: "^/park-info/contact-us/", to: "/contact/", statusCode: 301 }
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
