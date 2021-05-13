@@ -8,17 +8,17 @@
       }}')!important; } @media screen and (min-width: 640px) {
       .heroImage[data-id="heroImage"] { background-image: url('{{
         $urlFor(image)
-          .width(800)
+          .width(1200)
           .height(800)
       }}')!important; } } @media screen and (min-width: 1280px) {
       .heroImage[data-id="heroImage"] { background-image: url('{{
         $urlFor(image)
-          .width(1400)
-          .height(1200)
+          .width(1900)
+          .height(750)
       }}')!important; } }
     </component>
 
-    <div class="heroImage relative bg-cover" data-id="heroImage">
+    <div class="heroImage relative bg-center" data-id="heroImage">
       <div
         class="wrapper  
       sm:px-6 sm:py-6
