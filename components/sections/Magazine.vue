@@ -89,7 +89,7 @@
     >
       <div class="space-y-10">
         <div>
-          <p class="eyebrow" :class="`text-${sectionThemeOptions.color}`">
+          <p class="eyebrow" :class="`text-${sectionThemeOptions.color}-dark`">
             {{ section.eyebrow }}
           </p>
 

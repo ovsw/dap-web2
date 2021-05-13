@@ -21,6 +21,9 @@
 .bg-yellow-dark
 
 .text-dark
+.text-green-dark
+.text-blue-dark
+.text-red-dark
 
 .from-red
 .from-green
