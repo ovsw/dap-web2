@@ -1,5 +1,7 @@
 export const state = () => ({
   showDrafPreviewBanner: false,
+  alertText: [],
+  alertActive: false,
   newsSlugs: [],
   pagesSlugs: [],
   ridesSlugs: [],
@@ -10,6 +12,12 @@ export const state = () => ({
 export const mutations = {
   showBanner(state) {
     state.showDrafPreviewBanner = true;
+  },
+  setAlertText(state, alertText) {
+    state.alertText = alertText;
+  },
+  setAlertActive(state, alertActive) {
+    state.alertActive = alertActive;
   },
   setNewsSlugs(state, slugs) {
     state.newsSlugs = slugs;
@@ -30,6 +38,17 @@ export const mutations = {
 
 export const actions = {
   async nuxtServerInit({ commit }, { $sanity }) {
+    // alert state
+    const alertText = await $sanity
+      .fetch(/* groq */ `*[ _id == "siteSettings"].content.alertMessage[0]`)
+      .catch(e => console.error(e));
+    commit("setAlertText", alertText);
+
+    const alertActive = await $sanity
+      .fetch(/* groq */ `*[ _id == "siteSettings"].content.alertIsActive[0]`)
+      .catch(e => console.error(e));
+    commit("setAlertActive", alertActive);
+
     const newsSlugs = await $sanity
       .fetch('*[_type == "newsItem"].content.slug.current')
       .catch(e => console.error(e));
