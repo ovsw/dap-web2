@@ -42,14 +42,14 @@
         <HeaderMegamenu
           :menuData="nav[0]"
           :menuIndex="1"
-          @close-mobile-menu="hideMenu"
+          @close-mobile-menu="toggleMenu"
         />
       </li>
       <li class="nav__item">
         <HeaderMegamenu
           :menuData="nav[1]"
           :menuIndex="2"
-          @close-mobile-menu="hideMenu"
+          @close-mobile-menu="toggleMenu"
         />
       </li>
 
@@ -57,21 +57,21 @@
         <HeaderMegamenu
           :menuData="nav[2]"
           :menuIndex="3"
-          @close-mobile-menu="hideMenu"
+          @close-mobile-menu="toggleMenu"
         />
       </li>
       <li class="nav__item">
         <HeaderMegamenu
           :menuData="nav[3]"
           :menuIndex="4"
-          @close-mobile-menu="hideMenu"
+          @close-mobile-menu="toggleMenu"
         />
       </li>
       <li class="nav__item">
         <HeaderMegamenu
           :menuData="nav[4]"
           :menuIndex="5"
-          @close-mobile-menu="hideMenu"
+          @close-mobile-menu="toggleMenu"
         />
       </li>
       <li class="nav__item ">
@@ -92,9 +92,9 @@
         aria-label="Main Menu toggle"
         :aria-expanded="menuOpen"
         class="hamburger-menu hidden"
-        @click.prevent="toggleMenu"
         :data-open="menuOpen"
       >
+        <!-- @click.prevent="toggleMenu" -->
         <div></div>
       </button>
     </div>
@@ -113,9 +113,7 @@ export default {
   methods: {
     toggleMenu() {
       this.menuOpen = !this.menuOpen;
-    },
-    hideMenu() {
-      this.menuOpen = false;
+      // console.warn("mobile menu toggled:", this.menuOpen);
     }
   }
 };

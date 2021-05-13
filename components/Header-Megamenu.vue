@@ -194,10 +194,15 @@
 </template>
 
 <script>
+import ClickOutside from "vue-click-outside";
+
 export default {
   props: {
     menuData: Object,
     menuIndex: Number
+  },
+  directives: {
+    ClickOutside
   },
   mounted() {
     this.menuItems = document.querySelectorAll(".mega-menu a");
