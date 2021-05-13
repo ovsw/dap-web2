@@ -129,7 +129,7 @@ export default {
       required: true
     },
     text: {
-      type: Object
+      type: Array
     }
   },
   data() {
