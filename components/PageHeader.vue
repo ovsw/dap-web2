@@ -4,7 +4,7 @@
       .page-header[data-id="pageheader"] { background-image: url('{{
         $urlFor(image)
           .width(600)
-          .height(400)
+          .height(600)
       }}')!important; } @media screen and (min-width: 640px) {
       .page-header[data-id="pageheader"] { background-image: url('{{
         $urlFor(image)
@@ -14,12 +14,12 @@
       .page-header[data-id="pageheader"] { background-image: url('{{
         $urlFor(image)
           .width(1900)
-          .height(1150)
+          .height(1200)
       }}')!important; } }
     </component>
 
     <div
-      class="[ page-header ] bg-bottom bg-fixed pt-96  2xl:pt-160 relative"
+      class="[ page-header ] bg-bottom 2xl:bg-cover bg-fixed pt-96  2xl:pt-160 relative"
       id="pageheader"
       data-id="pageheader"
     >
