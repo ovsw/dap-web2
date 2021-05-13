@@ -2,7 +2,7 @@
   <ais-instant-search :search-client="searchClient" index-name="dap-2">
     <ais-configure :hits-per-page.camel="5">
       <!-- :attributesToSnippet="['title', 'sections.body']" -->
-      <ais-autocomplete v-on-click-outside="onClickOutside">
+      <ais-autocomplete v-click-outside="onClickOutside">
         <div slot-scope="{ currentRefinement, indices, refine }">
           <input
             type="search"
