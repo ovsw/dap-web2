@@ -49,11 +49,20 @@
     </div>
     <div
       v-if="$store.state.alertActive"
-      class="bg-yellow pt-2 pb-1 flex justify-center"
+      class="bg-yellow pt-2 pb-1 flex items-center justify-center underline"
     >
-      <SanityContent :blocks="$store.state.alertText" />
-      <button class="ml-4 underline" @click="hideAlert">
-        x Dismiss
+      <SanityContent
+        :blocks="$store.state.alertText"
+        :serializers="serializers"
+      />
+      <button class="ml-2" @click="hideAlert">
+        <span class="sr-only">dismiss alert</span>
+        <svg-icon
+          name="window-close-duotone"
+          height="1.5em"
+          width="1.5em"
+          class="text-green"
+        />
       </button>
     </div>
     <!-- <HeaderAlert /> -->
@@ -62,9 +71,23 @@
 
 <script>
 import { mapMutations } from "vuex";
+import externalLink from "@/components/serializers/externalLink";
 
 export default {
   name: "SiteHeader",
+  data() {
+    return {
+      serializers: {
+        // marks: {
+        //   link: externalLink
+        // },
+        // TODO: form serializer
+        types: {
+          link: externalLink
+        }
+      }
+    };
+  },
   methods: {
     ...mapMutations({
       hideAlert: "hideAlert"

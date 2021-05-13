@@ -14,15 +14,15 @@
       .heroImage[data-id="heroImage"] { background-image: url('{{
         $urlFor(image)
           .width(1900)
-          .height(750)
+          .height(850)
       }}')!important; } }
     </component>
 
-    <div class="heroImage relative bg-center" data-id="heroImage">
+    <div class="heroImage relative bg-top xl:bg-cover" data-id="heroImage">
       <div
         class="wrapper  
       sm:px-6 sm:py-6
-      md:py-20
+      md:py-20 lg:py-28 xl:py-36
       lg:px-8"
       >
         <div
