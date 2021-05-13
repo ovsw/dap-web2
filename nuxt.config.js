@@ -162,11 +162,12 @@ export default {
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "@nuxtjs/svg-sprite",
-    "@nuxtjs/sanity/module"
+    "@nuxtjs/sanity/module",
+    "@nuxtjs/google-analytics"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/redirect-module"],
+  modules: ["@nuxtjs/redirect-module", "@nuxtjs/sitemap"],
 
   redirect: [
     // Redirect options here
@@ -423,5 +424,15 @@ export default {
   sanity: {
     ...configSanity,
     withCredentials: true
+  },
+
+  googleAnalytics: {
+    // Options
+    id: "UA-80641441-1"
+  },
+
+  sitemap: {
+    hostname: "https://www.mydelgrossopark.com/",
+    gzip: true
   }
 };
