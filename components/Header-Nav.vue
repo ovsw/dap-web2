@@ -39,40 +39,20 @@
       :class="menuOpen ? 'block' : 'hidden'"
     >
       <li class="nav__item">
-        <HeaderMegamenu
-          :menuData="nav[0]"
-          :menuIndex="1"
-          @close-mobile-menu="toggleMenu"
-        />
+        <HeaderMegamenu :menuData="nav[0]" :menuIndex="1" />
       </li>
       <li class="nav__item">
-        <HeaderMegamenu
-          :menuData="nav[1]"
-          :menuIndex="2"
-          @close-mobile-menu="toggleMenu"
-        />
+        <HeaderMegamenu :menuData="nav[1]" :menuIndex="2" />
       </li>
 
       <li class="nav__item">
-        <HeaderMegamenu
-          :menuData="nav[2]"
-          :menuIndex="3"
-          @close-mobile-menu="toggleMenu"
-        />
+        <HeaderMegamenu :menuData="nav[2]" :menuIndex="3" />
       </li>
       <li class="nav__item">
-        <HeaderMegamenu
-          :menuData="nav[3]"
-          :menuIndex="4"
-          @close-mobile-menu="toggleMenu"
-        />
+        <HeaderMegamenu :menuData="nav[3]" :menuIndex="4" />
       </li>
       <li class="nav__item">
-        <HeaderMegamenu
-          :menuData="nav[4]"
-          :menuIndex="5"
-          @close-mobile-menu="toggleMenu"
-        />
+        <HeaderMegamenu :menuData="nav[4]" :menuIndex="5" />
       </li>
       <li class="nav__item ">
         <a
@@ -93,8 +73,8 @@
         :aria-expanded="menuOpen"
         class="hamburger-menu hidden"
         :data-open="menuOpen"
+        @click.prevent="toggleMenu"
       >
-        <!-- @click.prevent="toggleMenu" -->
         <div></div>
       </button>
     </div>
@@ -110,10 +90,14 @@ export default {
       menuOpen: false
     };
   },
+  watch: {
+    $route() {
+      this.menuOpen = false;
+    }
+  },
   methods: {
     toggleMenu() {
       this.menuOpen = !this.menuOpen;
-      // console.warn("mobile menu toggled:", this.menuOpen);
     }
   }
 };

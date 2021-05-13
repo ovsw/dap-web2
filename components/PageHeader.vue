@@ -9,17 +9,17 @@
       .page-header[data-id="pageheader"] { background-image: url('{{
         $urlFor(image)
           .width(1200)
-          .height(800)
+          .height(1200)
       }}')!important; } } @media screen and (min-width: 1280px) {
       .page-header[data-id="pageheader"] { background-image: url('{{
         $urlFor(image)
-          .width(1600)
-          .height(1200)
+          .width(1900)
+          .height(1150)
       }}')!important; } }
     </component>
 
     <div
-      class="[ page-header ] bg-cover bg-fixed pt-96  2xl:pt-160 relative"
+      class="[ page-header ] bg-bottom bg-fixed pt-96  2xl:pt-160 relative"
       id="pageheader"
       data-id="pageheader"
     >
@@ -28,7 +28,7 @@
         :class="{ 'max-w-screen-lg': narrow, '-inset-x-10': narrow }"
       >
         <div
-          class="page-header__content bg-light inline-block p-14 rounded-tr-medium"
+          class="page-header__content bg-light inline-block p-10 xl:p-14 rounded-tr-medium"
         >
           <h1 class="text-3xl lg:text-4xl xl:text-5xl">{{ title }}</h1>
         </div>
