@@ -61,12 +61,14 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
   name: "SiteHeader",
   methods: {
-    hideAlert() {
-      console.warn("hide");
-    }
+    ...mapMutations({
+      hideAlert: "hideAlert"
+    })
   }
 };
 </script>

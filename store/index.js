@@ -19,6 +19,9 @@ export const mutations = {
   setAlertActive(state, alertActive) {
     state.alertActive = alertActive;
   },
+  hideAlert(state) {
+    state.alertActive = false;
+  },
   setNewsSlugs(state, slugs) {
     state.newsSlugs = slugs;
   },
