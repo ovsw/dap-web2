@@ -88,7 +88,13 @@
       :class="`border-${sectionThemeOptions.color}`"
     >
       <div class="space-y-10">
-        <h2>{{ section.title }}</h2>
+        <div>
+          <p class="eyebrow" :class="`text-${sectionThemeOptions.color}`">
+            {{ section.eyebrow }}
+          </p>
+
+          <h2 class="mt-2">{{ section.title }}</h2>
+        </div>
 
         <div v-if="section.subtitle" class="magSection__subHeadingWrapper">
           <h3 class="[ subtitle text-xl font-bold ]">{{ section.subtitle }}</h3>

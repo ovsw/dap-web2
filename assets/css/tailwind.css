@@ -127,4 +127,7 @@
   .pill {
     @apply px-3 pb-1 pt-2 text-xs tracking-wider uppercase rounded-full  font-semibold;
   }
+  .eyebrow {
+    @apply tracking-widest uppercase text-base font-semibold;
+  }
 }
