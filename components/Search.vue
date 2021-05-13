@@ -2,7 +2,7 @@
   <ais-instant-search :search-client="searchClient" index-name="dap-2">
     <ais-configure :hits-per-page.camel="5">
       <!-- :attributesToSnippet="['title', 'sections.body']" -->
-      <ais-autocomplete v-click-outside="onClickOutside">
+      <ais-autocomplete v-on-click-outside="onClickOutside">
         <div slot-scope="{ currentRefinement, indices, refine }">
           <input
             type="search"
@@ -68,7 +68,6 @@
 
 <script>
 import algoliasearch from "algoliasearch/lite";
-import { mixin as onClickOutside } from "vue-on-click-outside";
 
 const searchClient = algoliasearch(
   "F9U95OH1S6",
@@ -83,7 +82,6 @@ export default {
       highlightedIndex: -1
     };
   },
-  mixins: [onClickOutside],
   head() {
     return {
       // link: [

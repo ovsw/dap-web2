@@ -194,14 +194,11 @@
 </template>
 
 <script>
-import { mixin as onClickOutside } from "vue-on-click-outside";
-
 export default {
   props: {
     menuData: Object,
     menuIndex: Number
   },
-  mixins: [onClickOutside],
   mounted() {
     this.menuItems = document.querySelectorAll(".mega-menu a");
   },
