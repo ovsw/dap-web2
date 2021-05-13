@@ -12,7 +12,7 @@
     <div class="wrapper px-4 py-0 lg:py-2">
       <div class="site-head__inner flex flex-wrap items-center justify-between">
         <NuxtLink
-          class="logo block  flex-grow md:flex-grow-0 sm:w-auto md:w-48"
+          class="logo block  flex-grow md:flex-grow-0 sm:w-auto md:w-32 lg:w-48"
           to="/"
         >
           <img
@@ -47,13 +47,27 @@
         </a>
       </div>
     </div>
+    <div
+      v-if="$store.state.alertActive"
+      class="bg-yellow pt-2 pb-1 flex justify-center"
+    >
+      <SanityContent :blocks="$store.state.alertText" />
+      <button class="ml-4 underline" @click="hideAlert">
+        x Dismiss
+      </button>
+    </div>
     <!-- <HeaderAlert /> -->
   </header>
 </template>
 
 <script>
 export default {
-  name: "SiteHeader"
+  name: "SiteHeader",
+  methods: {
+    hideAlert() {
+      console.warn("hide");
+    }
+  }
 };
 </script>
 
