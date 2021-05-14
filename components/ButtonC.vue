@@ -52,9 +52,11 @@ export default {
             rel: "noopener"
           };
       }
+
+      let routerLinkDestination = `/${url}/`;
       return {
         is: "router-link",
-        to: this.cleanUrl(url)
+        to: this.cleanUrl(routerLinkDestination)
       };
     }
   }
