@@ -42,12 +42,14 @@ export default {
     },
     linkProps(url) {
       if (
-        url.match(/((mailto:\w+)|(tel:\w+)|(http:\/\/\w+)|(https:\/\/\w+)).+/)
+        url
+          .replace(/^\/+/, "")
+          .match(/((mailto:\w+)|(tel:\w+)|(http:\/\/\w+)|(https:\/\/\w+)).+/)
       ) {
         if (url)
           return {
             is: "a",
-            href: url,
+            href: this.cleanUrl(url.replace(/^\/+/, "")),
             target: "_blank",
             rel: "noopener"
           };
