@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     cleanUrl(url) {
-      return url.replace(/\/\/$/, "/");
+      return url.replace(/\/\//g, "/");
     },
     linkProps(url) {
       if (
@@ -56,7 +56,7 @@ export default {
         is: "router-link",
         to: this.cleanUrl(url)
       };
-    }
+    }''
   }
 };
 </script>

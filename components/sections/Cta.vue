@@ -36,7 +36,7 @@
           </div>
           <ButtonC
             v-if="section.button1"
-            :url="section.button1.url"
+            :url="`/${section.button1.url}/`"
             class="[ button ]"
             :bgColor="sectionThemeOptions.buttonBgColor"
             :color="sectionThemeOptions.buttonTextColor"
