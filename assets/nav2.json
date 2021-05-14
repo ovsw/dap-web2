@@ -289,39 +289,6 @@
         "type": "columnsSection",
         "items": [
           {
-            "name": "Hours & Schedule",
-            "description": "for 2021",
-            "new": true,
-            "url": "/hours-and-schedule-of-operation/",
-            "icon": "clock-duotone"
-          },
-          {
-            "name": "Gift Cards",
-            "description": "available year-round!",
-            "new": false,
-            "url": "/gift-cards/",
-            "icon": "gift-card-duotone"
-          },
-          {
-            "name": "Rain Check Info",
-            "description": "& inclement weather policy",
-            "new": false,
-            "url": "/rain-check-info/",
-            "icon": "umbrella-duotone"
-          },
-          {
-            "name": "Ride Tickets",
-            "description": "at the park Ticket Booth",
-            "new": false,
-            "url": "/ride-tickets/",
-            "icon": "ticket-duotone"
-          }
-        ]
-      },
-      {
-        "type": "columnsSection",
-        "items": [
-          {
             "name": "All-Day Fun Pass",
             "description": "Includes Rides & Water Park!",
             "new": false,
@@ -341,6 +308,39 @@
             "new": false,
             "url": "/passes/season-pass/",
             "icon": "star-duotone"
+          },
+          {
+            "name": "Ride Tickets",
+            "description": "at the park Ticket Booth",
+            "new": false,
+            "url": "/ride-tickets/",
+            "icon": "ticket-duotone"
+          }
+        ]
+      },
+      {
+        "type": "columnsSection",
+        "items": [
+          {
+            "name": "Hours & Schedule",
+            "description": "for 2021",
+            "new": true,
+            "url": "/hours-and-schedule-of-operation/",
+            "icon": "clock-duotone"
+          },
+          {
+            "name": "Gift Cards",
+            "description": "available year-round!",
+            "new": false,
+            "url": "/gift-cards/",
+            "icon": "gift-card-duotone"
+          },
+          {
+            "name": "Rain Check Info",
+            "description": "& inclement weather policy",
+            "new": false,
+            "url": "/rain-check-info/",
+            "icon": "umbrella-duotone"
           },
           {
             "name": "2020 Season Pass Info",
