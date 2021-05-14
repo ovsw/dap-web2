@@ -3,6 +3,12 @@
     <span class="relative inset-y-0.5 mr-2">
       <slot></slot>
     </span>
+    <svg-icon
+      name="icon-chevron-right-light"
+      title="chevron right icon"
+      height="1em"
+      width="1em"
+    />
   </component>
 </template>
 
