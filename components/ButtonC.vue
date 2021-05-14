@@ -56,7 +56,7 @@ export default {
         is: "router-link",
         to: this.cleanUrl(url)
       };
-    }''
+    }
   }
 };
 </script>
