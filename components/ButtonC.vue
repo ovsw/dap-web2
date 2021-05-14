@@ -3,12 +3,6 @@
     <span class="relative inset-y-0.5 mr-2">
       <slot></slot>
     </span>
-    <svg-icon
-      name="icon-chevron-right-light"
-      title="chevron right icon"
-      height="1em"
-      width="1em"
-    />
   </component>
 </template>
 
@@ -42,14 +36,12 @@ export default {
     },
     linkProps(url) {
       if (
-        url
-          .replace(/^\/+/, "")
-          .match(/((mailto:\w+)|(tel:\w+)|(http:\/\/\w+)|(https:\/\/\w+)).+/)
+        url.match(/((mailto:\w+)|(tel:\w+)|(http:\/\/\w+)|(https:\/\/\w+)).+/)
       ) {
         if (url)
           return {
             is: "a",
-            href: this.cleanUrl(url.replace(/^\/+/, "")),
+            href: url,
             target: "_blank",
             rel: "noopener"
           };
