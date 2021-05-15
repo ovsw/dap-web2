@@ -7,7 +7,7 @@ if (!globalThis.fetch) {
 }
 
 const configSanity = {
-  projectId: "0un18sqx",
+  projectId: "zjwbgj71",
   useCdn: false,
   minimal: true,
   apiVersion: "2021-03-25",
@@ -16,14 +16,14 @@ const configSanity = {
 };
 const client = createClient(configSanity);
 
-const getdefaultSeoInfo = async function seoInfo() {
-  const response = await client.fetch(/* groq */ `*[ _id == "siteSettings"] {
-      "seo": content.seo
-    }[0]`);
-  return response;
-};
+// const getdefaultSeoInfo = async function seoInfo() {
+//   const response = await client.fetch(/* groq */ `*[ _id == "siteSettings"] {
+//       "seo": content.seo
+//     }[0]`);
+//   return response;
+// };
 
-getdefaultSeoInfo().then(response => console.log("xxxxxxx", response));
+// getdefaultSeoInfo().then(response => console.log("xxxxxxx", response));
 
 // console.log("xxxxxxxxxxxxxx", defaultSeoInfo());
 
