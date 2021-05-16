@@ -3,7 +3,7 @@
     <SanityContent
       :blocks="page.content.body"
       :serializers="serializers"
-      class="prose prose-2xl max-w-screen-lg px-4"
+      class="prose prose-lg xl:prose-2xl max-w-screen-lg px-4 break-words"
     />
   </div>
 </template>

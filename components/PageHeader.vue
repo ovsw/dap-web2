@@ -25,7 +25,7 @@
     >
       <div
         class="[ wrapper ] z-10 relative lg:mt-36"
-        :class="{ 'max-w-screen-lg': narrow, '-inset-x-10': narrow }"
+        :class="{ 'lg:max-w-screen-lg': narrow, 'lg:-inset-x-10': narrow }"
       >
         <div
           class="page-header__content bg-light inline-block p-10 xl:p-14 rounded-tr-medium"
