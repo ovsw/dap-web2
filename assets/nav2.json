@@ -143,7 +143,7 @@
           },
           {
             "name": "Park Map",
-            "description": "a bird's eye view",
+            "description": "a bird's-eye view",
             "new": false,
             "url": "/park-map/",
             "icon": "map-marked-alt-duotone"
@@ -243,7 +243,7 @@
             "description": "for rides and attractions",
             "new": false,
             "url": "/closures/",
-            "icon": "store-slash-duotone"
+            "icon": "box-usd-duotone"
           }
         ]
       },
@@ -277,6 +277,13 @@
             "new": false,
             "url": "/contact/",
             "icon": "paper-plane-duotone"
+          },
+          {
+            "name": "Donation Requests",
+            "description": "Giving Back",
+            "new": false,
+            "url": "/donation-requests/",
+            "icon": "box-usd-duotone"
           }
         ]
       }
