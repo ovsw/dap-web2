@@ -366,8 +366,10 @@ export default {
       const waterParkAttractions = await client.fetch(
         /* groq */ `*[ _type == "attraction" && content.category match "Water"]`
       );
-      const newsItems = await client.fetch(`*[_type == "newsItem"]`);
-      const events = await client.fetch(/* groq */ `*[_type == "event"] {
+      const newsItems = await client.fetch(
+        `*[_type == "newsItem"  && !(_id in path('drafts.**'))]`
+      );
+      const events = await client.fetch(/* groq */ `*[_type == "event" && !(_id in path('drafts.**'))] {
           ...,
           content {
             ...,
