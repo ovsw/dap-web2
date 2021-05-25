@@ -431,7 +431,7 @@ export default {
 
   googleAnalytics: {
     // Options
-    id: "UA-80641441-1"
+    id: "UA-47136170-1"
   },
 
   sitemap: {
