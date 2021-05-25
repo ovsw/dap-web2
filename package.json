@@ -19,6 +19,7 @@
     "core-js": "^3.9.1",
     "gorko": "^0.3.0",
     "nuxt": "^2.15.4",
+    "nuxt-lazy-load": "^1.2.6",
     "vue-click-outside": "^1.1.0",
     "vue-instantsearch": "^3.6.0",
     "vue-silentbox": "^2.4.4"

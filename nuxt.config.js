@@ -164,7 +164,8 @@ export default {
     "@nuxtjs/google-fonts",
     "@nuxtjs/svg-sprite",
     "@nuxtjs/sanity/module",
-    "@nuxtjs/google-analytics"
+    "@nuxtjs/google-analytics",
+    "nuxt-lazy-load"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
