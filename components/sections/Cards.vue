@@ -60,7 +60,7 @@ export default {
 <style lang="scss" scoped>
 .cardSection {
   // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 20 20'%3E%3Cg fill-opacity='0.13'%3E%3Cpolygon fill='%23ffefc2' points='20 10 10 0 0 0 20 20'/%3E%3Cpolygon fill='%23ffefc2' points='0 10 0 20 10 20'/%3E%3C/g%3E%3C/svg%3E");
-  background-image: url("https://cdn.sanity.io/images/zjwbgj71/production/07f29dad6b7619710bc4e12cc969d59f4a687e86-4272x2848.jpg?w=1500");
+  background-image: url("https://cdn.sanity.io/images/zjwbgj71/production/07f29dad6b7619710bc4e12cc969d59f4a687e86-4272x2848.jpg?w=1200");
   background-size: cover;
 }
 .cardSection::after {
