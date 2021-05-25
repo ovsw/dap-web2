@@ -13,17 +13,22 @@
         class="object-cover w-full h-full"
         :src="
           $urlFor(section.image)
-            .width(1300)
-            .height(1300)
+            .width(800)
+            .height(800)
         "
         :alt="section.image.alt"
+      />
+      <!-- sizes="
+          (min-width: 1500px) 860px,
+          100vw
+        " 
         :srcset="
           $urlFor(section.image)
             .width(400)
             .height(300) +
             ' 400w, ' +
             $urlFor(section.image)
-              .width(928)
+              .width(800)
               .height(300) +
             ' 928w, ' +
             $urlFor(section.image)
@@ -43,11 +48,7 @@
               .height(1500) +
             ' 2500w'
         "
-      />
-      <!-- sizes="
-          (min-width: 1500px) 860px,
-          100vw
-        " -->
+        -->
 
       <client-only v-if="section.video">
         <silent-box
