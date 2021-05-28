@@ -1,7 +1,7 @@
 export const state = () => ({
   showDrafPreviewBanner: false,
-  alertText: [],
   alertActive: false,
+  alertItems: [],
   newsSlugs: [],
   pagesSlugs: [],
   ridesSlugs: [],
@@ -18,6 +18,9 @@ export const mutations = {
   },
   setAlertActive(state, alertActive) {
     state.alertActive = alertActive;
+  },
+  setAlertItems(state, alertItems) {
+    state.alertItems = alertItems;
   },
   hideAlert(state) {
     state.alertActive = false;
@@ -42,15 +45,16 @@ export const mutations = {
 export const actions = {
   async nuxtServerInit({ commit }, { $sanity }) {
     // alert state
-    const alertText = await $sanity
-      .fetch(/* groq */ `*[ _id == "siteSettings"].content.alertMessage[0]`)
+    const alertItems = await $sanity
+      .fetch(/* groq */ `*[ _id == "siteSettings"].content.alertItems`)
       .catch(e => console.error(e));
-    commit("setAlertText", alertText);
-
-    const alertActive = await $sanity
-      .fetch(/* groq */ `*[ _id == "siteSettings"].content.alertIsActive[0]`)
-      .catch(e => console.error(e));
-    commit("setAlertActive", alertActive);
+    commit("setAlertItems", alertItems[0]);
+    // see if we have any active alerts and set state accordingly
+    alertItems[0].map(item => {
+      if (item.alertIsActive) {
+        commit("setAlertActive", true);
+      }
+    });
 
     const newsSlugs = await $sanity
       .fetch('*[_type == "newsItem"].content.slug.current')

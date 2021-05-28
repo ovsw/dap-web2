@@ -49,12 +49,21 @@
     </div>
     <div
       v-if="$store.state.alertActive"
-      class="bg-yellow pt-2 pb-1 flex items-center justify-center underline"
+      class="bg-yellow pt-2 pb-1 flex items-center justify-center px-2"
     >
-      <SanityContent
-        :blocks="$store.state.alertText"
-        :serializers="serializers"
-      />
+      <div>
+        <template v-for="(item, index) in $store.state.alertItems">
+          <div :key="item._key" class="inline" v-if="item.alertIsActive">
+            <span class="pl-2 pr-1" v-if="index != 0"> &middot; </span>
+            <SanityContent
+              :blocks="item.text"
+              :serializers="serializers"
+              class="alertText prose inline-flex"
+            />
+          </div>
+        </template>
+      </div>
+
       <button class="ml-2" @click="hideAlert">
         <span class="sr-only">dismiss alert</span>
         <svg-icon
