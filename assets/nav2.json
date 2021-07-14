@@ -251,6 +251,13 @@
         "type": "columnsSection",
         "items": [
           {
+            "name": "Cabana Rentals",
+            "description": "at Laguna Splash Water Park",
+            "new": false,
+            "url": "/waterpark-cabana-rental-information/",
+            "icon": "umbrella-beach-duotone"
+          },
+          {
             "name": "First Aid",
             "description": "& Infant Care Center",
             "new": false,
