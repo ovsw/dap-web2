@@ -15,10 +15,14 @@
                 :href="sponsor.url"
                 target="_blank"
                 rel="noopener"
-                class="sponsorGridCell w-1/4 flex items-center justify-center"
+                class="sponsorGridCell w-1/4 flex items-center justify-center px-6"
               >
-                <img
+                <!-- <img
                   :src="$urlFor(sponsor.image).width(200)"
+                  :alt="`${sponsor.name} logo`"
+                /> -->
+                <img
+                  :src="$urlFor(sponsor.image).height(100)"
                   :alt="`${sponsor.name} logo`"
                 />
               </a>
