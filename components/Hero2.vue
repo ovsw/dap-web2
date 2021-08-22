@@ -3,22 +3,12 @@
     <component :is="'style'" v-if="image">
       .heroImage[data-id="heroImage"] { background-image: url('{{
         $urlFor(image)
-          .width(600)
-          .height(600)
-      }}')!important; } @media screen and (min-width: 640px) {
-      .heroImage[data-id="heroImage"] { background-image: url('{{
-        $urlFor(image)
-          .width(1200)
-          .height(800)
-      }}')!important; } } @media screen and (min-width: 1280px) {
-      .heroImage[data-id="heroImage"] { background-image: url('{{
-        $urlFor(image)
-          .width(1900)
-          .height(850)
-      }}')!important; } }
+          .width(1000)
+          .height(500)
+      }}')!important; }
     </component>
 
-    <div class="heroImage relative bg-top xl:bg-cover" data-id="heroImage">
+    <div class="heroImage relative bg-center bg-cover" data-id="heroImage">
       <div
         class="wrapper  
       sm:px-6 sm:py-6
