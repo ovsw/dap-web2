@@ -22,7 +22,7 @@ export default {
           is: "a",
           href: href,
           target: "_blank",
-          rel: "noopener"
+          rel: "noopener noreferrer"
         };
       }
       return {
