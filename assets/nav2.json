@@ -318,7 +318,7 @@
           },
           {
             "name": "Season Pass",
-            "description": "for 2021",
+            "description": "for 2022",
             "new": false,
             "url": "/passes/season-pass/",
             "icon": "star-duotone"
@@ -355,13 +355,6 @@
             "new": false,
             "url": "/rain-check-info/",
             "icon": "umbrella-duotone"
-          },
-          {
-            "name": "2020 Season Pass Info",
-            "description": "and refunds",
-            "new": false,
-            "url": "/2020-season-pass-information/",
-            "icon": "exclamation-solid"
           }
         ]
       }
