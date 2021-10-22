@@ -200,8 +200,8 @@
         "items": [
           {
             "name": "Hours & Schedule",
-            "description": "for 2021",
-            "new": true,
+            "description": "for 2022",
+            "new": false,
             "url": "/hours-and-schedule-of-operation/",
             "icon": "clock-duotone"
           },
@@ -291,6 +291,13 @@
             "new": false,
             "url": "/donation-requests/",
             "icon": "box-usd-duotone"
+          },
+          {
+            "name": "Rider Safety & Accessibility",
+            "description": "guide",
+            "new": false,
+            "url": "/rider-safety-and-accessibility-guide/",
+            "icon": "users-duotone"
           }
         ]
       }
@@ -337,8 +344,8 @@
         "items": [
           {
             "name": "Hours & Schedule",
-            "description": "for 2021",
-            "new": true,
+            "description": "for 2022",
+            "new": false,
             "url": "/hours-and-schedule-of-operation/",
             "icon": "clock-duotone"
           },
