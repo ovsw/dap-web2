@@ -7,7 +7,25 @@
         <dl class="space-y-16">
           <template v-for="menuItem in section.menuItems">
             <div :key="menuItem._key">
-              <dt class="font-bold text-3xl font-display mb-6">
+              <!-- heading -->
+              <dt
+                v-if="menuItem._type != 'menuItem'"
+                class="font-bold text-3xl font-display mb-6"
+              >
+                <h2
+                  :key="menuItem._key"
+                  class="text-2xl font-display lg:text-3xl font-bold mt-16 text-red"
+                >
+                  {{ menuItem.value }}
+                </h2>
+              </dt>
+
+              <!-- menuItem -->
+
+              <dt
+                v-if="menuItem._type === 'menuItem'"
+                class="font-bold text-3xl font-display mb-6"
+              >
                 {{ menuItem.name }}
               </dt>
               <dd>
