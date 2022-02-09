@@ -35,7 +35,7 @@
           },
           {
             "name": "Group Pricing",
-            "description": "2021 All-Day Fun Pass",
+            "description": "2022 All-Day Fun Pass",
             "new": false,
             "url": "/groups-pricing/",
             "icon": "money-check-alt-duotone"
@@ -71,7 +71,7 @@
           },
           {
             "name": "Spagetti Wednesdays",
-            "description": "2021 weekly pasta features",
+            "description": "2022 weekly pasta features",
             "new": false,
             "url": "/food/spaghetti-wednesdays/",
             "icon": "noun-spaghetti"
