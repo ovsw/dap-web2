@@ -40,14 +40,14 @@
             famous food.
           </p>
           <p>
-            <a href="mailto:info@mydelgrossopark.com" class="flex items-start">
+            <a href="mailto:parkinfo@delgrossos.com" class="flex items-start">
               <svg-icon
                 name="at-solid"
                 height="1em"
                 width="1em"
                 class="svgIcon mr-2"
               />
-              info@mydelgrossopark.com
+              parkinfo@delgrossos.com
             </a>
           </p>
           <div class="flex items-start">
