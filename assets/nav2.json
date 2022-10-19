@@ -14,7 +14,7 @@
           },
           {
             "name": "School Picnics",
-            "description": "Late May / June 2022",
+            "description": "Late May / June 2023",
             "new": false,
             "url": "/school-picnics/",
             "icon": "bus-school-duotone"
@@ -200,7 +200,7 @@
         "items": [
           {
             "name": "Hours & Schedule",
-            "description": "for 2022",
+            "description": "for 2023",
             "new": false,
             "url": "/hours-and-schedule-of-operation/",
             "icon": "clock-duotone"
