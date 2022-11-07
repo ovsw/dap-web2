@@ -325,7 +325,7 @@
           },
           {
             "name": "Season Pass",
-            "description": "for 2022",
+            "description": "for 2023",
             "new": false,
             "url": "/passes/season-pass/",
             "icon": "star-duotone"
@@ -344,7 +344,7 @@
         "items": [
           {
             "name": "Hours & Schedule",
-            "description": "for 2022",
+            "description": "for 2023",
             "new": false,
             "url": "/hours-and-schedule-of-operation/",
             "icon": "clock-duotone"
