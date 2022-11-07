@@ -14,7 +14,7 @@
           },
           {
             "name": "School Picnics",
-            "description": "Late May / June 2023",
+            "description": "Late May / June",
             "new": false,
             "url": "/school-picnics/",
             "icon": "bus-school-duotone"
@@ -35,7 +35,7 @@
           },
           {
             "name": "Group Pricing",
-            "description": "2022 All-Day Fun Pass",
+            "description": "All-Day Fun Pass",
             "new": false,
             "url": "/groups-pricing/",
             "icon": "money-check-alt-duotone"
@@ -70,8 +70,8 @@
             "icon": "list-alt-duotone"
           },
           {
-            "name": "Spagetti Wednesdays",
-            "description": "2022 weekly pasta features",
+            "name": "Spaghetti Wednesdays",
+            "description": "weekly pasta features",
             "new": false,
             "url": "/food/spaghetti-wednesdays/",
             "icon": "noun-spaghetti"
@@ -200,7 +200,7 @@
         "items": [
           {
             "name": "Hours & Schedule",
-            "description": "for 2023",
+            "description": "for the season",
             "new": false,
             "url": "/hours-and-schedule-of-operation/",
             "icon": "clock-duotone"
@@ -325,7 +325,7 @@
           },
           {
             "name": "Season Pass",
-            "description": "for 2023",
+            "description": "pricing & info",
             "new": false,
             "url": "/passes/season-pass/",
             "icon": "star-duotone"
@@ -344,7 +344,7 @@
         "items": [
           {
             "name": "Hours & Schedule",
-            "description": "for 2023",
+            "description": "for the season",
             "new": false,
             "url": "/hours-and-schedule-of-operation/",
             "icon": "clock-duotone"
