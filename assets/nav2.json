@@ -258,11 +258,11 @@
             "icon": "umbrella-beach-duotone"
           },
           {
-            "name": "First Aid",
-            "description": "& Infant Care Center",
-            "new": false,
-            "url": "/first-aid-infant-and-care-center/",
-            "icon": "first-aid-duotone"
+            "name": "Cashless Info",
+            "description": "starting 2023 season",
+            "new": true,
+            "url": "/cashless-info/",
+            "icon": "twotone-credit-card"
           },
           {
             "name": "Rental Lockers",
@@ -272,11 +272,11 @@
             "icon": "door-closed-duotone"
           },
           {
-            "name": "Guest Relations",
-            "description": "& info booth",
+            "name": "First Aid",
+            "description": "& Infant Care Center",
             "new": false,
-            "url": "/guest-relations-and-info-booth/",
-            "icon": "comment-alt-smile-duotone"
+            "url": "/first-aid-infant-and-care-center/",
+            "icon": "first-aid-duotone"
           },
           {
             "name": "Contact Us",
@@ -286,11 +286,11 @@
             "icon": "paper-plane-duotone"
           },
           {
-            "name": "Donation Requests",
-            "description": "Giving Back",
+            "name": "Guest Relations",
+            "description": "& info booth",
             "new": false,
-            "url": "/donation-requests/",
-            "icon": "box-usd-duotone"
+            "url": "/guest-relations-and-info-booth/",
+            "icon": "comment-alt-smile-duotone"
           },
           {
             "name": "Rider Safety & Accessibility",
@@ -298,6 +298,13 @@
             "new": false,
             "url": "/rider-safety-and-accessibility-guide/",
             "icon": "users-duotone"
+          },
+          {
+            "name": "Donation Requests",
+            "description": "Giving Back",
+            "new": false,
+            "url": "/donation-requests/",
+            "icon": "box-usd-duotone"
           }
         ]
       }
