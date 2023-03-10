@@ -60,6 +60,11 @@ export default {
         content: seoDescription
       },
       {
+        hid: "googlesiteverification",
+        name: "google-site-verification",
+        content: "JCqURsLL4sx7DLr1kowzdUNGIsY67VoXT7D0e8q6c4s"
+      },
+      {
         hid: "ogtitle",
         name: "og:title",
         content: seoTitle
