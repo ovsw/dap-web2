@@ -55,11 +55,6 @@ export default {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: "google-site-verification",
-        name: "google-site-verification",
-        content: "JCqURsLL4sx7DLr1kowzdUNGIsY67VoXT7D0e8q6c4s"
-      },
-      {
         hid: "description",
         name: "description",
         content: seoDescription
@@ -118,10 +113,7 @@ export default {
       { rel: "manifest", href: "/site.webmanifest" },
       { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#2d8262" }
       // { rel: "canonical", href: seoCannonicalUrl }
-    ],
-    // script: [
-      // { src: 'https://js.adsrvr.org/up_loader.1.1.0.js', body: true },
-    // ]
+    ]
   },
 
   googleFonts: {
@@ -159,8 +151,7 @@ export default {
     "~plugins/preview.client.js",
     "~plugins/image-builder.js",
     "~/plugins/to-link.js",
-    "~/plugins/lightbox.client.js",
-    "~/plugins/TTDUniversalPixel.js"
+    "~/plugins/lightbox.client.js"
     // "~/plugins/axe.client.js"
   ],
 
