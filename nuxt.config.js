@@ -51,6 +51,11 @@ export default {
     htmlAttrs: {
       lang: "en"
     },
+    script: [
+      {
+        src: "https://js.adsrvr.org/up_loader.1.1.0.js", defer: '', body: true
+      },
+    ],
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
