@@ -119,9 +119,9 @@ export default {
       { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#2d8262" }
       // { rel: "canonical", href: seoCannonicalUrl }
     ],
-    script: [
-      { src: 'https://js.adsrvr.org/up_loader.1.1.0.js', body: true },
-    ]
+    // script: [
+      // { src: 'https://js.adsrvr.org/up_loader.1.1.0.js', body: true },
+    // ]
   },
 
   googleFonts: {
