@@ -55,7 +55,7 @@ export default {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: "",
+        hid: "google-site-verification",
         name: "google-site-verification",
         content: "JCqURsLL4sx7DLr1kowzdUNGIsY67VoXT7D0e8q6c4s"
       },
