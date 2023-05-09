@@ -10,18 +10,23 @@
         console.log({{ ride }})
       </script> -->
 
-    <CardGridWrapper>
-      <CardGrid
-        v-for="event in events"
-        :key="event._id"
-        :date="event.content.date"
-        :title="event.content.title"
-        :tags="event.content.tags"
-        :image="event.content.mainImage"
-        :description="event.content.description"
-        :url="`${event.content.slug.current}/`"
-      />
-    </CardGridWrapper>
+    <div v-for="(month, i) in eventsByMonth" :key="i">
+      <!-- <h2 class="mt-16 pl-8">{{month.name}} {{new Date().getFullYear()}}</h2> -->
+      <CardGridWrapper :title="month.name + ' ' + new Date().getFullYear()" >
+        <CardGrid
+          v-for="event in month.events"
+          :key="event._id"
+          :date="event.content.date"
+          :title="event.content.title"
+          :tags="event.content.tags"
+          :image="event.content.mainImage"
+          :description="event.content.description"
+          :url="`${event.content.slug.current}/`"
+        />
+      </CardGridWrapper>
+    </div>
+
+    
 
     <SectionsRenderer :sections="eventsPage.content.sectionsBottom" />
   </article>
@@ -30,18 +35,43 @@
 <script>
 const query = /* groq */ `{
   "eventsPage": *[_id == 'eventsPage'][0],
-  "events": *[ _type == "event"] | order(content.date asc)
+  "events": *[ _type == "event" && (content.date > now())] | order(content.date asc)
 }
 `;
 
 export default {
   name: "EventsPage",
-  asyncData({ $sanity }) {
-    const sanityCall = $sanity.fetch(query);
+  async asyncData({ $sanity }) {
+    const sanityCall = await $sanity.fetch(query);
+
+    // Create an array for the months
+    var months= [
+      {name: "January", events: []},
+      {name: "February", events: []},
+      {name: "March", events: []},
+      {name: "April", events: []},
+      {name: "May", events: []},
+      {name: "June", events: []},
+      {name: "July", events: []},
+      {name: "August", events: []},
+      {name: "September", events: []},
+      {name: "October", events: []},
+      {name: "November", events: []},
+      {name: "December", events: []},
+      ]; 
+
+    // Iterate through the original events array and push objects into corresponding sub-arrays
+    for (const event of sanityCall.events) {
+      const monthIndex = new Date(event.content.date).getMonth();
+      months[monthIndex].events.push(event);
+    }
+    // console.log("📆 months data", months.filter(month => month.events.length > 0));
+
+    sanityCall.eventsByMonth = months.filter(month => month.events.length > 0);
     // console.log("🎈 asyncData: called", sanityCall);
+
     return sanityCall;
   },
-
   computed: {
     seoTitle() {
       if (this.eventsPage.content.seo && this.eventsPage.content.seo.title)
