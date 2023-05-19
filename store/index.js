@@ -84,7 +84,7 @@ export const actions = {
     commit("setWaterParkAttractionSlugs", waterParkAttractionSlugs);
 
     const eventsSlugs = await $sanity
-      .fetch('*[ _type == "event"].content.slug.current')
+      .fetch('*[ _type == "event" && (content.date > now())].content.slug.current')
       .catch(e => console.error(e));
     // console.log(ridesSlugs);
     commit("setEventsSlugs", eventsSlugs);
