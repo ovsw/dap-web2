@@ -10,7 +10,7 @@ const configSanity = {
   projectId: "zjwbgj71",
   useCdn: false,
   minimal: true,
-  apiVersion: "2021-03-25",
+  apiVersion: "2021-10-21",
   dataset: "production"
   // token: process.env.NODE_ENV == "development" ? process.env.SANITY_READ_TOKEN : ''
 };
