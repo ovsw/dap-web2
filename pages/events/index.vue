@@ -35,7 +35,7 @@
 <script>
 const query = /* groq */ `{
   "eventsPage": *[_id == 'eventsPage'][0],
-  "events": *[ _type == "event" && (content.date > now())] | order(content.date asc)
+  "events": *[ _type == "event" && (content.endDate > now())] | order(content.date asc)
 }
 `;
 
