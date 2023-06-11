@@ -17,6 +17,7 @@
           v-for="event in month.events"
           :key="event._id"
           :date="event.content.date"
+          :endDate="event.content.endDate" 
           :title="event.content.title"
           :tags="event.content.tags"
           :image="event.content.mainImage"
