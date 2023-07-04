@@ -12,12 +12,13 @@
 
     <div v-for="(month, i) in eventsByMonth" :key="i">
       <!-- <h2 class="mt-16 pl-8">{{month.name}} {{new Date().getFullYear()}}</h2> -->
-      <CardGridWrapper :title="month.name + ' ' + new Date().getFullYear()" >
+      <CardGridWrapper :title="month.name + ' ' + new Date().getFullYear()">
         <CardGrid
+          enableEndDates="true"
           v-for="event in month.events"
           :key="event._id"
           :date="event.content.date"
-          :endDate="event.content.endDate" 
+          :endDate="event.content.endDate"
           :title="event.content.title"
           :tags="event.content.tags"
           :image="event.content.mainImage"
@@ -26,8 +27,6 @@
         />
       </CardGridWrapper>
     </div>
-
-    
 
     <SectionsRenderer :sections="eventsPage.content.sectionsBottom" />
   </article>
@@ -46,20 +45,20 @@ export default {
     const sanityCall = await $sanity.fetch(query);
 
     // Create an array for the months
-    var months= [
-      {name: "January", events: []},
-      {name: "February", events: []},
-      {name: "March", events: []},
-      {name: "April", events: []},
-      {name: "May", events: []},
-      {name: "June", events: []},
-      {name: "July", events: []},
-      {name: "August", events: []},
-      {name: "September", events: []},
-      {name: "October", events: []},
-      {name: "November", events: []},
-      {name: "December", events: []},
-      ]; 
+    var months = [
+      { name: "January", events: [] },
+      { name: "February", events: [] },
+      { name: "March", events: [] },
+      { name: "April", events: [] },
+      { name: "May", events: [] },
+      { name: "June", events: [] },
+      { name: "July", events: [] },
+      { name: "August", events: [] },
+      { name: "September", events: [] },
+      { name: "October", events: [] },
+      { name: "November", events: [] },
+      { name: "December", events: [] }
+    ];
 
     // Iterate through the original events array and push objects into corresponding sub-arrays
     for (const event of sanityCall.events) {

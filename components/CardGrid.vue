@@ -14,12 +14,19 @@
           </span>
 
           <span class="flex space-x-2 items-baseline">
-            <span v-if="sameStartEndDates" class="pill bg-gray-300">
-              {{date | formatDateShort }}</span>
-            <span v-else class="pill bg-gray-300">
-              {{ date | formatDateShort }} - {{ endDate | formatDateShort }}
+            <template v-if="enableEndDates">
+              <span v-if="sameStartEndDates" class="pill bg-gray-300">
+                {{ date | formatDateShort }}</span
+              >
+              <span v-else class="pill bg-gray-300">
+                {{ date | formatDateShort }} - {{ endDate | formatDateShort }}
+              </span>
+            </template>
 
-            </span>
+            <template v-else>
+              <span class="pill bg-gray-300">{{ date | formatDateShort }}</span>
+            </template>
+
             <template v-if="tags.length">
               <span
                 v-for="(tag, index) in tags"
@@ -62,6 +69,10 @@ export default {
       type: String,
       default: "missing title"
     },
+    enableEndDates: {
+      type: Boolean,
+      default: () => false
+    },
     tags: {
       type: Array,
       default: () => []
@@ -85,22 +96,21 @@ export default {
   },
   computed: {
     sameStartEndDates() {
-      if (this.date== this.endDate) {
+      if (this.date == this.endDate) {
         return true;
       }
       return false;
     }
   },
   methods: {
-    formatDateShort (dateValue){
+    formatDateShort(dateValue) {
       const date = new Date(dateValue);
-      
+
       return date.toLocaleString(["en-US"], {
         timeZone: "America/New_York",
         month: "short",
         day: "2-digit"
       });
-
     },
     tagColor(tag) {
       if (["Thrill Ride", "food"].includes(tag)) {

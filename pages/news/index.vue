@@ -12,6 +12,7 @@
         :image="item.content.mainImage"
         :description="item.content.description"
         :url="`${item.content.slug.current}/`"
+        :date="item.content.date"
       />
     </CardGridWrapper>
   </div>
