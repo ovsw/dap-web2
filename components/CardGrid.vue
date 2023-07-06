@@ -24,7 +24,9 @@
             </template>
 
             <template v-else>
-              <span class="pill bg-gray-300">{{ date | formatDateShort }}</span>
+              <template v-if="date">
+                <span class="pill bg-gray-300">{{ date | formatDateShort }}</span>
+              </template>
             </template>
 
             <template v-if="tags.length">
