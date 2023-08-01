@@ -1,11 +1,11 @@
 <template>
   <li
-    class="card  bg-white transition-transform flex flex-col shadow-md rounded-tr-3xl relative hover:shadow-lg"
+    class="card bg-white transition-transform flex flex-col shadow-md rounded-tr-3xl relative hover:shadow-lg"
   >
     <div class="order-2 p-4 space-y-2 flex-1 flex flex-col justify-between">
       <h3 class="">
-        <NuxtLink
-          :to="url"
+        <a
+          :href="url"
           class="cardLink"
           :aria-describedby="`${title}-ride` | slugify"
         >
@@ -25,7 +25,9 @@
 
             <template v-else>
               <template v-if="date">
-                <span class="pill bg-gray-300">{{ date | formatDateShort }}</span>
+                <span class="pill bg-gray-300">{{
+                  date | formatDateShort
+                }}</span>
               </template>
             </template>
 
@@ -39,9 +41,9 @@
               >
             </template>
           </span>
-        </NuxtLink>
+        </a>
       </h3>
-      <p v-if="description" class=" text-muted">
+      <p v-if="description" class="text-muted">
         {{ description }}
       </p>
       <p
@@ -53,11 +55,7 @@
       </p>
     </div>
     <img
-      :src="
-        $urlFor(image)
-          .width(400)
-          .height(300)
-      "
+      :src="$urlFor(image).width(400).height(300)"
       :alt="image.alt"
       class="order-1 rounded-tr-3xl"
     />
@@ -69,32 +67,32 @@ export default {
   props: {
     title: {
       type: String,
-      default: "missing title"
+      default: "missing title",
     },
     enableEndDates: {
       type: Boolean,
-      default: () => false
+      default: () => false,
     },
     tags: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     image: {
-      type: Object
+      type: Object,
     },
     description: {
-      type: String
+      type: String,
     },
     date: {
-      type: String
+      type: String,
     },
     endDate: {
-      type: String
+      type: String,
     },
     url: {
       type: String,
-      default: "/"
-    }
+      default: "/",
+    },
   },
   computed: {
     sameStartEndDates() {
@@ -102,7 +100,7 @@ export default {
         return true;
       }
       return false;
-    }
+    },
   },
   methods: {
     formatDateShort(dateValue) {
@@ -111,7 +109,7 @@ export default {
       return date.toLocaleString(["en-US"], {
         timeZone: "America/New_York",
         month: "short",
-        day: "2-digit"
+        day: "2-digit",
       });
     },
     tagColor(tag) {
@@ -132,8 +130,8 @@ export default {
         return "free entry";
       }
       return tag;
-    }
-  }
+    },
+  },
 };
 </script>
 
