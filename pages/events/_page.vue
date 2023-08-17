@@ -29,12 +29,12 @@ const query = /* groq */ `{ "page": *[_type == 'event' && content.slug.current =
 export default {
   name: "EventPage",
 
-  validate({ params, store, query }) {
-    return (
-      query.preview === "true" ||
-      store.state.eventsSlugs.includes(`${params.page}`)
-    );
-  },
+  // validate({ params, store, query }) {
+  //   return (
+  //     query.preview === "true" ||
+  //     store.state.eventsSlugs.includes(`${params.page}`)
+  //   );
+  // },
 
   asyncData({ $sanity, params, payload }) {
     const fullSlug = `${params.page}`;
@@ -44,7 +44,7 @@ export default {
     }
     // console.log('no payload, refetching')
     return $sanity.fetch(query, {
-      slug: fullSlug
+      slug: fullSlug,
     });
   },
 
@@ -67,7 +67,7 @@ export default {
     },
     seoShareImage() {
       return undefined;
-    }
+    },
   },
 
   head() {
@@ -77,34 +77,34 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: this.seoDescription
+          content: this.seoDescription,
         },
         {
           hid: "ogtitle",
           name: "og:title",
-          content: this.seoTitle
+          content: this.seoTitle,
         },
         {
           hid: "ogdescription",
           name: "og:description",
-          content: this.seoDescription
+          content: this.seoDescription,
         },
         {
           hid: "ogimage",
           name: "og:image",
-          content: this.seoShareImage
+          content: this.seoShareImage,
         },
         {
           hid: "ogurl",
           name: "og:url",
-          content: this.seoPageUrl
-        }
+          content: this.seoPageUrl,
+        },
       ],
       link: [{ rel: "canonical", href: this.seoPageUrl }],
       __dangerouslyDisableSanitizersByTagID: {
-        ogimage: ["content"]
-      }
+        ogimage: ["content"],
+      },
     };
-  }
+  },
 };
 </script>
