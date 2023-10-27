@@ -348,7 +348,8 @@ export default {
       to: "donation-requests",
       statusCode: 301
     },
-    { from: "^/park-info/contact-us/", to: "/contact/", statusCode: 301 }
+    { from: "^/park-info/contact-us/", to: "/contact/", statusCode: 301 },
+    { from: "^/school-picnics/", to: "/school-groups/", statusCode: 301 }
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

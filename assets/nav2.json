@@ -13,10 +13,10 @@
             "icon": "users-duotone"
           },
           {
-            "name": "School Picnics",
-            "description": "Late May / June",
+            "name": "School Groups",
+            "description": "Special Pricing",
             "new": false,
-            "url": "/school-picnics/",
+            "url": "/school-groups/",
             "icon": "bus-school-duotone"
           },
           {
