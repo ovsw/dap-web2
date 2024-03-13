@@ -124,7 +124,7 @@
 
             <li><NuxtLink to="/our-history/">History</NuxtLink></li>
             <li>
-              <NuxtLink to="/employment/">Join Our Team</NuxtLink>
+              <NuxtLink to="/employment/">Jobs</NuxtLink>
             </li>
             <li>
               <NuxtLink to="/donation-requests/">Donation Requests</NuxtLink>
