@@ -259,8 +259,8 @@
           },
           {
             "name": "Cashless Info",
-            "description": "starting 2023 season",
-            "new": true,
+            "description": "for the park",
+            "new": false,
             "url": "/cashless-info/",
             "icon": "twotone-credit-card"
           },
@@ -336,6 +336,13 @@
             "new": false,
             "url": "/passes/season-pass/",
             "icon": "star-duotone"
+          },
+          {
+            "name": "Super Splash Tues. ",
+            "description": "Fun Pass",
+            "new": true,
+            "url": "/passes/super-splash-tuesday-fun-pass/",
+            "icon": "calendar-alt-duotone"
           },
           {
             "name": "Ride Tickets",
