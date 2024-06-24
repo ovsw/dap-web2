@@ -26,6 +26,7 @@ export default {
     const fullSlug = `${params.page}`;
     // console.log('params: ', fullSlug)
     if (payload) {
+      console.log("payload", payload);
       return { page: payload };
     }
     // console.log('no payload, refetching')
