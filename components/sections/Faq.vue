@@ -6,7 +6,7 @@
           {{ section.title }}
         </h2>
         <div class="faqsWrapper space-y-10 text-xl">
-          <template v-for="(item, index) in section.faqItems" class="">
+          <template v-for="(item, index) in section.faqItems">
             <!-- heading item -->
             <h3
               :key="index"
@@ -16,7 +16,7 @@
               {{ item.value }}
             </h3>
             <!-- Q&A item -->
-            <div v-if="item.type == 'faqItem'" :key="index">
+            <div v-if="item.type != 'heading'" :key="index">
               <component :is="`h${itemHeadingLvl}`">
                 <button
                   @click="
@@ -70,6 +70,10 @@ export default {
     sectionIndex: {
       type: Number
     }
+  },
+  created() {
+    console.log('created');
+    console.log(props.section);
   },
   computed: {
     itemHeadingLvl() {
