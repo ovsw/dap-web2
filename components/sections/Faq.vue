@@ -6,7 +6,7 @@
           {{ section.title }}
         </h2>
         <div class="faqsWrapper space-y-10 text-xl">
-          <template v-for="(item, index) in section.faqItems">
+          <template v-for="(item, index) in section.faqItems" class="">
             <!-- heading item -->
             <h3
               :key="index"
@@ -16,7 +16,7 @@
               {{ item.value }}
             </h3>
             <!-- Q&A item -->
-            <div v-if="item.type != 'heading'" :key="index">
+            <div v-if="item.type == 'faqItem'" :key="index">
               <component :is="`h${itemHeadingLvl}`">
                 <button
                   @click="
@@ -25,7 +25,7 @@
                   :aria-expanded="selected == index ? 'true' : 'false'"
                   class="bg-green text-light-light p-6 pt-8 block w-full text-left focus:outline-green-large"
                 >
-                  {{ item.faqItem.question }}
+                 - {{ item.faqItem.question }}
                   <span class="float-right text-2xl">
                     <svg
                       viewBox="0 0 10 10"
@@ -70,10 +70,6 @@ export default {
     sectionIndex: {
       type: Number
     }
-  },
-  created() {
-    console.log('created');
-    console.log(props.section);
   },
   computed: {
     itemHeadingLvl() {
