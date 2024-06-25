@@ -52,6 +52,7 @@ export default {
 
   computed: {
     seoTitle() {
+       console.log("page", this.page);
       if (this.page.content.seo && this.page.content.seo.title)
         return this.page.content.seo.title;
       return undefined;
