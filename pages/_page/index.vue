@@ -21,6 +21,7 @@ import sectionQueries from "@/sanityFragments/sectionQueries";
 const query = /* groq */ `{ 
   "page": *[(_type == 'page' || _type== 'simplePage') && content.slug.current == $slug] {
           ...,
+          foo: "bar",
           content {
             ...,
             sections[] {
