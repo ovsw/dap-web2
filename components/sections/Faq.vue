@@ -63,12 +63,20 @@
 
 <script>
 export default {
+  created() {
+    console.log(this.first_room)  //undefined;
+  },
   props: {
     section: {
       type: Object
     },
     sectionIndex: {
       type: Number
+    }
+  },
+  watch: {
+    section (n, o) {
+      console.log("??", n, o) // n is the new value, o is the old value.
     }
   },
   computed: {
