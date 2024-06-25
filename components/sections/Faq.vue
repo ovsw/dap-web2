@@ -73,6 +73,7 @@ export default {
   },
   computed: {
     itemHeadingLvl() {
+      console.log("FROM faqComponent, this.section",this.section)
       // check if there are heading items among the FAQ items list
       const headingItems = this.section.faqItems.filter(item => !item._type);
 
