@@ -6,11 +6,21 @@
       :narrow="page._type == 'simplePage' ? true : false"
     />
     <SectionsRenderer :sections="page.content.sections" />
+    
   </article>
 </template>
 
 <script>
-const query = /* groq */ `{ "page": *[_type == 'attraction' && content.slug.current == $slug] | order(_updatedAt desc)[0]}`;
+const query = /* groq */ `{ "page": *[_type == 'attraction' && content.slug.current == $slug] {
+          ...,
+          content {
+            ...,
+            sections[] {
+              ...,
+              ${sectionQueries}
+            }
+          }
+        } | order(_updatedAt desc)[0]}`;
 
 export default {
   name: "RidesPage",
