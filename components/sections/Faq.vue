@@ -64,7 +64,7 @@
 <script>
 export default {
   created() {
-    console.log(this.first_room)  //undefined;
+    console.log(this)
   },
   props: {
     section: {
@@ -76,7 +76,7 @@ export default {
   },
   watch: {
     section (n, o) {
-      console.log("??", n, o) // n is the new value, o is the old value.
+      console.log("section watch", n, o) // n is the new value, o is the old value.
     }
   },
   computed: {

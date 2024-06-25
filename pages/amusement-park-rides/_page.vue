@@ -13,7 +13,8 @@
 <script>
 import sectionQueries from "@/sanityFragments/sectionQueries";
 
-const query = /* groq */ `{ "page": *[_type == 'attraction' && content.slug.current == $slug] {
+const query = /* groq */ `{ 
+  "page": *[_type == 'attraction' && content.slug.current == $slug] {
           ...,
           content {
             ...,
@@ -22,7 +23,8 @@ const query = /* groq */ `{ "page": *[_type == 'attraction' && content.slug.curr
               ${sectionQueries}
             }
           }
-        } | order(_updatedAt desc)[0]}`;
+        } | order(_updatedAt desc)[0]
+  }`;
 
 export default {
   name: "RidesPage",
