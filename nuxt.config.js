@@ -374,10 +374,28 @@ export default {
           }
         }`);
       const parkRides = await client.fetch(
-        /* groq */ `*[ _type == "attraction" && content.category match "Amusement"]`
+        /* groq */ `*[ _type == "attraction" && content.category match "Amusement"] {
+          ...,
+          content {
+            ...,
+            sections[] {
+              ...,
+              ${sectionQueries}
+            }
+          }
+        }`
       );
       const waterParkAttractions = await client.fetch(
-        /* groq */ `*[ _type == "attraction" && content.category match "Water"]`
+        /* groq */ `*[ _type == "attraction" && content.category match "Water"] {
+          ...,
+          content {
+            ...,
+            sections[] {
+              ...,
+              ${sectionQueries}
+            }
+          }
+        }`
       );
       const newsItems = await client.fetch(
         `*[_type == "newsItem"  && !(_id in path('drafts.**'))]`
