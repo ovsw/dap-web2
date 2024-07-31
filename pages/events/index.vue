@@ -14,7 +14,7 @@
       <!-- <h2 class="mt-16 pl-8">{{month.name}} {{new Date().getFullYear()}}</h2> -->
       <CardGridWrapper :title="month.name + ' ' + new Date().getFullYear()">
         <CardGrid
-          enableEndDates="true"
+          enableEndDates={true}
           v-for="event in month.events"
           :key="event._id"
           :date="event.content.date"
@@ -35,7 +35,8 @@
 <script>
 const query = /* groq */ `{
   "eventsPage": *[_id == 'eventsPage'][0],
-  "events": *[ _type == "event" && (content.endDate > now())] | order(content.date asc)
+  // "events": *[ _type == "event" && (content.endDate > now())] | order(content.date asc)
+  "events": *[ _type == "event" && (dateTime(content.endDate+"T23:59:59Z") > dateTime(now()) - 3600 * 24 )] | order(content.date asc) // delayed hiding an event by 24 hours
 }
 `;
 
