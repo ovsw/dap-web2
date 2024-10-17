@@ -12,7 +12,7 @@
 
     <div v-for="(month, i) in eventsByMonth" :key="i">
       <!-- <h2 class="mt-16 pl-8">{{month.name}} {{new Date().getFullYear()}}</h2> -->
-      <CardGridWrapper :title="month.name + ' ' + new Date().getMonth() < 8 ? new Date().getFullYear() : new Date().getFullYear()+1">
+      <CardGridWrapper :title="'|' + month.name + ' ' + (new Date().getMonth() > 8 ? new Date().getFullYear()+1 : new Date().getFullYear())">
         <CardGrid
           enableEndDates={true}
           v-for="event in month.events"
