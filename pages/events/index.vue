@@ -14,7 +14,7 @@
       <!-- <h2 class="mt-16 pl-8">{{month.name}} {{new Date().getFullYear()}}</h2> -->
       <CardGridWrapper :title="month.name + ' ' + (new Date().getMonth() >= 9 ? new Date().getFullYear()+1 : new Date().getFullYear())">
         <CardGrid
-          enableEndDates={true}
+          :enableEndDates="true"
           v-for="event in month.events"
           :key="event._id"
           :date="event.content.date"
@@ -63,8 +63,20 @@ export default {
 
     // Iterate through the original events array and push objects into corresponding sub-arrays
     for (const event of sanityCall.events) {
-      const monthIndex = new Date(event.content.date).getMonth();
-      months[monthIndex].events.push(event);
+      const startMonthIndex = new Date(event.content.date).getMonth();
+
+      // check to see if the end date falls in the sae if the end date falls in a differnet month
+      // and if so, add that event to that month as well.
+      const sameDay = event.content.date == event.content.endDate ? true : false;
+     
+      if (!sameDay) { // first check to see if we actually have a different end date
+        const endMonthIndex = new Date(event.content.endDate).getMonth();
+        if (endMonthIndex != startMonthIndex) { // if the end month is different from the start month
+          months[endMonthIndex].events.push(event); // add the event under that month as well. Since we go in chronological order, the event spanning 2 months will appear listed first in the second month
+        }
+      }
+      
+      months[startMonthIndex].events.push(event);
     }
     // console.log("📆 months data", months.filter(month => month.events.length > 0));
 
