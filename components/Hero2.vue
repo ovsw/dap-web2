@@ -31,20 +31,20 @@
           >
             <h1
               class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl 
-              lg:text-6xl lg:text-left
-              "
-            >
-              <span
-                class="
-              block text-dark max-w-2xl mx-auto
+              lg:text-6xl lg:text-left block text-dark max-w-2xl mx-auto
               lg:mx-0
               "
-                >{{ title }}</span
-              >
+            >
+                {{ title }}
               <!-- <span class="block text-indigo-200">customer support</span> -->
             </h1>
+            <p class="text-center text-xl  sm:text-2xl 
+              lg:text-3xl lg:text-left block text-dark max-w-2xl mx-auto mt-10
+              lg:mx-0">
+          {{ subtitle }}
+        </p>
             <div
-              class="mt-8 md:mt-12  mx-auto text-center text-xl text-dark sm:max-w-3xl
+              class="mt-8 md:mt-10  mx-auto text-center text-xl text-dark sm:max-w-3xl
                 lg:text-left lg:mx-0
               "
             >
