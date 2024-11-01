@@ -340,7 +340,7 @@
           {
             "name": "Super Splash Tues. ",
             "description": "Fun Pass",
-            "new": true,
+            "new": false,
             "url": "/passes/super-splash-tuesday-fun-pass/",
             "icon": "calendar-alt-duotone"
           },
