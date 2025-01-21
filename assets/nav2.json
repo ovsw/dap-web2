@@ -218,13 +218,6 @@
         "type": "columnsSection",
         "items": [
           {
-            "name": "COVID-19 Safety",
-            "description": "guidelines & procedures",
-            "new": false,
-            "url": "/covid-19-safety-guidelines/",
-            "icon": "star-of-life-duotone"
-          },
-          {
             "name": "Policies, Info, FAQs",
             "description": "to know before you visit",
             "new": false,
