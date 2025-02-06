@@ -29,7 +29,7 @@
 <script>
 const query = /* groq */ `{
   "parkRidesPage": *[_id == 'parkRides'][0],
-  "rides": *[ _type == "attraction" && content.category match 'Amusement']
+  "rides": *[ _type == "attraction" && content.category match 'Amusement'] | order(content.name asc)
 }
 `;
 

@@ -28,7 +28,7 @@
 <script>
 const query = /* groq */ `{
   "waterAttractionsPage": *[_id == 'waterParkAttractions'][0],
-  "rides": *[ _type == "attraction" && content.category match 'Water']
+  "rides": *[ _type == "attraction" && content.category match 'Water'] | order(content.name asc)
 }
 `;
 
