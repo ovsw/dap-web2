@@ -12,7 +12,15 @@
 
     <div v-for="(month, i) in eventsByMonth" :key="i">
       <!-- <h2 class="mt-16 pl-8">{{month.name}} {{new Date().getFullYear()}}</h2> -->
-      <CardGridWrapper :title="month.name + ' ' + (new Date().getMonth() >= 9 ? new Date().getFullYear()+1 : new Date().getFullYear())">
+      <CardGridWrapper
+        :title="
+          month.name +
+          ' ' +
+          (new Date().getMonth() >= 9
+            ? new Date().getFullYear() + 1
+            : new Date().getFullYear())
+        "
+      >
         <CardGrid
           :enableEndDates="true"
           v-for="event in month.events"
@@ -36,7 +44,7 @@
 const query = /* groq */ `{
   "eventsPage": *[_id == 'eventsPage'][0],
   // "events": *[ _type == "event" && (content.endDate > now())] | order(content.date asc)
-  "events": *[ _type == "event" && (dateTime(content.endDate+"T23:59:59Z") > dateTime(now()) - 3600 * 24 )] | order(content.date asc) // delayed hiding an event by 24 hours
+  "events": *[ _type == "event" && (dateTime(content.endDate+"T23:59:59Z") > dateTime(now()) - 3600 * 24 )] | order( content.endDate asc, content.date asc) // delayed hiding an event by 24 hours
 }
 `;
 
@@ -58,7 +66,7 @@ export default {
       { name: "September", events: [] },
       { name: "October", events: [] },
       { name: "November", events: [] },
-      { name: "December", events: [] }
+      { name: "December", events: [] },
     ];
 
     // Iterate through the original events array and push objects into corresponding sub-arrays
@@ -67,20 +75,25 @@ export default {
 
       // check to see if the end date falls in the sae if the end date falls in a differnet month
       // and if so, add that event to that month as well.
-      const sameDay = event.content.date == event.content.endDate ? true : false;
-     
-      if (!sameDay) { // first check to see if we actually have a different end date
+      const sameDay =
+        event.content.date == event.content.endDate ? true : false;
+
+      if (!sameDay) {
+        // first check to see if we actually have a different end date
         const endMonthIndex = new Date(event.content.endDate).getMonth();
-        if (endMonthIndex != startMonthIndex) { // if the end month is different from the start month
+        if (endMonthIndex != startMonthIndex) {
+          // if the end month is different from the start month
           months[endMonthIndex].events.push(event); // add the event under that month as well. Since we go in chronological order, the event spanning 2 months will appear listed first in the second month
         }
       }
-      
+
       months[startMonthIndex].events.push(event);
     }
     // console.log("📆 months data", months.filter(month => month.events.length > 0));
 
-    sanityCall.eventsByMonth = months.filter(month => month.events.length > 0);
+    sanityCall.eventsByMonth = months.filter(
+      (month) => month.events.length > 0
+    );
     // console.log("🎈 asyncData: called", sanityCall);
 
     return sanityCall;
@@ -107,7 +120,7 @@ export default {
     },
     seoShareImage() {
       return undefined;
-    }
+    },
   },
 
   head() {
@@ -117,35 +130,35 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: this.seoDescription
+          content: this.seoDescription,
         },
         {
           hid: "ogtitle",
           name: "og:title",
-          content: this.seoTitle
+          content: this.seoTitle,
         },
         {
           hid: "ogdescription",
           name: "og:description",
-          content: this.seoDescription
+          content: this.seoDescription,
         },
         {
           hid: "ogimage",
           name: "og:image",
-          content: this.seoShareImage
+          content: this.seoShareImage,
         },
         {
           hid: "ogurl",
           name: "og:url",
-          content: this.seoPageUrl
-        }
+          content: this.seoPageUrl,
+        },
       ],
       link: [{ rel: "canonical", href: this.seoPageUrl }],
       __dangerouslyDisableSanitizersByTagID: {
-        ogimage: ["content"]
-      }
+        ogimage: ["content"],
+      },
     };
-  }
+  },
 };
 </script>
 
