@@ -3,7 +3,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   corePlugins: {
     // ...
-    ringColor: false
+    ringColor: false,
   },
   purge: {
     // layers: ['components', 'utilities'],
@@ -13,8 +13,8 @@ module.exports = {
       "layouts/**/*.vue",
       "pages/**/*.vue",
       "plugins/**/*.js",
-      "nuxt.config.js"
-    ]
+      "nuxt.config.js",
+    ],
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -25,86 +25,102 @@ module.exports = {
         green: {
           light: "#3EB084",
           DEFAULT: "#2D8262",
-          dark: "#006E44"
+          dark: "#006E44",
         },
         red: {
           light: "#FF6E6E",
           DEFAULT: "#DB3232",
-          dark: "#CC1616"
+          dark: "#CC1616",
         },
         blue: {
           light: "#5BD8EB",
           DEFAULT: "#057EA6",
-          dark: "#006F94"
+          dark: "#006F94",
         },
         yellow: {
           light: "#ffd324",
           DEFAULT: "#ffcc00",
-          dark: "#fefc9f"
+          dark: "#fefc9f",
         },
         cyan: {
           light: "#0EADC2",
           DEFAULT: "#0A7F8F",
-          dark: "#096F7D"
+          dark: "#096F7D",
         },
         dark: {
           light: "#42413b",
           DEFAULT: "#36342E",
           dark: "#343432",
-          panelBorder: "rgba(54,52,46,.5)"
+          panelBorder: "rgba(54,52,46,.5)",
         },
         light: {
           light: "#FFF",
           DEFAULT: "#F4F4F4",
           dark: "#FFFDF5",
-          panelBorder: "rgba(255,255,255,.5)"
+          panelBorder: "rgba(255,255,255,.5)",
         },
         muted: {
-          DEFAULT: "#757575"
-        }
+          DEFAULT: "#757575",
+        },
       },
       outline: {
         green: ["2px solid #2d8262", "0.25rem"],
-        greenLarge: ["2px solid #2d8262", "0.5rem"]
+        greenLarge: ["2px solid #2d8262", "0.5rem"],
       },
       fontSize: {
-        xxs: ".69rem"
+        xxs: ".69rem",
       },
       fontFamily: {
         display: ["Raleway", ...defaultTheme.fontFamily.sans],
-        body: ["Overpass", ...defaultTheme.fontFamily.sans]
+        body: ["Overpass", ...defaultTheme.fontFamily.sans],
       },
       spacing: {
         grd: "0.9375rem",
         "grd-half": "0.4688rem",
-        "160": "40rem"
+        160: "40rem",
       },
       borderWidth: {
-        "5": "5px"
+        5: "5px",
       },
       // maxWidth: {
       //   'content': '1600px'
       // }
       borderRadius: {
         medium: "50px",
-        large: "100px"
+        large: "100px",
       },
       typography: {
+        DEFAULT: {
+          css: {
+            strong: {
+              fontWeight: "700",
+            },
+            b: {
+              fontWeight: "700",
+            },
+          },
+        },
         dark: {
           css: {
             a: {
               color: "white",
               "&:hover": {
-                color: "#ffcc00"
-              }
-            }
-          }
-        }
-      }
-    }
+                color: "#ffcc00",
+              },
+            },
+            strong: {
+              fontWeight: "700",
+            },
+            b: {
+              fontWeight: "700",
+            },
+          },
+        },
+      },
+    },
   },
   variants: {
-    extend: {}
+    extend: {},
   },
-  plugins: [require("@tailwindcss/typography")]
+  plugins: [require("@tailwindcss/typography")],
 };

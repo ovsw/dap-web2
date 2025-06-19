@@ -115,7 +115,7 @@
         "items": [
           {
             "name": "Park Rides",
-            "description": "30+ rides to enjoy",
+            "description": "30+ rides &amp; attractions",
             "new": false,
             "url": "/amusement-park-rides/",
             "icon": "star-duotone"

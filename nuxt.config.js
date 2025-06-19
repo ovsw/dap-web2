@@ -11,7 +11,7 @@ const configSanity = {
   useCdn: false,
   minimal: true,
   apiVersion: "2021-10-21",
-  dataset: "production"
+  dataset: "production",
   // token: process.env.NODE_ENV == "development" ? process.env.SANITY_READ_TOKEN : ''
 };
 const client = createClient(configSanity);
@@ -49,7 +49,7 @@ export default {
     title: seoTitle,
     titleTemplate: "%s | DelGrosso's Park Tipton PA",
     htmlAttrs: {
-      lang: "en"
+      lang: "en",
     },
     // script: [
     //   {
@@ -62,68 +62,68 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: seoDescription
+        content: seoDescription,
       },
       {
         hid: "googlesiteverification",
         name: "google-site-verification",
-        content: "JCqURsLL4sx7DLr1kowzdUNGIsY67VoXT7D0e8q6c4s"
+        content: "JCqURsLL4sx7DLr1kowzdUNGIsY67VoXT7D0e8q6c4s",
       },
       {
         hid: "ogtitle",
         name: "og:title",
-        content: seoTitle
+        content: seoTitle,
       },
       {
         hid: "ogdescription",
         name: "og:description",
-        content: seoDescription
+        content: seoDescription,
       },
       {
         hid: "ogimage",
         name: "og:image",
-        content: seoSocialShareImage
+        content: seoSocialShareImage,
       },
       {
         hid: "msTitleColor",
         name: "msapplication-TileColor",
-        content: "#ffffff"
+        content: "#ffffff",
       },
       {
         hid: "theme-color",
         name: "msapplication-TileColor",
-        content: "#ffffff"
-      }
+        content: "#ffffff",
+      },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico?v=2" },
       {
         rel: "apple-touch-icon",
         sizes: "180x180",
-        href: "/apple-touch-icon.png"
+        href: "/apple-touch-icon.png",
       },
       {
         rel: "apple-touch-icon",
         type: "image/png",
         sizes: "32x32",
-        href: "/apple-touch-icon.png"
+        href: "/apple-touch-icon.png",
       },
       {
         rel: "icon",
         type: "image/png",
         sizes: "32x32",
-        href: "/favicon-32x32.png"
+        href: "/favicon-32x32.png",
       },
       {
         rel: "icon",
         type: "image/png",
         sizes: "16x16",
-        href: "/favicon-16x16.png"
+        href: "/favicon-16x16.png",
       },
       { rel: "manifest", href: "/site.webmanifest" },
-      { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#2d8262" }
+      { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#2d8262" },
       // { rel: "canonical", href: seoCannonicalUrl }
-    ]
+    ],
   },
 
   googleFonts: {
@@ -134,19 +134,21 @@ export default {
     // fontsDir: 'fonts',
     // fontsPath: '~assets/fonts',
     families: {
-      Overpass: true,
+      Overpass: {
+        wght: [400, 600, 700],
+      },
       "Open+Sans": {
         wght: [400, 600, 700],
-        ital: [400, 600]
+        ital: [400, 600],
       },
       Raleway: {
-        wght: [400, 800, 900]
-      }
-    }
+        wght: [400, 800, 900],
+      },
+    },
   },
 
   tailwindcss: {
-    jit: true
+    jit: true,
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -162,7 +164,7 @@ export default {
     "~plugins/image-builder.js",
     "~/plugins/to-link.js",
     "~/plugins/lightbox.client.js",
-    "~/plugins/pixel.client.js"
+    "~/plugins/pixel.client.js",
     // "~/plugins/axe.client.js"
   ],
 
@@ -176,7 +178,7 @@ export default {
     "@nuxtjs/svg-sprite",
     "@nuxtjs/sanity/module",
     "@nuxtjs/google-analytics",
-    "nuxt-lazy-load"
+    "nuxt-lazy-load",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -188,53 +190,53 @@ export default {
     {
       from: "^/attractions/rides/",
       to: "/amusement-park-rides/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/attractions/laguna-splash-water-park/",
       to: "/laguna-splash-water-park-attractions/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/attractions/cabana-rental-information/",
       to: "/waterpark-cabana-rental-information/",
-      statusCode: 301
+      statusCode: 301,
     },
     { from: "^/events/events-calendar/", to: "/events/", statusCode: 301 },
     {
       from: "^/food/spaghetti-wednesday/",
       to: "/food/spaghetti-wednesdays/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/hours/operating-hours/",
       to: "/hours-and-schedule-of-operation/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/tickets/all-day-fun-pass/",
       to: "/passes/all-day-fun-pass/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/tickets/sundowner-fun-passes/",
       to: "/passes/sundowner-fun-pass/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/tickets/season-pass/",
       to: "/passes/season-pass/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/tickets/individual-ride-tickets/",
       to: "/ride-tickets/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/tickets/2020-season-pass-information/",
       to: "/2020-season-pass-information/",
-      statusCode: 301
+      statusCode: 301,
     },
     { from: "^/tickets/gift-cards/", to: "/gift-cards/", statusCode: 301 },
     { from: "^/groups/", to: "/group-picnics/", statusCode: 301 },
@@ -242,60 +244,60 @@ export default {
     {
       from: "^/groups/groups-pricing/",
       to: "/groups-pricing/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/groups/buddy-bears-birthday-roundhouse/",
       to: "/kids-birthday-parties-at-the-park/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/groups/other-groups/",
       to: "/specialty-groups/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/food/dg2go/",
       to: "https://www.dg2gofood.com/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/food/pick-up-delivery-catering/",
       to: "/famous-food/pick-up-delivery-catering/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/food/food-menus/",
       to: "/famous-food/food-menus/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/food/food-allergen-information/",
       to: "/food-allergens/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/food/the-delgrosso-food-tradition/",
       to: "/famous-food/the-delgrosso-food-tradition/",
-      statusCode: 301
+      statusCode: 301,
     },
     { from: "^/news/current-news-releases/", to: "/news/", statusCode: 301 },
     {
       from: "^/park-info/covid-19-safety-guidelines/",
       to: "/covid-19-safety-guidelines/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/park-info/employment-opportunities/",
       to: "/employment/",
-      statusCode: 301
+      statusCode: 301,
     },
     { from: "^/park-info/directions/", to: "/directions/", statusCode: 301 },
     { from: "^/park-info/closures/", to: "/closures/", statusCode: 301 },
     {
       from: "^/park-info/guest-policies/",
       to: "/policies-info-and-faqs/",
-      statusCode: 301
+      statusCode: 301,
     },
     // {
     //   from: "^/park-info/rider-safety-accessibility-guide/",
@@ -305,56 +307,56 @@ export default {
     {
       from: "^/map/",
       to: "/park-map/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/park-info/faqs/",
       to: "/policies-info-and-faqs/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/park-info/locker-scooter-and-stroller-rentals/",
       to: "/locker-scooter-and-stroller-rentals/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/park-info/information-booth/",
       to: "guest-relations-and-info-booth",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/park-info/first-aid-infant-care-center/",
       to: "/first-aid-infant-and-care-center/",
-      statusCode: 301
+      statusCode: 301,
     },
     { from: "^/park-info/history/", to: "/our-history/", statusCode: 301 },
     {
       from: "^/park-info/affiliations/",
       to: "/friends-of-the-park/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/park-info/affiliations/sponsors/",
       to: "/sponsors/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/park-info/affiliations/friends-of-the-park/",
       to: "/friends-of-the-park/",
-      statusCode: 301
+      statusCode: 301,
     },
     {
       from: "^/park-info/donation-requests/",
       to: "donation-requests",
-      statusCode: 301
+      statusCode: 301,
     },
     { from: "^/park-info/contact-us/", to: "/contact/", statusCode: 301 },
-    { from: "^/school-picnics/", to: "/school-groups/", statusCode: 301 }
+    { from: "^/school-picnics/", to: "/school-groups/", statusCode: 301 },
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ["vue-instantsearch", "instantsearch.js/es"]
+    transpile: ["vue-instantsearch", "instantsearch.js/es"],
   },
 
   // GENERATE DYNAMIC PAGES FROM SANITY
@@ -363,7 +365,8 @@ export default {
     fallback: true,
     crawler: false,
     async routes() {
-      const pages = await client.fetch(/* groq */ `*[_type == "page" || _type == "simplePage"] {
+      const pages =
+        await client.fetch(/* groq */ `*[_type == "page" || _type == "simplePage"] {
           ...,
           content {
             ...,
@@ -373,8 +376,8 @@ export default {
             }
           }
         }`);
-      const parkRides = await client.fetch(
-        /* groq */ `*[ _type == "attraction" && content.category match "Amusement"] {
+      const parkRides =
+        await client.fetch(/* groq */ `*[ _type == "attraction" && content.category match "Amusement"] {
           ...,
           content {
             ...,
@@ -383,10 +386,9 @@ export default {
               ${sectionQueries}
             }
           }
-        }`
-      );
-      const waterParkAttractions = await client.fetch(
-        /* groq */ `*[ _type == "attraction" && content.category match "Water"] {
+        }`);
+      const waterParkAttractions =
+        await client.fetch(/* groq */ `*[ _type == "attraction" && content.category match "Water"] {
           ...,
           content {
             ...,
@@ -395,12 +397,12 @@ export default {
               ${sectionQueries}
             }
           }
-        }`
-      );
+        }`);
       const newsItems = await client.fetch(
         `*[_type == "newsItem"  && !(_id in path('drafts.**'))]`
       );
-      const events = await client.fetch(/* groq */ `*[_type == "event" && !(_id in path('drafts.**'))] {
+      const events =
+        await client.fetch(/* groq */ `*[_type == "event" && !(_id in path('drafts.**'))] {
           ...,
           content {
             ...,
@@ -412,61 +414,61 @@ export default {
         }`);
 
       return [
-        ...pages.map(page => {
+        ...pages.map((page) => {
           // console.log('creting route for: ', `/${page.content.slug.current}/`)
           return {
             route: `/${page.content.slug.current}/`,
-            payload: page
+            payload: page,
           };
         }),
-        ...parkRides.map(page => {
+        ...parkRides.map((page) => {
           // console.log('creting route for: ', `/${page.content.slug.current}/`)
           return {
             route: `/amusement-park-rides/${page.content.slug.current}/`,
-            payload: page
+            payload: page,
           };
         }),
-        ...waterParkAttractions.map(page => {
+        ...waterParkAttractions.map((page) => {
           // console.log('creting route for: ', `/${page.content.slug.current}/`)
           return {
             route: `/laguna-splash-water-park-attractions/${page.content.slug.current}/`,
-            payload: page
+            payload: page,
           };
         }),
-        ...newsItems.map(page => {
+        ...newsItems.map((page) => {
           // console.log('creting route for: ', `/news/${page.content.slug.current}/`)
           return {
             route: `/news/${page.content.slug.current}/`,
-            payload: page
+            payload: page,
           };
         }),
-        ...events.map(page => {
+        ...events.map((page) => {
           // console.log('creting route for: ', `/news/${page.content.slug.current}/`)
           return {
             route: `/events/${page.content.slug.current}/`,
-            payload: page
+            payload: page,
           };
-        })
+        }),
       ];
-    }
+    },
   },
 
   router: {
-    trailingSlash: true
+    trailingSlash: true,
   },
 
   sanity: {
     ...configSanity,
-    withCredentials: true
+    withCredentials: true,
   },
 
   googleAnalytics: {
     // Options
-    id: "UA-47136170-1"
+    id: "UA-47136170-1",
   },
 
   sitemap: {
     hostname: "https://www.mydelgrossopark.com/",
-    gzip: true
-  }
+    gzip: true,
+  },
 };
