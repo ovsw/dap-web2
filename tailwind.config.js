@@ -93,9 +93,13 @@ module.exports = {
         DEFAULT: {
           css: {
             strong: {
+              fontFamily:
+                'Raleway, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
               fontWeight: "700",
             },
             b: {
+              fontFamily:
+                'Raleway, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
               fontWeight: "700",
             },
           },
@@ -109,9 +113,13 @@ module.exports = {
               },
             },
             strong: {
+              fontFamily:
+                'Raleway, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
               fontWeight: "700",
             },
             b: {
+              fontFamily:
+                'Raleway, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
               fontWeight: "700",
             },
           },
