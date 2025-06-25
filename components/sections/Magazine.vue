@@ -104,7 +104,7 @@
         <div class="magSection__rteWrapper [  ]">
           <SanityContent
             :blocks="section.text"
-            :serializers="serializers"
+            :serializers="defaultSerializers"
             class="prose text-lg"
           />
         </div>
@@ -128,7 +128,7 @@
 </template>
 
 <script>
-import externalLink from "@/components/serializers/externalLink";
+import { defaultSerializers } from "@/plugins/sanity-serializers";
 
 export default {
   name: "MagSection",
@@ -175,11 +175,7 @@ export default {
   },
   data() {
     return {
-      serializers: {
-        marks: {
-          link: externalLink
-        }
-      }
+      defaultSerializers
     };
   }
 };

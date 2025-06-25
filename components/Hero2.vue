@@ -48,7 +48,7 @@
                 lg:text-left lg:mx-0
               "
             >
-              <SanityContent :blocks="text" :serializers="serializers" />
+              <SanityContent :blocks="text" :serializers="defaultSerializers" />
             </div>
             <div
               class="mt-10 max-w-sm mx-auto 
@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import externalLink from "@/components/serializers/externalLink";
+import { defaultSerializers } from "@/plugins/sanity-serializers";
 
 export default {
   props: {
@@ -124,11 +124,7 @@ export default {
   },
   data() {
     return {
-      serializers: {
-        types: {
-          link: externalLink
-        }
-      }
+      defaultSerializers
     };
   }
 };

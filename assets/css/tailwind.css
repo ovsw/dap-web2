@@ -130,4 +130,15 @@
   .eyebrow {
     @apply tracking-widest uppercase text-base font-semibold;
   }
+
+  /* Fix for Sanity portable text blocks without style property */
+  /* These blocks render as divs instead of paragraphs, causing formatting issues */
+  .prose div[data-portabletext]:not([data-portabletext-style]) {
+    @apply block mb-4;
+  }
+
+  /* Alternative selector for SanityContent divs that should be paragraphs */
+  .prose .sanity-content > div:not([class]) {
+    @apply block mb-4;
+  }
 }

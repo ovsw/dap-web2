@@ -23,7 +23,7 @@
             :buttonUrl="card.button.url"
             class="flex-1"
           >
-            <SanityContent :blocks="card.text" class="prose" />
+            <SanityContent :blocks="card.text" class="prose" :serializers="defaultSerializers" />
           </CardGeneric>
         </div>
 
@@ -47,12 +47,19 @@
 </template>
 
 <script>
+import { defaultSerializers } from "@/plugins/sanity-serializers";
+
 export default {
   props: {
     section: {
       type: Object,
       required: true
     }
+  },
+  data() {
+    return {
+      defaultSerializers
+    };
   }
 };
 </script>

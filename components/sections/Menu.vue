@@ -32,6 +32,7 @@
                 <SanityContent
                   :blocks="menuItem.description"
                   class="prose text-lg max-w-full"
+                  :serializers="defaultSerializers"
                 />
 
                 <p
@@ -59,12 +60,19 @@
 </template>
 
 <script>
+import { defaultSerializers } from "@/plugins/sanity-serializers";
+
 export default {
   props: {
     section: {
       type: Object,
       required: true
     }
+  },
+  data() {
+    return {
+      defaultSerializers
+    };
   }
 };
 </script>

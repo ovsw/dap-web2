@@ -53,11 +53,11 @@
     >
       <div>
         <template v-for="(item, index) in $store.state.alertItems">
-          <div :key="item._key" class="inline" v-if="item.alertIsActive">
+          <div :key="item._key || `alert-${index}`" class="inline" v-if="item.alertIsActive">
             <span class="pl-2 pr-1" v-if="index != 0"> &middot; </span>
             <SanityContent
               :blocks="item.text"
-              :serializers="serializers"
+              :serializers="defaultSerializers"
               class="alertText prose inline-flex"
             />
           </div>
@@ -80,21 +80,13 @@
 
 <script>
 import { mapMutations } from "vuex";
-import externalLink from "@/components/serializers/externalLink";
+import { defaultSerializers } from "@/plugins/sanity-serializers";
 
 export default {
   name: "SiteHeader",
   data() {
     return {
-      serializers: {
-        // marks: {
-        //   link: externalLink
-        // },
-        // TODO: form serializer
-        types: {
-          link: externalLink
-        }
-      }
+      defaultSerializers
     };
   },
   methods: {

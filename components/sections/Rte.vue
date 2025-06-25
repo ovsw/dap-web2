@@ -10,7 +10,7 @@
           <SanityContent
             :blocks="section.body"
             class="prose"
-            :serializers="serializers"
+            :serializers="defaultSerializers"
           />
         </div>
       </div>
@@ -19,8 +19,7 @@
 </template>
 
 <script>
-import iframe from "@/components/serializers/iframe";
-import externalLink from "@/components/serializers/externalLink";
+import { defaultSerializers } from "@/plugins/sanity-serializers";
 
 export default {
   props: {
@@ -31,15 +30,7 @@ export default {
   },
   data() {
     return {
-      serializers: {
-        // marks: {
-        //   link: externalLink
-        // },
-        types: {
-          iframeEmbed: iframe,
-          link: externalLink
-        }
-      }
+      defaultSerializers
     };
   }
 };

@@ -34,7 +34,7 @@
           </div>
 
           <div v-if="section.text">
-            <SanityContent :blocks="section.text" :serializers="serializers" />
+            <SanityContent :blocks="section.text" :serializers="defaultSerializers" />
           </div>
 
           <SanityFile :asset-id="section.file.asset._ref" :download="true">
@@ -75,7 +75,7 @@
 </template>
 
 <script>
-import externalLink from "@/components/serializers/externalLink";
+import { defaultSerializers } from "@/plugins/sanity-serializers";
 
 export default {
   props: {
@@ -87,11 +87,7 @@ export default {
 
   data() {
     return {
-      serializers: {
-        marks: {
-          link: externalLink
-        }
-      }
+      defaultSerializers
     };
   },
 

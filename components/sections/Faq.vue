@@ -51,6 +51,7 @@
                 <SanityContent
                   :blocks="item.faqItem.answer"
                   class="prose text-xl max-w-screen-lg"
+                  :serializers="defaultSerializers"
                 />
               </div>
             </div>
@@ -62,6 +63,8 @@
 </template>
 
 <script>
+import { defaultSerializers } from "@/plugins/sanity-serializers";
+
 export default {
   created() {
     console.log(this)
@@ -92,7 +95,8 @@ export default {
   },
   data() {
     return {
-      selected: -1
+      selected: -1,
+      defaultSerializers
     };
   }
 };
