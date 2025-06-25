@@ -56,6 +56,12 @@ source ~/.nvm/nvm.sh && nvm use 14
 - **Events & News**: Dynamic content from Sanity
 - **Components**: Modular Vue components in `/components/` with section-based organization
 
+### Routing Architecture
+- **Store-Independent**: Dynamic pages don't rely on Vuex store validation for improved reliability
+- **Template Guards**: All dynamic pages use `v-if="page"` guards to prevent undefined access errors
+- **Natural 404s**: Missing content handled gracefully through template conditionals
+- **Preview Support**: Sanity preview mode works automatically via preview plugin
+
 ### Styling System
 - **Framework**: Tailwind CSS with custom design tokens
 - **Fonts**: 
