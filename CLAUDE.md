@@ -15,7 +15,12 @@ This is a Nuxt.js 2 static site for DelGrosso's Amusement Park & Laguna Splash W
 
 ## Development Commands
 
+**IMPORTANT**: This project requires Node.js 14. Use NVM to switch to the correct version:
+
 ```bash
+# Switch to Node 14 (required for this project)
+nvm use 14
+
 # Install dependencies
 npm install
 
@@ -30,6 +35,11 @@ npm run start
 
 # Generate static site
 npm run generate
+```
+
+**Note**: If you get `nvm: command not found`, first run:
+```bash
+source ~/.nvm/nvm.sh && nvm use 14
 ```
 
 ## Architecture
