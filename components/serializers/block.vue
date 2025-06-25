@@ -1,27 +1,10 @@
-<template>
-  <!-- Handle blocks without style property by wrapping in <p> -->
-  <p v-if="shouldWrapInParagraph">
+<template functional>
+  <!-- Simple functional component to avoid hydration issues -->
+  <!-- Always wrap in <p> if no style, otherwise <div> -->
+  <p v-if="!props.node || !props.node.style">
     <slot />
   </p>
-  <!-- For blocks with style, render as div to let default handling take over -->
   <div v-else>
     <slot />
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    node: {
-      type: Object,
-      default: () => ({})
-    }
-  },
-  computed: {
-    shouldWrapInParagraph() {
-      // Check if node exists and lacks style property
-      return this.node && !this.node.style;
-    }
-  }
-};
-</script>

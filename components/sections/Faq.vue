@@ -6,7 +6,7 @@
           {{ section.title }}
         </h2>
         <div class="faqsWrapper space-y-10 text-xl">
-          <template v-for="(item, index) in section.faqItems" class="">
+          <template v-for="(item, index) in section.faqItems">
             <!-- heading item -->
             <h3
               :key="index"
@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import { defaultSerializers } from "@/plugins/sanity-serializers";
+import { defaultSerializers } from "@/utils/sanity-serializers";
 
 export default {
   created() {
@@ -108,7 +108,7 @@ export default {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(29,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23fffdde'/%3E%3Cstop offset='1' stop-color='%23d3d6ba'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='49' height='49' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23fdfcff' cx='24.5' cy='24.5' r='24.5'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.1'/%3E%3C/svg%3E");
   background-attachment: fixed;
   background-size: cover; */
-  \background-color: #ffffff;
+  background-color: #ffffff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 20 20'%3E%3Cg fill-opacity='0.13'%3E%3Cpolygon fill='%23ffefc2' points='20 10 10 0 0 0 20 20'/%3E%3Cpolygon fill='%23ffefc2' points='0 10 0 20 10 20'/%3E%3C/g%3E%3C/svg%3E");
 }
 /* plus minus styles */

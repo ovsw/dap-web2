@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { defaultSerializers } from "@/plugins/sanity-serializers";
+import { defaultSerializers } from "@/utils/sanity-serializers";
 
 export default {
   props: {

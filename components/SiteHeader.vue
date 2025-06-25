@@ -57,7 +57,6 @@
             <span class="pl-2 pr-1" v-if="index != 0"> &middot; </span>
             <SanityContent
               :blocks="item.text"
-              :serializers="defaultSerializers"
               class="alertText prose inline-flex"
             />
           </div>
@@ -80,15 +79,9 @@
 
 <script>
 import { mapMutations } from "vuex";
-import { defaultSerializers } from "@/plugins/sanity-serializers";
 
 export default {
   name: "SiteHeader",
-  data() {
-    return {
-      defaultSerializers
-    };
-  },
   methods: {
     ...mapMutations({
       hideAlert: "hideAlert"
