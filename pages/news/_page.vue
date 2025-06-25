@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article v-if="page">
     <PageHeader
       :title="page.content.title"
       :image="page.content.mainImage"
@@ -7,6 +7,13 @@
     />
     <SimplePageContent :page="page" />
   </article>
+  <div v-else>
+    <PageHeader title="News Article Not Found" />
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold text-center">404 - News Article Not Found</h1>
+      <p class="text-center mt-4">The news article you're looking for doesn't exist.</p>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -25,13 +32,22 @@ export default {
   //   )
   // },
 
-  asyncData({ $sanity, params, payload }) {
+  async asyncData({ $sanity, params, payload }) {
     if (payload) {
       return { page: payload };
     }
-    return $sanity.fetch(query, {
-      slug: params.page
-    });
+    
+    try {
+      const result = await $sanity.fetch(query, {
+        slug: params.page
+      });
+      
+      // Ensure we always return a page property, even if null
+      return { page: result.page || null };
+    } catch (error) {
+      console.error('Error fetching news item:', error);
+      return { page: null };
+    }
   },
 
   data() {
@@ -46,11 +62,13 @@ export default {
 
   computed: {
     seoTitle() {
+      if (!this.page) return "News Article Not Found";
       if (this.page.content.seo && this.page.content.seo.title)
         return this.page.content.seo.title;
       return undefined;
     },
     seoDescription() {
+      if (!this.page) return undefined;
       if (this.page.content.seo && this.page.content.seo.description)
         return this.page.content.seo.description;
       return undefined;
@@ -59,7 +77,8 @@ export default {
       return undefined;
     },
     seoPageUrl() {
-      return `https://www.mydelgrossopark.com/${this.page.content.slug.current}/`;
+      if (!this.page || !this.page.content.slug) return "https://www.mydelgrossopark.com/";
+      return `https://www.mydelgrossopark.com/news/${this.page.content.slug.current}/`;
     },
     seoShareImage() {
       return undefined;

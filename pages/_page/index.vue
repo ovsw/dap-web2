@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article v-if="page">
     <PageHeader
       :title="page.content.title"
       :image="pageHeaderImage"
@@ -12,16 +12,20 @@
       <SimplePageContent :page="page" />
     </template>
   </article>
+  <div v-else>
+    <PageHeader title="Page Not Found" />
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold text-center">404 - Page Not Found</h1>
+      <p class="text-center mt-4">The page you're looking for doesn't exist.</p>
+    </div>
+  </div>
 </template>
 
 <script>
-import externalLink from "@/components/serializers/externalLink";
 import sectionQueries from "@/sanityFragments/sectionQueries";
 
-const query = /* groq */ `{ 
-  "page": *[(_type == 'page' || _type== 'simplePage') && content.slug.current == $slug] {
+const query = /* groq */ `{ "page": *[(_type == 'page' || _type== 'simplePage') && content.slug.current == $slug] {
           ...,
-          foo: "bar",
           content {
             ...,
             sections[] {
@@ -29,42 +33,44 @@ const query = /* groq */ `{
               ${sectionQueries}
             }
           }
-        } | order(_updatedAt desc)[0]
-  }`;
+        } | order(_updatedAt desc)[0]}`;
 
 export default {
   name: "Page",
 
-  validate({ params, store, query }) {
-    // console.log('params:', params)
-    // If FALSE redirect to 404 page
-    return (
-      query.preview === "true" || store.state.pagesSlugs.includes(params.page)
-    );
-  },
-
-  asyncData({ $sanity, params, payload }) {
+  async asyncData({ $sanity, params, payload }) {
     if (payload) {
       return { page: payload };
     }
-    return $sanity.fetch(query, {
-      slug: params.page
-    });
+    
+    try {
+      const result = await $sanity.fetch(query, {
+        slug: params.page
+      });
+      
+      // Ensure we always return a page property, even if null
+      return { page: result.page || null };
+    } catch (error) {
+      console.error('Error fetching page:', error);
+      return { page: null };
+    }
   },
 
   computed: {
     pageHeaderImage() {
+      if (!this.page) return null;
       return this.page._type == "simplePage"
         ? this.page.content.image
         : this.page.content.mainImage;
     },
     seoTitle() {
-      console.log("page", this.page);
+      if (!this.page) return "Page Not Found";
       if (this.page.content.seo && this.page.content.seo.title)
         return this.page.content.seo.title;
       return this.page.title;
     },
     seoDescription() {
+      if (!this.page) return undefined;
       if (this.page.content.seo && this.page.content.seo.description)
         return this.page.content.seo.description;
       return undefined;
@@ -73,6 +79,7 @@ export default {
       return undefined;
     },
     seoPageUrl() {
+      if (!this.page || !this.page.content.slug) return "https://www.mydelgrossopark.com/";
       return `https://www.mydelgrossopark.com/${this.page.content.slug.current}/`;
     },
     seoShareImage() {
