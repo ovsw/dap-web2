@@ -39,7 +39,6 @@ export default {
     const fullSlug = `${params.page}`;
     // console.log('params: ', fullSlug)
     if (payload) {
-      console.log("payload", payload);
       return { page: payload };
     }
     
@@ -60,7 +59,6 @@ export default {
   computed: {
     seoTitle() {
       if (!this.page) return "Attraction Not Found";
-      console.log("page", this.page);
       if (this.page.content.seo && this.page.content.seo.title)
         return this.page.content.seo.title;
       return this.page.title;

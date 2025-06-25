@@ -62,7 +62,6 @@ export default {
   computed: {
     seoTitle() {
       if (!this.page) return "Page Not Found";
-      console.log("page", this.page);
       if (this.page.content.seo && this.page.content.seo.title)
         return this.page.content.seo.title;
       return undefined;

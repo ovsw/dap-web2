@@ -36,12 +36,6 @@ const query = /* groq */ `{ "page": *[_type == 'event' && content.slug.current =
 export default {
   name: "EventPage",
 
-  // validate({ params, store, query }) {
-  //   return (
-  //     query.preview === "true" ||
-  //     store.state.eventsSlugs.includes(`${params.page}`)
-  //   );
-  // },
 
   async asyncData({ $sanity, params, payload }) {
     const fullSlug = `${params.page}`;
