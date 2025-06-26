@@ -129,6 +129,7 @@
 
 <script>
 import externalLink from "@/components/serializers/externalLink";
+import block from "@/components/serializers/block";
 
 export default {
   name: "MagSection",
@@ -178,6 +179,9 @@ export default {
       serializers: {
         marks: {
           link: externalLink
+        },
+        types: {
+          block: block
         }
       }
     };
