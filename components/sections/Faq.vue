@@ -50,6 +50,7 @@
               <div class="p-6 lg:pt-8 bg-gray-100" v-show="selected == index">
                 <SanityContent
                   :blocks="item.faqItem.answer"
+                  :serializers="serializers"
                   class="prose text-xl max-w-screen-lg"
                 />
               </div>
@@ -62,6 +63,8 @@
 </template>
 
 <script>
+import block from "@/components/serializers/block";
+
 export default {
   created() {
     console.log(this)
@@ -92,7 +95,12 @@ export default {
   },
   data() {
     return {
-      selected: -1
+      selected: -1,
+      serializers: {
+        types: {
+          block: block
+        }
+      }
     };
   }
 };
