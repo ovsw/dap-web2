@@ -93,3 +93,6 @@ sw.*
 .env.development
 .env
 .vscode/settings.json
+
+# screenshots
+/screenshots
