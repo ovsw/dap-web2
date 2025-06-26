@@ -17,7 +17,20 @@
 </template>
 
 <script>
-const query = /* groq */ `{ "page": *[_type == 'attraction' && content.slug.current == $slug] | order(_updatedAt desc)[0]}`;
+import sectionQueries from "@/sanityFragments/sectionQueries";
+
+const query = /* groq */ `{ 
+  "page": *[_type == 'attraction' && content.slug.current == $slug] {
+          ...,
+          content {
+            ...,
+            sections[] {
+              ...,
+              ${sectionQueries}
+            }
+          }
+        } | order(_updatedAt desc)[0]
+  }`;
 
 export default {
   name: "WaterParkAttractionPage",

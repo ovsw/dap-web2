@@ -23,7 +23,8 @@
         </NuxtLink>
 
         <Header-Nav />
-        <!-- <Search
+        <!-- Lazy load Search component when needed
+        <Search
           class="w-full flex-grow lg:pr-8 lg:pl-4 order-5 lg:order-none lg:w-auto mt-1"
         /> -->
         <!-- <HeaderStatus class="hidden xl:flex" /> -->

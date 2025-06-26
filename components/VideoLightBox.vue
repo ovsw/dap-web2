@@ -34,6 +34,10 @@ export default {
   props: {
     videoUrl: String
   },
+  components: {
+    // Lazy load the SilentBox component to reduce initial bundle size
+    SilentBox: () => import('vue-silentbox')
+  },
   data() {
     return {};
   }

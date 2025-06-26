@@ -6,7 +6,7 @@ module.exports = {
     ringColor: false,
   },
   purge: {
-    // layers: ['components', 'utilities'],
+    enabled: process.env.NODE_ENV === 'production',
     content: [
       "tw-jit-classes.txt",
       "components/**/*.vue",
@@ -14,7 +14,25 @@ module.exports = {
       "pages/**/*.vue",
       "plugins/**/*.js",
       "nuxt.config.js",
+      "assets/**/*.scss",
+      "assets/**/*.css",
     ],
+    options: {
+      safelist: [
+        'prose',
+        'prose-dark',
+        /^bg-/,
+        /^text-/,
+        /^border-/,
+        /^hover:/,
+        /^focus:/,
+        /^active:/,
+        /^md:/,
+        /^lg:/,
+        /^xl:/,
+        /^2xl:/,
+      ],
+    },
   },
   darkMode: false, // or 'media' or 'class'
   theme: {

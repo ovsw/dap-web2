@@ -122,6 +122,11 @@ export default {
       },
       { rel: "manifest", href: "/site.webmanifest" },
       { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#2d8262" },
+      // Resource hints for performance
+      { rel: "preconnect", href: "https://cdn.sanity.io" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: true },
+      { rel: "dns-prefetch", href: "https://www.google-analytics.com" },
       // { rel: "canonical", href: seoCannonicalUrl }
     ],
   },
@@ -129,10 +134,9 @@ export default {
   googleFonts: {
     subsets: "latin",
     display: "swap",
-    // download: true,
-    // overwriting: true,
-    // fontsDir: 'fonts',
-    // fontsPath: '~assets/fonts',
+    preload: true,
+    prefetch: true,
+    preconnect: true,
     families: {
       Overpass: {
         wght: [400, 600, 700],
@@ -357,6 +361,40 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ["vue-instantsearch", "instantsearch.js/es"],
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        cacheGroups: {
+          layouts: {
+            name: 'layouts',
+            test: /layouts\/.+\.(vue)$/,
+            chunks: 'all',
+            priority: 10
+          },
+          pages: {
+            name: 'pages',
+            test: /pages\/.+\.(vue)$/,
+            chunks: 'all',
+            priority: 10
+          },
+          commons: {
+            name: 'commons',
+            minChunks: 2,
+            chunks: 'all',
+            priority: 5
+          }
+        }
+      }
+    },
+    extractCSS: true,
+    optimizeCSS: true,
+    parallel: true,
+    cache: true,
+    babel: {
+      plugins: [
+        ["@babel/plugin-proposal-private-methods", { loose: true }]
+      ]
+    }
   },
 
   // GENERATE DYNAMIC PAGES FROM SANITY
