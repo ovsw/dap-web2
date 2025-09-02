@@ -43,15 +43,32 @@
 <script>
 const query = /* groq */ `{
   "eventsPage": *[_id == 'eventsPage'][0],
-  // "events": *[ _type == "event" && (content.endDate > now())] | order(content.date asc)
-  "events": *[ _type == "event" && (dateTime(content.endDate+"T23:59:59Z") > dateTime(now()) - 3600 * 24 )] | order( content.endDate asc, content.date asc) // delayed hiding an event by 24 hours
-}
-`;
+  "events": *[
+    _type == "event" &&
+    coalesce(content.endDate, content.date) >= $todayEt
+  ] | order(content.endDate asc, content.date asc)
+}`;
 
 export default {
   name: "EventsPage",
   async asyncData({ $sanity }) {
-    const sanityCall = await $sanity.fetch(query);
+    // Compute today's date in America/New_York as YYYY-MM-DD for timezone-safe filtering
+    const todayInTzYYYYMMDD = (tz = "America/New_York") => {
+      const parts = new Intl.DateTimeFormat("en-CA", {
+        timeZone: tz,
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      }).formatToParts(new Date());
+      const y = parts.find((p) => p.type === "year").value;
+      const m = parts.find((p) => p.type === "month").value;
+      const d = parts.find((p) => p.type === "day").value;
+      return `${y}-${m}-${d}`;
+    };
+
+    const todayEt = todayInTzYYYYMMDD("America/New_York");
+
+    const sanityCall = await $sanity.fetch(query, { todayEt });
 
     // Create an array for the months
     var months = [
