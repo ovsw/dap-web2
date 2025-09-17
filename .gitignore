@@ -93,3 +93,5 @@ sw.*
 .env.development
 .env
 .vscode/settings.json
+
+.netlify
