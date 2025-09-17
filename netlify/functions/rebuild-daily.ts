@@ -50,4 +50,4 @@ export default async () => {
 };
 
 // while debugging
-export const config = { schedule: "*/2 * * * *" };
+export const config = { schedule: "0 4,5 * * *" };
