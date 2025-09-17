@@ -55,5 +55,5 @@ export default async () => {
 // Run daily at 04:00 and 05:00 UTC to cover ET midnight across DST.
 // The handler guards to only fire at midnight ET.
 export const config = {
-  schedule: "0 4,5 * * *",
+  schedule: "*/2 * * * *",
 };

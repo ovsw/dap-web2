@@ -2,6 +2,9 @@
   command = "npm run generate"
   publish = "dist"
 
+[functions]
+  directory = "netlify/functions"
+
 [[redirects]]
   from = "https://dap-web2.netlify.app/*"
   to = "https://www.mydelgrossopark.com/:splat"
