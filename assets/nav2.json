@@ -331,13 +331,6 @@
             "icon": "star-duotone"
           },
           {
-            "name": "Super Splash Tues. ",
-            "description": "Fun Pass",
-            "new": false,
-            "url": "/passes/super-splash-tuesday-fun-pass/",
-            "icon": "calendar-alt-duotone"
-          },
-          {
             "name": "Ride Tickets",
             "description": "at the park Ticket Booth",
             "new": false,
