@@ -11,11 +11,11 @@
               src="~/assets/images/logos/dap-logo-traced.png"
               alt="DelGrosso's Amusement Park and Laguna Splash Logo"
           /></a>
-          <a href="https://www.explorealtoona.com/" target="_blank">
+          <!-- <a href="https://www.explorealtoona.com/" target="_blank">
             <img
               src="~/assets/images/logos/explore-altoona-logo-traced.png"
               alt="Explore Altoona Logo"
-          /></a>
+          /></a> -->
         </div>
 
         <!-- phone -->
