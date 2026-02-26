@@ -177,12 +177,11 @@ export default {
     "@nuxtjs/google-fonts",
     "@nuxtjs/svg-sprite",
     "@nuxtjs/sanity/module",
-    "@nuxtjs/google-analytics",
     "nuxt-lazy-load",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/redirect-module", "@nuxtjs/sitemap"],
+  modules: ["@nuxtjs/redirect-module", "@nuxtjs/sitemap", "@nuxtjs/gtm"],
 
   redirect: [
     // Redirect options here
@@ -462,9 +461,9 @@ export default {
     withCredentials: true,
   },
 
-  googleAnalytics: {
-    // Options
-    id: "UA-47136170-1",
+  gtm: {
+    id: "GTM-PTB8BGL",
+    pageTracking: false,
   },
 
   sitemap: {
