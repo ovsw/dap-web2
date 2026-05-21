@@ -52,8 +52,8 @@
       class="bg-yellow pt-2 pb-1 flex items-center justify-center px-2"
     >
       <div>
-        <template v-for="(item, index) in $store.state.alertItems">
-          <div :key="item._key" class="inline" v-if="item.alertIsActive">
+        <template v-for="(item, index) in activeAlertItems">
+          <div :key="item._key" class="inline">
             <span class="pl-2 pr-1" v-if="index != 0"> &middot; </span>
             <SanityContent
               :blocks="item.text"
@@ -96,6 +96,11 @@ export default {
         }
       }
     };
+  },
+  computed: {
+    activeAlertItems() {
+      return this.$store.state.alertItems.filter(item => item.alertIsActive);
+    }
   },
   methods: {
     ...mapMutations({
