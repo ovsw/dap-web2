@@ -54,7 +54,7 @@
         <silent-box
           class="playIcon "
           :image="{
-            src: section.video,
+            src: normalizedVideoUrl,
             description: section.title
           }"
         >
@@ -130,6 +130,7 @@
 <script>
 import externalLink from "@/components/serializers/externalLink";
 import block from "@/components/serializers/block";
+const { normalizeYouTubeUrl } = require("@/utils/video-url");
 
 export default {
   name: "MagSection",
@@ -140,6 +141,9 @@ export default {
     }
   },
   computed: {
+    normalizedVideoUrl() {
+      return normalizeYouTubeUrl(this.section.video);
+    },
     sectionButtons() {
       return this.section.buttons || [];
     },
