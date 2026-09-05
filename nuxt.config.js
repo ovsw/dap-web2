@@ -203,6 +203,11 @@ export default {
     },
     { from: "^/events/events-calendar/", to: "/events/", statusCode: 301 },
     {
+      from: "^/events/the-season-finale-harvestfest/",
+      to: "/events/annual-harvestfest/",
+      statusCode: 301,
+    },
+    {
       from: "^/food/spaghetti-wednesday/",
       to: "/food/spaghetti-wednesdays/",
       statusCode: 301,
