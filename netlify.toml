@@ -6,6 +6,12 @@
   directory = "netlify/functions"
 
 [[redirects]]
+  from = "/events/the-season-finale-harvestfest/"
+  to = "/events/annual-harvestfest/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://dap-web2.netlify.app/*"
   to = "https://www.mydelgrossopark.com/:splat"
   status = 301
