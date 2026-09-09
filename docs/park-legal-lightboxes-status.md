@@ -19,4 +19,6 @@ Branch: `feat/park-legal-lightboxes`, based on `origin/master` at `ece803e2`. Pa
 
 ## Release hold
 
-The hosted Terms URL still returns HTTP 404 while main generates the document. The Terms anchor and official lightbox launch are checked; Terms content must be checked after publication. This draft must not merge until that check passes. No CMS changes or CodeRabbit review were run.
+The hosted Terms document now returns HTTP 200. Actual Netlify preview `https://deploy-preview-6--dap-web2.netlify.app` (build `6aa115daf9f3be00086fa594`, source `82d57fa`) passed real Privacy/Cookie/Terms lightbox content checks on desktop/mobile, before and after Nuxt navigation. Both legacy Terms variants return 301. Evidence: `/work/dev/dgs/iubenda-rollout/park-legal-preview-results.json` and `park-legal-manual-inspection.md`.
+
+Manual inspection found no material code issues. No CMS changes or CodeRabbit review were run. The PR remains draft and must not merge while main awaits the user's decision about legacy dispute provisions in the managed Terms. The former 404 blocker is resolved.
