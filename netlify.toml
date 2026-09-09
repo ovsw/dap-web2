@@ -7,6 +7,18 @@
 
 # Force hosted policies even if a previous build contains legacy CMS pages.
 [[redirects]]
+  from = "/terms-and-conditions"
+  to = "https://www.iubenda.com/terms-and-conditions/41165067"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms-and-conditions/"
+  to = "https://www.iubenda.com/terms-and-conditions/41165067"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/privacy-policy"
   to = "https://www.iubenda.com/privacy-policy/41165067"
   status = 301
