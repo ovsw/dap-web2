@@ -1,0 +1,68 @@
+{
+  "verifiedAt": "2026-09-09",
+  "siteId": 4607766,
+  "policyId": 41165067,
+  "configurationUrl": "https://cs.iubenda.com/cookie-solution/confs/js/41165067.js",
+  "widgetUrl": "https://embeds.iubenda.com/widgets/09c719d0-e19a-4073-9656-a898af0fa09b.js",
+  "widgetSha256": "4e9a65e8cddd0388e316d61f1715a2e88ab5d3ca3a5462600ba92e97b02e6d71",
+  "coreRuntimeUrl": "https://cdn.iubenda.com/cookie_solution/iubenda_cs/1.105.0/core-en.js",
+  "coreSha256": "8b008536f7c8f61d676db515e92039ad8cf4a6f6b97c4ba0c28073a2457485fc",
+  "csEnabled": true,
+  "csSiteConf": {
+    "askConsentAtCookiePolicyUpdate": true,
+    "emailMarketing": {
+      "styles": {
+        "backgroundColor": "#2D8262",
+        "buttonsBackgroundColor": "#FFFFFF",
+        "buttonsTextColor": "#0E0E0E",
+        "footerBackgroundColor": "#FFFFFF",
+        "footerTextColor": "#2D8262",
+        "textColor": "#FFFFFF"
+      },
+      "theme": "dark"
+    },
+    "enableGdpr": false,
+    "enableUspr": true,
+    "floatingPreferencesButtonDisplay": "bottom-right",
+    "lang": "en",
+    "promptToAcceptOnBlockedElements": true,
+    "siteId": 4607766,
+    "storage": {
+      "useSiteId": true
+    },
+    "usPreferencesWidgetDisplay": "inline-left",
+    "usprApplies": true,
+    "usprPurposes": "s,sh,adv",
+    "whitelabel": true,
+    "cookiePolicyId": 41165067,
+    "banner": {
+      "acceptButtonCaptionColor": "#0E0E0E",
+      "acceptButtonColor": "#FFFFFF",
+      "acceptButtonDisplay": true,
+      "backgroundColor": "#2D8262",
+      "closeButtonDisplay": false,
+      "customizeButtonCaptionColor": "#2D8262",
+      "customizeButtonColor": "#FFFFFF",
+      "customizeButtonDisplay": true,
+      "position": "bottom",
+      "prependOnBody": true,
+      "rejectButtonCaptionColor": "#F7F7F7",
+      "rejectButtonColor": "#F0493E",
+      "rejectButtonDisplay": true,
+      "showTitle": false,
+      "showTotalNumberOfProviders": true
+    }
+  },
+  "finalVerification": {
+    "verified_at": "2026-09-09T05:31:36.161302+00:00",
+    "widget_url": "https://embeds.iubenda.com/widgets/09c719d0-e19a-4073-9656-a898af0fa09b.js",
+    "http_status": 200,
+    "widget_sha256": "4e9a65e8cddd0388e316d61f1715a2e88ab5d3ca3a5462600ba92e97b02e6d71",
+    "site_id": 4607766,
+    "policy_id": 41165067,
+    "cookie_solution_id": 1284756,
+    "banner_matches_saved_dg2go": true,
+    "core_us_flags_verified": true,
+    "snippet_source": "Verified public widget URL; dashboard Unified embedding code panel remained blank. UUID also observed in Park Step 3 simplified-embedding link."
+  }
+}

@@ -1,5 +1,6 @@
 import { createClient } from "@nuxtjs/sanity";
 import fetch from "node-fetch";
+import { legacyPolicyRedirects } from "./lib/privacy-links";
 import sectionQueries from "./sanityFragments/sectionQueries";
 
 if (!globalThis.fetch) {
@@ -164,6 +165,7 @@ export default {
     "~plugins/image-builder.js",
     "~/plugins/to-link.js",
     "~/plugins/lightbox.client.js",
+    "~/plugins/privacy-tracking.client.js",
     "~/plugins/pixel.client.js",
     // "~/plugins/axe.client.js"
   ],
@@ -181,7 +183,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/redirect-module", "@nuxtjs/sitemap", "@nuxtjs/gtm"],
+  modules: ["@nuxtjs/redirect-module", "@nuxtjs/sitemap"],
 
   redirect: [
     // Redirect options here
@@ -413,13 +415,20 @@ export default {
         }`);
 
       return [
-        ...pages.map((page) => {
-          // console.log('creting route for: ', `/${page.content.slug.current}/`)
-          return {
-            route: `/${page.content.slug.current}/`,
-            payload: page,
-          };
-        }),
+        ...pages
+          .filter(
+            (page) =>
+              !legacyPolicyRedirects[
+                `/${page.content.slug.current.replace(/\/$/, "")}`
+              ]
+          )
+          .map((page) => {
+            // console.log('creting route for: ', `/${page.content.slug.current}/`)
+            return {
+              route: `/${page.content.slug.current}/`,
+              payload: page,
+            };
+          }),
         ...parkRides.map((page) => {
           // console.log('creting route for: ', `/${page.content.slug.current}/`)
           return {
@@ -453,17 +462,13 @@ export default {
   },
 
   router: {
+    middleware: ["privacy-policy-redirects"],
     trailingSlash: true,
   },
 
   sanity: {
     ...configSanity,
     withCredentials: true,
-  },
-
-  gtm: {
-    id: "GTM-PTB8BGL",
-    pageTracking: false,
   },
 
   sitemap: {

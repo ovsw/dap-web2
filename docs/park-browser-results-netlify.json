@@ -1,0 +1,135 @@
+{
+  "origin": "https://deploy-preview-1--park-privacy-fixture.netlify.app",
+  "fresh": {
+    "allowed": true,
+    "requests": [
+      "https://www.googletagmanager.com/gtm.js?id=GTM-M35WQ393",
+      "https://www.googletagmanager.com/gtm.js?id=GTM-PTB8BGL",
+      "https://insight.adsrvr.org/track/up?adv=wylz9t3&ref=https%3A%2F%2Fdeploy-preview-1--park-privacy-fixture.netlify.app%2F&upid=jthjdgl&upv=1.1.0"
+    ],
+    "preferences": {},
+    "purposes": {
+      "1": true,
+      "2": false,
+      "3": false,
+      "4": false,
+      "5": false,
+      "s": true,
+      "sh": true,
+      "adv": true
+    }
+  },
+  "controls": {
+    "noticeInFooter": 1,
+    "preferencesInFooter": 1,
+    "automaticUSWidgets": 0,
+    "genericFloatingButtons": 0,
+    "noticeHref": "https://www.iubenda.com/privacy-policy/41165067/cookie-policy?an=no&s_ck=false&newmarkup=yes"
+  },
+  "persistence": {
+    "origin": "https://deploy-preview-1--park-privacy-fixture.netlify.app",
+    "cookies": [
+      {
+        "name": "_iub_cs-s4607766-uspr",
+        "value": "%7B%22s%22%3Afalse%2C%22sh%22%3Afalse%2C%22adv%22%3Afalse%7D",
+        "domain": "deploy-preview-1--park-privacy-fixture.netlify.app",
+        "path": "/",
+        "expires": 1820469105,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+      },
+      {
+        "name": "_iub_previous_preference_id",
+        "value": "%7B%22s4607766%22%3A%222026%2F09%2F09%2F05%2F51%2F45%2F561%2F09eeec%22%7D",
+        "domain": "deploy-preview-1--park-privacy-fixture.netlify.app",
+        "path": "/",
+        "expires": 1820469105,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+      },
+      {
+        "name": "_iub_cs-s4607766",
+        "value": "%7B%22cons%22%3A%7B%22rand%22%3A%22de3a00%22%2C%22returnedId%22%3A%222026%2F09%2F09%2F05%2F51%2F45%2F561%2F09eeec%22%7D%2C%22id%22%3A41165067%7D",
+        "domain": "deploy-preview-1--park-privacy-fixture.netlify.app",
+        "path": "/",
+        "expires": 1820469105,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+      }
+    ],
+    "state": {
+      "preferences": {
+        "id": 41165067,
+        "cons": {
+          "rand": "de3a00",
+          "returnedId": "2026/09/09/05/51/45/561/09eeec"
+        },
+        "consent": false,
+        "ccpa": "1YN-",
+        "gppString": "DBABL~BqgVAAAAAAA.QA",
+        "uspr": {
+          "s": false,
+          "sh": false,
+          "adv": false
+        }
+      },
+      "purposes": {
+        "1": true,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": false,
+        "s": false,
+        "sh": false,
+        "adv": false
+      }
+    },
+    "requests": 3
+  },
+  "withdrawal": {
+    "allowed": false,
+    "requestsAfterReload": 0,
+    "purposes": {
+      "1": true,
+      "2": false,
+      "3": false,
+      "4": false,
+      "5": false,
+      "s": false,
+      "sh": false,
+      "adv": false
+    }
+  },
+  "returningOptOut": {
+    "requests": 0,
+    "contactIframeRetained": true,
+    "ticketLinkRetained": true,
+    "footerOpensNativePreferences": true,
+    "staleUtmKeysRemoved": true,
+    "dynamicTicketUtmRemoved": true,
+    "cartParametersPreserved": true
+  },
+  "gpc": {
+    "requests": 0,
+    "purposes": {
+      "1": true,
+      "2": false,
+      "3": false,
+      "4": false,
+      "5": false,
+      "s": false,
+      "sh": false,
+      "adv": false
+    }
+  },
+  "cmpUnavailable": {
+    "requests": 0
+  },
+  "noJavaScript": {
+    "requests": 0,
+    "hostedFallbackRetained": true
+  }
+}

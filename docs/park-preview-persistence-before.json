@@ -1,0 +1,10 @@
+{
+  "origin": "https://deploy-preview-1--park-privacy-fixture.netlify.app",
+  "method": "Generated dist fulfilled at HTTPS fixture origin; actual Park native widget/CMP; same browser context through Save and reload",
+  "cookiesAfterReload": [],
+  "preferencesAfterReload": {},
+  "usFlagsAfterReload": { "s": true, "sh": true, "adv": true },
+  "optionalRequestsBeforeSave": 3,
+  "optionalRequestsAfterReload": 3,
+  "result": "FAIL before localConsentDomainExact Netlify condition"
+}

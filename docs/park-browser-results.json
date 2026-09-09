@@ -1,0 +1,79 @@
+{
+  "fresh": {
+    "allowed": true,
+    "requests": [
+      "https://www.googletagmanager.com/gtm.js?id=GTM-M35WQ393",
+      "https://www.googletagmanager.com/gtm.js?id=GTM-PTB8BGL",
+      "https://insight.adsrvr.org/track/up?adv=wylz9t3&ref=http%3A%2F%2F127.0.0.1%3A4317%2F&upid=jthjdgl&upv=1.1.0"
+    ],
+    "preferences": {},
+    "purposes": {
+      "1": true,
+      "2": false,
+      "3": false,
+      "4": false,
+      "5": false,
+      "s": true,
+      "sh": true,
+      "adv": true
+    }
+  },
+  "controls": {
+    "noticeInFooter": 1,
+    "preferencesInFooter": 1,
+    "automaticUSWidgets": 0,
+    "genericFloatingButtons": 0,
+    "noticeHref": "https://www.iubenda.com/privacy-policy/41165067/cookie-policy?an=no&s_ck=false&newmarkup=yes"
+  },
+  "withdrawal": {
+    "allowed": false,
+    "requestsAfterReload": 0,
+    "purposes": {
+      "1": true,
+      "2": false,
+      "3": false,
+      "4": false,
+      "5": false,
+      "s": false,
+      "sh": false,
+      "adv": false
+    }
+  },
+  "returningOptOut": {
+    "requests": 0,
+    "contactIframeRetained": true,
+    "ticketLinkRetained": true,
+    "footerOpensNativePreferences": true,
+    "staleUtmKeysRemoved": true,
+    "dynamicTicketUtmRemoved": true,
+    "cartParametersPreserved": true
+  },
+  "gpc": {
+    "requests": 0,
+    "purposes": {
+      "1": true,
+      "2": false,
+      "3": false,
+      "4": false,
+      "5": false,
+      "s": false,
+      "sh": false,
+      "adv": false
+    }
+  },
+  "cmpUnavailable": {
+    "requests": 0
+  },
+  "noJavaScript": {
+    "requests": 0,
+    "hostedFallbackRetained": true
+  },
+  "verifiedAt": "2026-09-09",
+  "environment": {
+    "browser": "Chromium headless, isolated temporary contexts",
+    "site": "local generated dist",
+    "cmp": "real Park unified widget/runtime",
+    "tracking": "tracker responses intercepted; no production analytics events sent",
+    "forms": "Cognito iframe response stubbed; no form submitted"
+  }
+}
