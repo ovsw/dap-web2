@@ -5,6 +5,31 @@
 [functions]
   directory = "netlify/functions"
 
+# Force hosted policies even if a previous build contains legacy CMS pages.
+[[redirects]]
+  from = "/privacy-policy"
+  to = "https://www.iubenda.com/privacy-policy/41165067"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy-policy/"
+  to = "https://www.iubenda.com/privacy-policy/41165067"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cookie-policy"
+  to = "https://www.iubenda.com/privacy-policy/41165067/cookie-policy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cookie-policy/"
+  to = "https://www.iubenda.com/privacy-policy/41165067/cookie-policy"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/events/the-season-finale-harvestfest/"
   to = "/events/annual-harvestfest/"

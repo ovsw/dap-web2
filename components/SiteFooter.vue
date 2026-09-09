@@ -144,7 +144,18 @@
                 >Terms &amp; Conditions</NuxtLink
               >
             </li>
-            <li><NuxtLink to="/privacy-policy/">Privacy Policy</NuxtLink></li>
+            <li><a :href="privacyPolicyUrl">Privacy Policy</a></li>
+            <li><a :href="cookiePolicyUrl">Cookie Policy</a></li>
+            <li>
+              <a :href="noticeAtCollectionUrl" class="iubenda-cs-uspr-link"
+                >Notice at Collection</a
+              >
+            </li>
+            <li>
+              <a :href="privacyChoicesUrl" class="iubenda-cs-preferences-link"
+                >Your Privacy Choices</a
+              >
+            </li>
             <li>
               <NuxtLink to="/website-accessibility-statement/"
                 >Accessibility Statement</NuxtLink
@@ -182,7 +193,18 @@
 </template>
 
 <script>
-export default {};
+import {
+  privacyPolicyUrl,
+  cookiePolicyUrl,
+  privacyChoicesUrl,
+  noticeAtCollectionUrl,
+} from "../lib/privacy-links";
+
+export default {
+  data() {
+    return { privacyPolicyUrl, cookiePolicyUrl, privacyChoicesUrl, noticeAtCollectionUrl };
+  },
+};
 </script>
 
 <style></style>

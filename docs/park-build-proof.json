@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-09",
+  "node": "14.21.3",
+  "command": "npm run generate",
+  "exitCode": 0,
+  "logSha256": "d59a3a15b215429cea68a6046e147114e9ebb49b8e7ad36d3cbbd6a00ece473b",
+  "generatedRoutes": 162,
+  "tail": [
+    "\u2714 Generated route \"/news/\"",
+    "\u2714 Generated route \"/laguna-splash-water-park-attractions/\"",
+    "\u2714 Generated route \"/amusement-park-rides/\"",
+    "\u2714 Client-side fallback created: 404.html",
+    "\u2714 Static manifest generated",
+    "\u2139 Generating sitemaps",
+    "\u2714 Generated /sitemap.xml",
+    "\u2714 Generated /sitemap.xml.gz"
+  ],
+  "warnings": [
+    "Browserslist caniuse-lite is outdated",
+    "Webpack asset size limit warning"
+  ],
+  "buildOutput": "dist (gitignored; not deployed)",
+  "log": "/tmp/park-generate-review.log",
+  "scope": "After CodeRabbit valid fixes and Netlify exact-host consent scope"
+}
